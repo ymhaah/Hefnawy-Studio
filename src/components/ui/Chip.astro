@@ -1,0 +1,27 @@
+---
+let { content, link = null } = Astro.props;
+---
+
+<span class="chip" aria-labelledby="chip-content" title={link ? link : content}>
+    {
+        link ? (
+            <a href={link}>
+                <span class="chip__avatar">
+                    <slot name="chipAvatar" />
+                </span>
+                <span class="chip__content" id="chip-content">
+                    {content}
+                </span>
+            </a>
+        ) : (
+            <button type="button">
+                <span class="chip__avatar">
+                    <slot name="chipAvatar" />
+                </span>
+                <span class="chip__content">
+                    <h4 id="chip-content">{content}</h4>
+                </span>
+            </button>
+        )
+    }
+</span>

@@ -1,0 +1,83 @@
+@use "../global/index" as *;
+@use "../util/index" as *;
+
+// @include flex(r, c, c);
+// @include flexForPhon(cr,2);
+// @include grid(2, 2, fr, 1rem)
+
+:root {
+    --Header-hight: #{toRem(80px)};
+    --Header-Nav-width: 30em;
+    --Header-icon-hight: 5rem;
+}
+
+header[aria-label="main header"] {
+    width: 100%;
+    height: var(--Header-hight);
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    border: 3px solid hotpink;
+    .Container {
+        @include flex(r, sb, c);
+        gap: 1rem;
+        .c1 {
+            max-width: 50%;
+            height: 100%;
+            @include flex(r, fs, c);
+
+            .header__Logo {
+                @include flex(r, sb, c);
+                gap: 1rem;
+
+                .main__logo,
+                .article__logo {
+                    position: relative;
+                    white-space: nowrap;
+                }
+                // .main__logo::after {
+                //     content: "";
+                //     width: 0.5rem;
+                //     height: 0.5rem;
+                //     border-radius: 50%;
+                //     background-color: white;
+                //     position: absolute;
+                //     right: -0.6rem;
+                //     top: 50%;
+                // }
+            }
+            .skip-nav-link {
+            }
+            // .skip-nav-link:focus,
+            // .skip-nav-link:focus-visible {
+            //     opacity: 1;
+            // }
+        }
+        .c2 {
+            max-width: 50%;
+            height: 100%;
+            @include flex(r, fe, c);
+
+            .mobile-nav-toggle {
+                display: none;
+            }
+            nav.header__main-navigation {
+                @include flex(r, n, c);
+                ul {
+                    width: 100%;
+                    @include flex(r, sb, c);
+                    gap: 1rem;
+                    li {
+                        a {
+                        }
+                        // a:hover {
+                        // }
+                    }
+                    li a[date-selected="true"]::after {
+                    }
+                }
+            }
+        }
+    }
+}

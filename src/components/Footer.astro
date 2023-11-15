@@ -1,0 +1,71 @@
+---
+import Chip from "@ui/Chip.astro";
+
+let year = new Date().getFullYear();
+const { title } = Astro.props;
+---
+
+<footer aria-label="main footer">
+    <div class="Container">
+        <div class="footer__awards">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <div class="footer__info">
+            <div class="description Div">
+                <div class="logo"></div>
+                <p>
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                    Similique quisquam fugiat aut nesciunt cum. Cupiditate ab
+                </p>
+            </div>
+            <div class="footer__nav Div">
+                <nav aria-label="footer navigation">
+                    <ul>
+                        <li><a href="#">text</a></li>
+                        <li><a href="#">text</a></li>
+                        <li><a href="#">text</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="social Div">
+                <ul aria-label="social links">
+                    <li>
+                        <a href="#" aria-label="facebook">f</a>
+                    </li>
+                    <li>
+                        <a href="#" aria-label="twitter">t</a>
+                    </li>
+                    <li>
+                        <a href="#" aria-label="youtube">y</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer__ownership">
+            <div class="madeWith Div">
+                <p>
+                    Made with
+                    <span class="hart">
+                        <lord-icon
+                            src="https://cdn.lordicon.com/xryjrepg.json"
+                            trigger="hover"
+                            colors="primary:#0d6dfd"
+                            style="width:16px;height:16px"
+                        >
+                        </lord-icon>
+                    </span>
+                     by <Chip content="test" />
+                </p>
+            </div>
+            <div class="copyright Div">
+                <p>
+                    Copy right &copy; <span>{year}</span>
+                    {title}
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>

@@ -1,0 +1,56 @@
+@use "../global/index" as *;
+@use "../util/index" as *;
+
+// @include flex(r, c, c);
+// @include flexForPhon(cr,2);
+// @include grid(2, 2, fr, 1rem)
+
+footer[aria-label="main footer"] {
+    width: 100%;
+    border: 3px solid firebrick;
+    .Container {
+        .footer__awards {
+            width: 100%;
+            min-height: 10vh;
+            @include flex(r, n, c);
+            gap: 0.5rem;
+        }
+        .footer__info {
+            width: 100%;
+            min-height: 25vh;
+            @include flex(r, n, c);
+            gap: 0.5rem;
+            .Div {
+                width: 100%;
+                height: 100%;
+            }
+            .description {
+                p {
+                    text-align: center;
+                }
+            }
+            .footer__nav {
+            }
+            .social {
+            }
+        }
+        .footer__ownership {
+            width: 100%;
+            @include flex(r, sb, c);
+            gap: 1rem;
+            .Div {
+                max-width: 50%;
+                p {
+                    white-space: nowrap;
+                }
+            }
+            .madeWith {
+                .hart {
+                    cursor: default;
+                }
+            }
+            .copyright {
+            }
+        }
+    }
+}

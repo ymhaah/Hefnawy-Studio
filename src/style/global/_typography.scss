@@ -1,0 +1,69 @@
+@use "./colors.scss" as *;
+@use "../util/index" as *;
+
+// ! font file path is made to match the path from the css file not from the sass file
+// ! Roboto => Sans Serif
+@font-face {
+    font-family: "Roboto";
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+    src: url("/fonts/Roboto/roboto-regular.woff2") format("woff2"),
+        url("/fonts/Roboto/roboto-regular.woff") format("woff"),
+        url("/fonts/Roboto/roboto-regular.ttf") format("truetype");
+}
+@font-face {
+    font-family: "Roboto";
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+    src: url("/fonts/Roboto/roboto-medium.woff2") format("woff2"),
+        url("/fonts/Roboto/roboto-medium.woff") format("woff"),
+        url("/fonts/Roboto/roboto-medium.ttf") format("truetype");
+}
+@font-face {
+    font-family: "Roboto";
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+    src: url("/fonts/Roboto/roboto-bold.woff2") format("woff2"),
+        url("/fonts/Roboto/roboto-bold.woff") format("woff"),
+        url("/fonts/Roboto/roboto-bold.ttf") format("truetype");
+}
+@font-face {
+    font-family: "Roboto";
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+    src: url("/fonts/Roboto/roboto-black.woff2") format("woff2"),
+        url("/fonts/Roboto/roboto-black.woff") format("woff"),
+        url("/fonts/Roboto/roboto-black.ttf") format("truetype");
+}
+:root {
+    // font families
+    --ff-Roboto: "Roboto", -apple-system, BlinkMacSystemFont, avenir next,
+        avenir, segoe ui, helvetica neue, helvetica, Cantarell, Ubuntu, noto,
+        arial, sans-serif;
+}
+
+body {
+    font-family: var(--ff-Roboto) !important;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+:where(h1, h2, h3, h4) {
+    text-wrap: balance;
+}
+input,
+button,
+textarea,
+a,
+select {
+    font: inherit;
+}
+
+@media (prefers-contrast: more) {
+}
+
+@media (prefers-contrast: less) {
+}

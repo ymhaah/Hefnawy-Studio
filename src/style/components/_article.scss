@@ -1,0 +1,70 @@
+@use "../global/index" as *;
+@use "../util/index" as *;
+
+// @include flex(r, c, c);
+// @include flexForPhon(cr,2);
+// @include grid(2, 2, fr, 1rem)
+
+:root {
+    --art-width: 70%;
+}
+
+main#content {
+    width: 100%;
+    .Container {
+        --container-width: calc(100% - 2rem);
+        position: relative;
+        @include flex(r, n, n);
+        aside[aside-type="action"] {
+            width: calc(calc(100% - var(--art-width)) / 2);
+            height: min-content;
+
+            position: sticky;
+            top: var(--Header-hight);
+            left: 0;
+            z-index: 999;
+            .test {
+                width: 100%;
+                overflow: hidden;
+                border: 3px dotted blueviolet;
+            }
+        }
+        article {
+            width: var(--art-width);
+            overflow: hidden;
+            padding: 1rem;
+        }
+        aside[aside-type="info"] {
+            width: calc(calc(100% - var(--art-width)) / 2);
+            height: min-content;
+            position: sticky;
+            top: var(--Header-hight);
+            left: 0;
+            z-index: 999;
+            .table {
+                width: 100%;
+                overflow: hidden;
+                border: 3px dotted green;
+
+                #content {
+                    padding: 4px;
+                    h2,
+                    h3,
+                    p {
+                        margin: 0;
+                        font-size: 12px;
+                        a {
+                            font-size: 12px;
+                        }
+                    }
+                    h3 {
+                        margin: 0 20px;
+                    }
+                    p {
+                        margin: 0 40px;
+                    }
+                }
+            }
+        }
+    }
+}

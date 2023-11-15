@@ -1,0 +1,20 @@
+---
+import AsideAction from "../components/AsideAction.astro";
+import AsideInfo from "../components/AsideInfo.astro";
+import { Image } from "astro:assets";
+
+let { headings, post } = Astro.props;
+// console.log("post:", post);
+---
+
+<main id="content">
+    <div class="Container">
+        <AsideAction />
+        <article>
+            <Image src={post.cover} alt={post.title} />
+            <h1>{post.title}</h1>
+            <slot />
+        </article>
+        <AsideInfo headings={headings} />
+    </div>
+</main>

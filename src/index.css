@@ -1,0 +1,554 @@
+:root {
+  color-scheme: light;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    color-scheme: dark;
+  }
+}
+footer[aria-label="main footer"] .Container .footer__awards, footer[aria-label="main footer"] .Container .footer__info, footer[aria-label="main footer"] .Container .footer__ownership, [aria-labelledby="hero title"] .Container .Hero, main#content .Container, header[aria-label="main header"] .Container, header[aria-label="main header"] .Container .c1, header[aria-label="main header"] .Container .c1 .header__Logo, header[aria-label="main header"] .Container .c2, header[aria-label="main header"] .Container .c2 nav.header__main-navigation, header[aria-label="main header"] .Container .c2 nav.header__main-navigation ul, .old-script,
+.no-script {
+  display: flex;
+}
+
+footer[aria-label="main footer"] .Container .footer__awards, footer[aria-label="main footer"] .Container .footer__info, footer[aria-label="main footer"] .Container .footer__ownership, [aria-labelledby="hero title"] .Container .Hero, main#content .Container, header[aria-label="main header"] .Container, header[aria-label="main header"] .Container .c1, header[aria-label="main header"] .Container .c1 .header__Logo, header[aria-label="main header"] .Container .c2, header[aria-label="main header"] .Container .c2 nav.header__main-navigation, header[aria-label="main header"] .Container .c2 nav.header__main-navigation ul, .old-script,
+.no-script {
+  flex-direction: row;
+}
+
+.old-script,
+.no-script {
+  justify-content: center;
+}
+
+header[aria-label="main header"] .Container .c1 {
+  justify-content: flex-start;
+}
+
+header[aria-label="main header"] .Container .c2 {
+  justify-content: flex-end;
+}
+
+footer[aria-label="main footer"] .Container .footer__ownership, header[aria-label="main header"] .Container, header[aria-label="main header"] .Container .c1 .header__Logo, header[aria-label="main header"] .Container .c2 nav.header__main-navigation ul {
+  justify-content: space-between;
+}
+
+footer[aria-label="main footer"] .Container .footer__awards, footer[aria-label="main footer"] .Container .footer__info, footer[aria-label="main footer"] .Container .footer__ownership, header[aria-label="main header"] .Container, header[aria-label="main header"] .Container .c1, header[aria-label="main header"] .Container .c1 .header__Logo, header[aria-label="main header"] .Container .c2, header[aria-label="main header"] .Container .c2 nav.header__main-navigation, header[aria-label="main header"] .Container .c2 nav.header__main-navigation ul, .old-script,
+.no-script {
+  align-items: center;
+}
+
+@font-face {
+  font-family: "Roboto";
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  src: url("/fonts/Roboto/roboto-regular.woff2") format("woff2"), url("/fonts/Roboto/roboto-regular.woff") format("woff"), url("/fonts/Roboto/roboto-regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Roboto";
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+  src: url("/fonts/Roboto/roboto-medium.woff2") format("woff2"), url("/fonts/Roboto/roboto-medium.woff") format("woff"), url("/fonts/Roboto/roboto-medium.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Roboto";
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+  src: url("/fonts/Roboto/roboto-bold.woff2") format("woff2"), url("/fonts/Roboto/roboto-bold.woff") format("woff"), url("/fonts/Roboto/roboto-bold.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Roboto";
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+  src: url("/fonts/Roboto/roboto-black.woff2") format("woff2"), url("/fonts/Roboto/roboto-black.woff") format("woff"), url("/fonts/Roboto/roboto-black.ttf") format("truetype");
+}
+:root {
+  --ff-Roboto: "Roboto", -apple-system, BlinkMacSystemFont, avenir next,
+      avenir, segoe ui, helvetica neue, helvetica, Cantarell, Ubuntu, noto,
+      arial, sans-serif;
+}
+
+body {
+  font-family: var(--ff-Roboto) !important;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+:where(h1, h2, h3, h4) {
+  text-wrap: balance;
+}
+
+input,
+button,
+textarea,
+a,
+select {
+  font: inherit;
+}
+
+:root {
+  --border-radius: 0.625rem;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+html:focus-within {
+  scroll-behavior: smooth;
+  scroll-padding-top: var(--header-padding-hight, 5rem);
+  -webkit-text-size-adjust: none;
+     -moz-text-size-adjust: none;
+          text-size-adjust: none;
+}
+
+body {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  overscroll-behavior: contain;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html,
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+  background-color: var(--bg-clr);
+}
+
+.Container {
+  --container-width: 90%;
+  height: 100%;
+  width: var(--container-width, 90%);
+  margin-inline: auto;
+}
+
+li,
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+li a,
+ul a {
+  text-decoration: none;
+}
+
+::-moz-focus-inner {
+  border: none;
+}
+
+:focus {
+  outline: 2px solid transparent;
+}
+
+.focus {
+  --focus-shadow: 0 0 0 transparent;
+  --accent-clr: #454545;
+  box-shadow: var(--focus-shadow), 0 0 0 -0.4em black, 0 0 0 -0.6em var(--accent-clr);
+  transition: box-shadow 400ms cubic-bezier(0.66, -0.2, 0.27, 1.15);
+}
+
+.focus:focus-visible {
+  outline: 2px solid transparent;
+  box-shadow: var(--focus-shadow), 0 0 0 0.25em black, 0 0 0 0.45em var(--accent-clr);
+}
+
+.image .blur > div {
+  width: 100% !important;
+  height: 100% !important;
+}
+.image picture img {
+  width: 100%;
+  height: 100%;
+}
+
+img,
+svg {
+  max-width: 100%;
+  display: block;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  box-shadow: none;
+  pointer-events: none;
+  isolation: isolate;
+}
+
+[type=button] {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  overflow: hidden;
+  cursor: pointer;
+  text-decoration: none;
+  -webkit-appearance: button;
+     -moz-appearance: button;
+          appearance: button;
+  font: inherit;
+}
+
+:where(.Button, .inputFiled) {
+  min-height: 3.25rem;
+  max-height: 3em;
+  width: -moz-min-content;
+  width: min-content;
+  max-width: min(100%, 90vw);
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  vertical-align: middle;
+  text-align: center;
+  text-transform: capitalize;
+  white-space: nowrap;
+  padding: max(0.4em, 0.4rem) max(2.2em, 2.2rem);
+  font-size: var(--fs-s);
+  font-weight: var(--fw-b);
+  background-color: transparent;
+  color: var(--txt-clr);
+  border: 2px solid var(--secondary-clr);
+  border-radius: var(--border-radius);
+  --focus-shadow: inset 0px -0.4rem 0 var(--accent-shadow-clr);
+}
+
+.chip {
+  display: inline-flex;
+}
+.chip button h4 {
+  margin: 0;
+}
+
+.inputFiled {
+  outline: 2px solid transparent;
+}
+
+.Button:not(:last-child) {
+  margin: 0 0 1rem 0;
+}
+
+.skip-nav-link {
+  transform: scaleX(0);
+}
+
+.skip-nav-link:focus-visible,
+.skip-nav-link:focus {
+  transform: scaleX(1);
+}
+
+.visually-hidden {
+  position: absolute;
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+}
+
+.old-script,
+.no-script {
+  width: 100vw;
+  height: 100vh;
+  z-index: 9999;
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 0 1rem;
+  text-align: center;
+  background-color: #1c1e21;
+  color: #d9d4ce;
+}
+.old-script > p,
+.no-script > p {
+  font-size: 24px;
+  color: #d9d4ce;
+}
+
+.accent-X-clr {
+  --accent-clr: var(--accent-X-clr);
+  --accent-shadow-clr: var(--clr-teal-blue-500);
+}
+
+:root {
+  --Header-hight: 5rem;
+  --Header-Nav-width: 30em;
+  --Header-icon-hight: 5rem;
+}
+
+header[aria-label="main header"] {
+  width: 100%;
+  height: var(--Header-hight);
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  border: 3px solid hotpink;
+}
+header[aria-label="main header"] .Container {
+  gap: 1rem;
+}
+header[aria-label="main header"] .Container .c1 {
+  max-width: 50%;
+  height: 100%;
+}
+header[aria-label="main header"] .Container .c1 .header__Logo {
+  gap: 1rem;
+}
+header[aria-label="main header"] .Container .c1 .header__Logo .main__logo,
+header[aria-label="main header"] .Container .c1 .header__Logo .article__logo {
+  position: relative;
+  white-space: nowrap;
+}
+header[aria-label="main header"] .Container .c2 {
+  max-width: 50%;
+  height: 100%;
+}
+header[aria-label="main header"] .Container .c2 .mobile-nav-toggle {
+  display: none;
+}
+header[aria-label="main header"] .Container .c2 nav.header__main-navigation ul {
+  width: 100%;
+  gap: 1rem;
+}
+:root {
+  --art-width: 70%;
+}
+
+main#content {
+  width: 100%;
+}
+main#content .Container {
+  --container-width: calc(100% - 2rem);
+  position: relative;
+}
+main#content .Container aside[aside-type=action] {
+  width: calc((100% - var(--art-width)) / 2);
+  height: -moz-min-content;
+  height: min-content;
+  position: sticky;
+  top: var(--Header-hight);
+  left: 0;
+  z-index: 999;
+}
+main#content .Container aside[aside-type=action] .test {
+  width: 100%;
+  overflow: hidden;
+  border: 3px dotted blueviolet;
+}
+main#content .Container article {
+  width: var(--art-width);
+  overflow: hidden;
+  padding: 1rem;
+}
+main#content .Container aside[aside-type=info] {
+  width: calc((100% - var(--art-width)) / 2);
+  height: -moz-min-content;
+  height: min-content;
+  position: sticky;
+  top: var(--Header-hight);
+  left: 0;
+  z-index: 999;
+}
+main#content .Container aside[aside-type=info] .table {
+  width: 100%;
+  overflow: hidden;
+  border: 3px dotted green;
+}
+main#content .Container aside[aside-type=info] .table #content {
+  padding: 4px;
+}
+main#content .Container aside[aside-type=info] .table #content h2,
+main#content .Container aside[aside-type=info] .table #content h3,
+main#content .Container aside[aside-type=info] .table #content p {
+  margin: 0;
+  font-size: 12px;
+}
+main#content .Container aside[aside-type=info] .table #content h2 a,
+main#content .Container aside[aside-type=info] .table #content h3 a,
+main#content .Container aside[aside-type=info] .table #content p a {
+  font-size: 12px;
+}
+main#content .Container aside[aside-type=info] .table #content h3 {
+  margin: 0 20px;
+}
+main#content .Container aside[aside-type=info] .table #content p {
+  margin: 0 40px;
+}
+
+[aria-labelledby="hero title"] {
+  width: 100vw;
+  height: calc(100vh - var(--Header-hight));
+}
+[aria-labelledby="hero title"] .Container {
+  --container-width: 80%;
+}
+[aria-labelledby="hero title"] .Container .Hero {
+  width: 100%;
+  height: 100%;
+}
+[aria-labelledby="hero title"] .Container .Hero > * {
+  width: 50%;
+  height: 100%;
+}
+@media screen and (max-width: 769px) {
+  [aria-labelledby="hero title"] .Container .Hero {
+    flex-direction: column;
+  }
+  [aria-labelledby="hero title"] .Container .Hero > * {
+    width: 100%;
+    height: 50%;
+  }
+}
+footer[aria-label="main footer"] {
+  width: 100%;
+  border: 3px solid firebrick;
+}
+footer[aria-label="main footer"] .Container .footer__awards {
+  width: 100%;
+  min-height: 10vh;
+  gap: 0.5rem;
+}
+footer[aria-label="main footer"] .Container .footer__info {
+  width: 100%;
+  min-height: 25vh;
+  gap: 0.5rem;
+}
+footer[aria-label="main footer"] .Container .footer__info .Div {
+  width: 100%;
+  height: 100%;
+}
+footer[aria-label="main footer"] .Container .footer__info .description p {
+  text-align: center;
+}
+footer[aria-label="main footer"] .Container .footer__ownership {
+  width: 100%;
+  gap: 1rem;
+}
+footer[aria-label="main footer"] .Container .footer__ownership .Div {
+  max-width: 50%;
+}
+footer[aria-label="main footer"] .Container .footer__ownership .Div p {
+  white-space: nowrap;
+}
+footer[aria-label="main footer"] .Container .footer__ownership .madeWith .hart {
+  cursor: default;
+}
+@media screen and (max-width: 48em) {
+  .Container {
+    --container-width: calc(100% - 2rem);
+  }
+  header[aria-label="main header"] .Container .c2 {
+    position: relative;
+  }
+  header[aria-label="main header"] .Container .c2 .mobile-nav-toggle {
+    display: block;
+    position: absolute;
+    z-index: 1000;
+  }
+  header[aria-label="main header"] .Container .c2 nav.header__main-navigation:has([data-visible=true]) {
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    background-color: black;
+  }
+  header[aria-label="main header"] .Container .c2 nav.header__main-navigation:has([data-visible=false]) {
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 100%;
+    left: 0;
+    background-color: black;
+  }
+  main#content .Container {
+    display: flex !important;
+    flex-direction: column-reverse !important;
+    position: relative;
+  }
+  main#content .Container aside[aside-type=action],
+  main#content .Container article,
+  main#content .Container aside[aside-type=info] {
+    width: 100%;
+  }
+  main#content .Container aside[aside-type=action] {
+    position: fixed;
+    bottom: 1rem;
+    left: 0;
+    isolation: isolate;
+    z-index: 10;
+    background-color: rgba(128, 128, 128, 0.5);
+    padding: 1rem;
+  }
+  .Button,
+  .inputFiled {
+    width: 100% !important;
+  }
+  .Button:not(:last-child),
+  .inputFiled:not(:last-child) {
+    margin: 0 0 1rem 0;
+  }
+}
+@media screen and (max-width: 26.5625em) {
+  footer[aria-label="main footer"] .Container .footer__awards {
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    align-items: center !important;
+  }
+  footer[aria-label="main footer"] .Container .footer__info {
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    align-items: center !important;
+  }
+  footer[aria-label="main footer"] .Container .footer__ownership {
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    align-items: center !important;
+    gap: 0;
+  }
+  footer[aria-label="main footer"] .Container .footer__ownership div {
+    max-width: 100%;
+  }
+}
+/*For tablets */
+@supports (overflow-x: clip) {
+  html,
+  body {
+    overflow-x: clip;
+  }
+}
+/* For people who have motion sickness. */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  ::before,
+  ::after {
+    animation-delay: -1ms !important;
+    animation-duration: 1ms !important;
+    animation-iteration-count: 1 !important;
+    background-attachment: initial !important;
+    scroll-behavior: auto !important;
+    transition-delay: 0s !important;
+    transition-duration: 0s !important;
+  }
+}/*# sourceMappingURL=index.css.map */

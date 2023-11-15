@@ -1,0 +1,27 @@
+---
+import { getCollection, getEntry } from "astro:content";
+import Html from "@lay/Html.astro";
+import Header from "@comp/Header.astro";
+import Article from "@lay/Article.astro";
+import Footer from "@comp/Footer.astro";
+
+const allArticles = await getCollection("articles");
+---
+
+<Html title="AL Blog">
+    <Header />
+    <div id="content">
+        <ul>
+            {
+                allArticles.map((Entry) => (
+                    <li>
+                        <a href={`./articles/${Entry.slug}`}>
+                            {Entry.data.title}
+                        </a>
+                    </li>
+                ))
+            }
+        </ul>
+    </div>
+    <Footer title="AL Blog" />
+</Html>
