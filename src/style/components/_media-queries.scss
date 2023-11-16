@@ -195,6 +195,7 @@
     *,
     ::before,
     ::after {
+        animation: none;
         animation-delay: -1ms !important;
         animation-duration: 1ms !important;
         animation-iteration-count: 1 !important;

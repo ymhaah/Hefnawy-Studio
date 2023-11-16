@@ -4,16 +4,12 @@ import Header from "@comp/Header.astro";
 import Article from "@lay/Article.astro";
 import Footer from "@comp/Footer.astro";
 
-import Chip from "@ui/Chip.astro";
-
 let pageTitle = "blog";
 ---
 
 <Html title={pageTitle}>
     <Header />
     <div class="Container" id="content">
-        <Chip content="youssef" link="google.com" />
-
         <h1>this is a heading to test the article component</h1>
         <a href="./articles">art</a>
     </div>

@@ -91,15 +91,20 @@ ul {
     }
     picture {
         img {
-            width: 100%;
-            height: 100%;
         }
     }
 }
 img,
 svg {
     max-width: 100%;
-    display: block;
+    height: auto;
+    vertical-align: middle;
+    // display: block;
+    font-style: italic;
+    font-weight: var(--fw-bold);
+    background-repeat: no-repeat;
+    background-size: cover;
+    shape-margin: 0.75rem;
     user-select: none;
     object-fit: cover;
     object-position: center;

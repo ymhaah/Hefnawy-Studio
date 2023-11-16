@@ -34,6 +34,26 @@ const { title } = Astro.props;
         <meta name="generator" content={Astro.generator} />
         <!-- <meta name="color-scheme" content="light dark" /> -->
 
+        
+        <script is:inline>
+            var supportsCssVars = function () {
+                var e,
+                    t = document.createElement("style");
+                return (
+                    (t.innerHTML = "root: { --tmp-var: bold; }"),
+                    document.head.appendChild(t),
+                    (e = !!(
+                        window.CSS &&
+                        window.CSS.supports &&
+                        window.CSS.supports("font-weight", "var(--tmp-var)")
+                    )),
+                    t.parentNode.removeChild(t),
+                    e
+                );
+            };
+            supportsCssVars() || alert("Please use a modern browser");
+        </script>
+
         <link rel="icon" type="image/png" href="" />
         <title>{title}</title>
     </head>
@@ -53,22 +73,23 @@ const { title } = Astro.props;
             div.appendChild(p);
             document.body.appendChild(div);
         </script>
+        <script is:inline>
+            console.log(`Made with 💙 by Youssef Hefnawy: https://twitter.com/hafanwy`);
+            console.warn(
+                `
+              \$$\     $$/  $$\   $$\ 
+               \$$\   $$/   $$ |  $$ |
+                \$$\ $$/    $$ |  $$ |
+                 \$$$$/     $$$$$$$$ |
+                  \$$/      $$  __$$ |
+                  |$$|      $$ |  $$ |
+                  |$$|      $$ |  $$ |
+                  |__|      \__|  \__|
+            `
+            );
+        </script>
         <script src="https://cdn.lordicon.com/bhenfmcm.js"></script>
     </body>
 </html>
 
-<script>
-    console.log(`Made with 💙 by Youssef Hefnawy: https://twitter.com/hafanwi`);
-    console.warn(
-        `
-      \$$\     $$/  $$\   $$\ 
-       \$$\   $$/   $$ |  $$ |
-        \$$\ $$/    $$ |  $$ |
-         \$$$$/     $$$$$$$$ |
-          \$$/      $$  __$$ |
-          |$$|      $$ |  $$ |
-          |$$|      $$ |  $$ |
-          |__|      \__|  \__|
-    `
-    );
-</script>
+

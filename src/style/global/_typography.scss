@@ -1,58 +1,151 @@
 @use "./colors.scss" as *;
 @use "../util/index" as *;
 
-// ! font file path is made to match the path from the css file not from the sass file
-// ! Roboto => Sans Serif
+// ! open-sans => Sans Serif
 @font-face {
-    font-family: "Roboto";
+    font-family: "Open Sans";
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+    src: url("/fonts/open-sans/woff/opensans-300.woff2") format("woff2"),
+        url("/fonts/open-sans/woff/opensans-300.woff") format("woff"),
+        url("/fonts/open-sans/OpenSans-300.ttf") format("truetype");
+}
+@font-face {
+    font-family: "Open Sans";
     font-weight: 400;
     font-style: normal;
     font-display: swap;
-    src: url("/fonts/Roboto/roboto-regular.woff2") format("woff2"),
-        url("/fonts/Roboto/roboto-regular.woff") format("woff"),
-        url("/fonts/Roboto/roboto-regular.ttf") format("truetype");
+    src: url("/fonts/open-sans/woff/opensans-400.woff2") format("woff2"),
+        url("/fonts/open-sans/woff/opensans-400.woff") format("woff"),
+        url("/fonts/open-sans/OpenSans-400.ttf") format("truetype");
 }
 @font-face {
-    font-family: "Roboto";
-    font-weight: 500;
+    font-family: "Open Sans";
+    font-weight: 800;
     font-style: normal;
     font-display: swap;
-    src: url("/fonts/Roboto/roboto-medium.woff2") format("woff2"),
-        url("/fonts/Roboto/roboto-medium.woff") format("woff"),
-        url("/fonts/Roboto/roboto-medium.ttf") format("truetype");
+    src: url("/fonts/open-sans/woff/opensans-800.woff2") format("woff2"),
+        url("/fonts/open-sans/woff/opensans-800.woff") format("woff"),
+        url("/fonts/open-sans/OpenSans-800.ttf") format("truetype");
 }
 @font-face {
-    font-family: "Roboto";
-    font-weight: 700;
+    font-family: "Open Sans";
+    font-weight: 800;
+    font-style: italic;
+    font-display: swap;
+    src: url("/fonts/open-sans/woff/opensans-800-italic.woff2") format("woff2"),
+        url("/fonts/open-sans/woff/opensans-800-italic.woff") format("woff"),
+        url("/fonts/open-sans/opensans-800-italic.ttf") format("truetype");
+}
+// ! Merriweather Serif => Serif
+@font-face {
+    font-family: "Merriweather Serif";
+    font-weight: 300;
     font-style: normal;
     font-display: swap;
-    src: url("/fonts/Roboto/roboto-bold.woff2") format("woff2"),
-        url("/fonts/Roboto/roboto-bold.woff") format("woff"),
-        url("/fonts/Roboto/roboto-bold.ttf") format("truetype");
+    src: url("/fonts/MerriweatherSerif/woff/merriweather-300.woff2")
+            format("woff2"),
+        url("/fonts/MerriweatherSerif/woff/merriweather-300.woff")
+            format("woff"),
+        url("/public/fonts/MerriweatherSerif/Merriweather-300.ttf")
+            format("truetype");
 }
 @font-face {
-    font-family: "Roboto";
-    font-weight: 900;
+    font-family: "Merriweather Serif";
+    font-weight: 400;
     font-style: normal;
     font-display: swap;
-    src: url("/fonts/Roboto/roboto-black.woff2") format("woff2"),
-        url("/fonts/Roboto/roboto-black.woff") format("woff"),
-        url("/fonts/Roboto/roboto-black.ttf") format("truetype");
+    src: url("/fonts/MerriweatherSerif/woff/merriweather-400.woff2")
+            format("woff2"),
+        url("/fonts/MerriweatherSerif/woff/merriweather-400.woff")
+            format("woff"),
+        url("/public/fonts/MerriweatherSerif/Merriweather-400.ttf")
+            format("truetype");
 }
-:root {
-    // font families
-    --ff-Roboto: "Roboto", -apple-system, BlinkMacSystemFont, avenir next,
-        avenir, segoe ui, helvetica neue, helvetica, Cantarell, Ubuntu, noto,
-        arial, sans-serif;
+@font-face {
+    font-family: "Merriweather Serif";
+    font-weight: 800;
+    font-style: normal;
+    font-display: swap;
+    src: url("/fonts/MerriweatherSerif/woff/merriweather-800.woff2")
+            format("woff2"),
+        url("/fonts/MerriweatherSerif/woff/merriweather-800.woff")
+            format("woff"),
+        url("/public/fonts/MerriweatherSerif/Merriweather-800.ttf")
+            format("truetype");
+}
+@font-face {
+    font-family: "Merriweather Serif";
+    font-weight: 800;
+    font-style: italic;
+    font-display: swap;
+    src: url("/fonts/MerriweatherSerif/woff/merriweather-800-italic.woff2")
+            format("woff2"),
+        url("/fonts/MerriweatherSerif/woff/merriweather-800-italic.woff")
+            format("woff"),
+        url("/public/fonts/MerriweatherSerif/Merriweather-800-italic.ttf")
+            format("truetype");
+}
+// ! Partita => Sans Serif
+@font-face {
+    font-family: "Partita";
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+    src: url("/public/fonts/Partita/Partita.woff2") format("woff2"),
+        url("/public/fonts/Partita/Partita.woff") format("woff"),
+        url("/public/fonts/Partita/Partita.otf") format("opentype");
 }
 
+:root {
+    // font families
+    --ff-Open-Sans: "Open Sans", sans-serif;
+    --ff-Merriweather-Serif: "Merriweather Serif", serif;
+    --ff-Partita: "Partita", sans-serif;
+    --fw-light: 300;
+    --fw-reg: 400;
+    --fw-bold: 800;
+}
+/* Fluid font size variables, for browsers that support clamp */
+@supports (font-size: clamp(1rem, 1vw, 1rem)) {
+    :root {
+        --fs-sm: clamp(0.8rem, 0.17vw + 0.76rem, 0.89rem);
+        --fs-base: clamp(1rem, 0.34vw + 0.91rem, 1.19rem);
+        --fs-md: clamp(1.25rem, 0.61vw + 1.1rem, 1.58rem);
+        --fs-lg: clamp(1.56rem, 1vw + 1.31rem, 2.11rem);
+        --fs-xl: clamp(1.95rem, 1.56vw + 1.56rem, 2.81rem);
+    }
+}
+/* Fallback variables for browsers that don't support clamp */
+@supports not (font-size: clamp(1rem, 1vw, 1rem)) {
+    :root {
+        --fs-sm: 0.8rem;
+        --fs-base: 1rem;
+        --fs-md: 1.25rem;
+        --fs-lg: 1.56rem;
+        --fs-xl: 1.95rem;
+    }
+    @media screen and (min-width: 1280px) {
+        :root {
+            --fs-sm: 0.89rem;
+            --fs-base: 1.19rem;
+            --fs-md: 1.58rem;
+            --fs-lg: 2.11rem;
+            --fs-xl: 2.81rem;
+        }
+    }
+}
 body {
-    font-family: var(--ff-Roboto) !important;
+    font-family: var(--ff-Open-Sans) !important;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
 :where(h1, h2, h3, h4) {
     text-wrap: balance;
+}
+p {
+    font-size: var(--fs-base);
 }
 input,
 button,
