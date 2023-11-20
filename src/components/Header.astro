@@ -4,23 +4,32 @@
 
 <header aria-label="main header">
     <div class="Container header__Container">
-        <div class="c1">
+        <div class="c1 column">
             <div class="header__Logo">
-                <a href="/" class="main__logo focus"
-                    ><img src="" alt="logo" />
-                    <span class="visually-hidden">HS</span>
+                <i class="fa-solid fa-server"></i>
+                <a
+                    href="/"
+                    class="main__logo focus"
+                    aria-label="Hefnawy Studio"
+                >
+                    HS
+                    <span class="visually-hidden"
+                        >Greetings to users employing a website reader, Thank
+                        you for taking the time to visit my site. I've made
+                        every effort to enhance your experience, and I hope it
+                        proves to be the best it can be. Wishing you a joyful
+                        and fulfilling day ahead.</span
+                    >
                 </a>
-                <!-- ! make it link to the main hs -->
-                <a href="/" class="article__logo focus"> .Blog</a>
+                <a href="/" class="article__logo focus">.Blog</a>
             </div>
-            <!-- ? put id content everywhere -->
             <a
                 href="#content"
                 title="click Enter to skip navigation menu"
                 class="skip-nav-link Button focus">skip nav</a
             >
         </div>
-        <div class="c2">
+        <div class="c2 column">
             <button
                 type="button"
                 aria-controls="main-navigation-list"
@@ -33,19 +42,20 @@
             <nav class="header__main-navigation" aria-label="main navigation">
                 <ul data-visible="false" id="main-navigation-list" class="">
                     <li>
-                        <a href="#" data-selected="true">Home</a>
+                        <a href="#" data-selected="true">Articles</a>
                     </li>
                     <li>
-                        <a href="#" data-selected="false">Blog</a>
+                        <a href="#" data-selected="false">Services</a>
                     </li>
                     <li>
-                        <a href="#" data-selected="false">About Me</a>
-                    </li>
-                    <li>
-                        <a href="#" data-selected="false">More</a>
+                        <a href="#" data-selected="false">About Us</a>
                     </li>
                 </ul>
             </nav>
+        </div>
+        <div class="c3 column">
+            <button type="button"></button>
+            <button type="button"></button>
         </div>
     </div>
 </header>

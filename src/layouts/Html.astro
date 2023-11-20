@@ -1,6 +1,5 @@
 ---
 import "../index.css";
-import "../style/theme/blue/index.css";
 
 interface Props {
     title: string;
@@ -32,9 +31,12 @@ const { title } = Astro.props;
         <meta name="description" content="" />
         <meta name="author" content="Youssef Hafnawy" />
         <meta name="generator" content={Astro.generator} />
-        <!-- <meta name="color-scheme" content="light dark" /> -->
+        <meta name="color-scheme" content="dark light" />
 
-        
+        <script
+            src="https://kit.fontawesome.com/ce9a6b0742.js"
+            crossorigin="anonymous"></script>
+
         <script is:inline>
             var supportsCssVars = function () {
                 var e,
@@ -74,7 +76,9 @@ const { title } = Astro.props;
             document.body.appendChild(div);
         </script>
         <script is:inline>
-            console.log(`Made with 💙 by Youssef Hefnawy: https://twitter.com/hafanwy`);
+            console.log(
+                `Made with 💙 by Youssef Hefnawy: https://twitter.com/hafanwy`
+            );
             console.warn(
                 `
               \$$\     $$/  $$\   $$\ 
@@ -88,8 +92,5 @@ const { title } = Astro.props;
             `
             );
         </script>
-        <script src="https://cdn.lordicon.com/bhenfmcm.js"></script>
     </body>
 </html>
-
-

@@ -7,6 +7,7 @@
 
 :root {
     --Header-hight: #{toRem(80px)};
+    --Header-column-num: 3;
     --Header-Nav-width: 30em;
     --Header-icon-hight: 5rem;
 }
@@ -18,34 +19,28 @@ header[aria-label="main header"] {
     top: 0;
     left: 0;
     z-index: 999;
-    border: 3px solid hotpink;
-    .Container {
+    .header__Container {
         @include flex(r, sb, c);
         gap: 1rem;
-        .c1 {
-            max-width: 50%;
+        .column {
+            width: calc(100% / var(--Header-column-num));
             height: 100%;
+        }
+        .c1 {
             @include flex(r, fs, c);
-
             .header__Logo {
                 @include flex(r, sb, c);
                 gap: 1rem;
-
-                .main__logo,
-                .article__logo {
-                    position: relative;
+                .main__logo {
+                    font-family: var(--ff-Partita);
+                    font-size: var(--fs-xl);
+                    font-weight: 400;
+                    text-decoration: none;
+                    // line-height: 1;
+                    overflow: hidden;
+                    margin: 0;
                     white-space: nowrap;
                 }
-                // .main__logo::after {
-                //     content: "";
-                //     width: 0.5rem;
-                //     height: 0.5rem;
-                //     border-radius: 50%;
-                //     background-color: white;
-                //     position: absolute;
-                //     right: -0.6rem;
-                //     top: 50%;
-                // }
             }
             .skip-nav-link {
             }
@@ -55,10 +50,7 @@ header[aria-label="main header"] {
             // }
         }
         .c2 {
-            max-width: 50%;
-            height: 100%;
-            @include flex(r, fe, c);
-
+            @include flex(r, c, c);
             .mobile-nav-toggle {
                 display: none;
             }
@@ -78,6 +70,10 @@ header[aria-label="main header"] {
                     }
                 }
             }
+        }
+        .c3 {
+            @include flex(r, fe, c);
+            gap: 1rem;
         }
     }
 }

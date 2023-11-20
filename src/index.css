@@ -1,40 +1,93 @@
 :root {
-  color-scheme: light;
+  --clr-light-text: hsl(217, 92%, 10%);
+  --clr-light-background: hsl(216, 11%, 91%);
+  --clr-light-primary: hsl(217, 92%, 61%);
+  --clr-light-secondary: hsl(217, 24%, 85%);
+  --clr-light-accent: hsl(37, 91%, 48%);
+  --clr-dark-text: hsl(217, 92%, 90%);
+  --clr-dark-background: hsl(216, 11%, 9%);
+  --clr-dark-primary: hsl(217, 92%, 39%);
+  --clr-dark-secondary: hsl(217, 24%, 15%);
+  --clr-dark-accent: hsl(37, 91%, 52%);
 }
 
+@media (prefers-color-scheme: light) {
+  :root {
+    --clr-text: var(--clr-light-text);
+    --clr-background: var(--clr-light-background);
+    --clr-primary: var(--clr-light-primary);
+    --clr-secondary: var(--clr-light-secondary);
+    --clr-accent: var(--clr-light-accent);
+    color-scheme: light;
+  }
+}
 @media (prefers-color-scheme: dark) {
   :root {
+    --clr-text: var(--clr-dark-text);
+    --clr-background: var(--clr-dark-background);
+    --clr-primary: var(--clr-dark-primary);
+    --clr-secondary: var(--clr-dark-secondary);
+    --clr-accent: var(--clr-dark-accent);
     color-scheme: dark;
   }
 }
-footer[aria-label="main footer"] .Container .footer__awards, footer[aria-label="main footer"] .Container .footer__info, footer[aria-label="main footer"] .Container .footer__ownership, [aria-labelledby="hero title"] .Container .Hero, main#content .Container, header[aria-label="main header"] .Container, header[aria-label="main header"] .Container .c1, header[aria-label="main header"] .Container .c1 .header__Logo, header[aria-label="main header"] .Container .c2, header[aria-label="main header"] .Container .c2 nav.header__main-navigation, header[aria-label="main header"] .Container .c2 nav.header__main-navigation ul, .old-script,
+@media (forced-colors: active) {
+  :root {
+    --clr-text: #000;
+    --clr-background: #fff;
+    --clr-primary: #007bff;
+    --clr-secondary: #6c757d;
+    --clr-accent: #28a745;
+  }
+}
+@media (prefers-contrast: more) {
+  :root {
+    /* Adjust the colors for higher contrast */
+    --clr-text: #000;
+    --clr-background: #fff;
+    --clr-primary: #0044cc;
+    --clr-secondary: #666666;
+    --clr-accent: #008000;
+  }
+}
+@media (prefers-contrast: less) {
+  :root {
+    /* Adjust the colors for lower contrast */
+    --clr-text: #333;
+    --clr-background: #f2f2f2;
+    --clr-primary: #0066ff;
+    --clr-secondary: #999999;
+    --clr-accent: #007f00;
+  }
+}
+footer[aria-label="main footer"] .Container .footer__awards, footer[aria-label="main footer"] .Container .footer__info, footer[aria-label="main footer"] .Container .footer__ownership, [aria-labelledby="hero title"] .Container .Hero, main#content .Container, header[aria-label="main header"] .header__Container, header[aria-label="main header"] .header__Container .c1, header[aria-label="main header"] .header__Container .c1 .header__Logo, header[aria-label="main header"] .header__Container .c2, header[aria-label="main header"] .header__Container .c2 nav.header__main-navigation, header[aria-label="main header"] .header__Container .c2 nav.header__main-navigation ul, header[aria-label="main header"] .header__Container .c3, .old-script,
 .no-script {
   display: flex;
 }
 
-footer[aria-label="main footer"] .Container .footer__awards, footer[aria-label="main footer"] .Container .footer__info, footer[aria-label="main footer"] .Container .footer__ownership, [aria-labelledby="hero title"] .Container .Hero, main#content .Container, header[aria-label="main header"] .Container, header[aria-label="main header"] .Container .c1, header[aria-label="main header"] .Container .c1 .header__Logo, header[aria-label="main header"] .Container .c2, header[aria-label="main header"] .Container .c2 nav.header__main-navigation, header[aria-label="main header"] .Container .c2 nav.header__main-navigation ul, .old-script,
+footer[aria-label="main footer"] .Container .footer__awards, footer[aria-label="main footer"] .Container .footer__info, footer[aria-label="main footer"] .Container .footer__ownership, [aria-labelledby="hero title"] .Container .Hero, main#content .Container, header[aria-label="main header"] .header__Container, header[aria-label="main header"] .header__Container .c1, header[aria-label="main header"] .header__Container .c1 .header__Logo, header[aria-label="main header"] .header__Container .c2, header[aria-label="main header"] .header__Container .c2 nav.header__main-navigation, header[aria-label="main header"] .header__Container .c2 nav.header__main-navigation ul, header[aria-label="main header"] .header__Container .c3, .old-script,
 .no-script {
   flex-direction: row;
 }
 
-.old-script,
+header[aria-label="main header"] .header__Container .c2, .old-script,
 .no-script {
   justify-content: center;
 }
 
-header[aria-label="main header"] .Container .c1 {
+header[aria-label="main header"] .header__Container .c1 {
   justify-content: flex-start;
 }
 
-header[aria-label="main header"] .Container .c2 {
+header[aria-label="main header"] .header__Container .c3 {
   justify-content: flex-end;
 }
 
-footer[aria-label="main footer"] .Container .footer__ownership, header[aria-label="main header"] .Container, header[aria-label="main header"] .Container .c1 .header__Logo, header[aria-label="main header"] .Container .c2 nav.header__main-navigation ul {
+footer[aria-label="main footer"] .Container .footer__ownership, header[aria-label="main header"] .header__Container, header[aria-label="main header"] .header__Container .c1 .header__Logo, header[aria-label="main header"] .header__Container .c2 nav.header__main-navigation ul {
   justify-content: space-between;
 }
 
-footer[aria-label="main footer"] .Container .footer__awards, footer[aria-label="main footer"] .Container .footer__info, footer[aria-label="main footer"] .Container .footer__ownership, header[aria-label="main header"] .Container, header[aria-label="main header"] .Container .c1, header[aria-label="main header"] .Container .c1 .header__Logo, header[aria-label="main header"] .Container .c2, header[aria-label="main header"] .Container .c2 nav.header__main-navigation, header[aria-label="main header"] .Container .c2 nav.header__main-navigation ul, .old-script,
+footer[aria-label="main footer"] .Container .footer__awards, footer[aria-label="main footer"] .Container .footer__info, footer[aria-label="main footer"] .Container .footer__ownership, header[aria-label="main header"] .header__Container, header[aria-label="main header"] .header__Container .c1, header[aria-label="main header"] .header__Container .c1 .header__Logo, header[aria-label="main header"] .header__Container .c2, header[aria-label="main header"] .header__Container .c2 nav.header__main-navigation, header[aria-label="main header"] .header__Container .c2 nav.header__main-navigation ul, header[aria-label="main header"] .header__Container .c3, .old-script,
 .no-script {
   align-items: center;
 }
@@ -100,7 +153,7 @@ footer[aria-label="main footer"] .Container .footer__awards, footer[aria-label="
   font-weight: 400;
   font-style: normal;
   font-display: swap;
-  src: url("/public/fonts/Partita/Partita.woff2") format("woff2"), url("/public/fonts/Partita/Partita.woff") format("woff"), url("/public/fonts/Partita/Partita.otf") format("opentype");
+  src: url("/fonts/Partita/Partita.woff2") format("woff2"), url("/fonts/Partita/Partita.woff") format("woff"), url("/fonts/Partita/Partita.otf") format("opentype");
 }
 :root {
   --ff-Open-Sans: "Open Sans", sans-serif;
@@ -186,15 +239,14 @@ body {
   margin: 0;
   padding: 0;
   overscroll-behavior: contain;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
 
 html,
 body {
   max-width: 100%;
   overflow-x: hidden;
-  background-color: var(--bg-clr);
+  background-color: var(--clr-background);
+  color: var(--clr-text);
 }
 
 .Container {
@@ -226,13 +278,13 @@ ul a {
 .focus {
   --focus-shadow: 0 0 0 transparent;
   --accent-clr: #454545;
-  box-shadow: var(--focus-shadow), 0 0 0 -0.4em black, 0 0 0 -0.6em var(--accent-clr);
+  box-shadow: var(--focus-shadow), 0 0 0 -0.4em var(--clr-background), 0 0 0 -0.6em var(--accent-clr);
   transition: box-shadow 400ms cubic-bezier(0.66, -0.2, 0.27, 1.15);
 }
 
 .focus:focus-visible {
   outline: 2px solid transparent;
-  box-shadow: var(--focus-shadow), 0 0 0 0.25em black, 0 0 0 0.45em var(--accent-clr);
+  box-shadow: var(--focus-shadow), 0 0 0 0.25em var(--clr-background), 0 0 0 0.45em var(--accent-clr);
 }
 
 .image .blur > div {
@@ -360,6 +412,7 @@ svg {
 
 :root {
   --Header-hight: 5rem;
+  --Header-column-num: 3;
   --Header-Nav-width: 30em;
   --Header-icon-hight: 5rem;
 }
@@ -371,34 +424,37 @@ header[aria-label="main header"] {
   top: 0;
   left: 0;
   z-index: 999;
-  border: 3px solid hotpink;
 }
-header[aria-label="main header"] .Container {
+header[aria-label="main header"] .header__Container {
   gap: 1rem;
 }
-header[aria-label="main header"] .Container .c1 {
-  max-width: 50%;
+header[aria-label="main header"] .header__Container .column {
+  width: calc(100% / var(--Header-column-num));
   height: 100%;
 }
-header[aria-label="main header"] .Container .c1 .header__Logo {
+header[aria-label="main header"] .header__Container .c1 .header__Logo {
   gap: 1rem;
 }
-header[aria-label="main header"] .Container .c1 .header__Logo .main__logo,
-header[aria-label="main header"] .Container .c1 .header__Logo .article__logo {
-  position: relative;
+header[aria-label="main header"] .header__Container .c1 .header__Logo .main__logo {
+  font-family: var(--ff-Partita);
+  font-size: var(--fs-xl);
+  font-weight: 400;
+  text-decoration: none;
+  overflow: hidden;
+  margin: 0;
   white-space: nowrap;
 }
-header[aria-label="main header"] .Container .c2 {
-  max-width: 50%;
-  height: 100%;
-}
-header[aria-label="main header"] .Container .c2 .mobile-nav-toggle {
+header[aria-label="main header"] .header__Container .c2 .mobile-nav-toggle {
   display: none;
 }
-header[aria-label="main header"] .Container .c2 nav.header__main-navigation ul {
+header[aria-label="main header"] .header__Container .c2 nav.header__main-navigation ul {
   width: 100%;
   gap: 1rem;
 }
+header[aria-label="main header"] .header__Container .c3 {
+  gap: 1rem;
+}
+
 :root {
   --art-width: 70%;
 }
