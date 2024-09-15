@@ -28,7 +28,7 @@
         "paths": {
             "@/*": ["./src/*"],
             "@comp/*": ["./src/components/*"],
-            "@ui/*": ["./src/components/ui/*"],
+            "@ui/*": ["src/components/ui/*"],
             "@img/*": ["./src/assets/images/*"],
             "@icon/*": ["./src/assets/icons/*"]
         }
