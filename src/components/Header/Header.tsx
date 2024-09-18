@@ -2,7 +2,7 @@
 // import { gsap } from "gsap";
 // import { useGSAP } from "@gsap/react";
 
-import headerStyle from "./header.module.scss";
+// import headerStyle from "./header.module.scss";
 
 // import Button from "@/Button";
 

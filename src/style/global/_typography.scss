@@ -1,0 +1,143 @@
+@use "./colors.scss" as *;
+@use "../util/index" as *;
+
+/* 
+--ff-inter
+--ff-geist
+--ff-playfair
+--ff-modern_society
+*/
+
+// Basic system font stacks
+// Sans-serif
+// font-family: -apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui, helvetica neue, helvetica, Cantarell, Ubuntu, roboto, noto, arial, sans-serif;
+// Serif
+// font-family: Iowan Old Style, Apple Garamond, Baskerville, Times New Roman, Droid Serif, Times, Source Serif Pro, serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
+// Mono
+// font-family: Menlo, Consolas, Monaco, Liberation Mono, Lucida Console, monospace;
+
+// // ! font file path is made to match the path from the css file not from the sass file
+// // ! Rachel => serif
+// @font-face {
+//     font-family: "Rachel";
+//     font-weight: 400;
+//     font-style: normal;
+//     font-display: swap;
+//     src: url("./assets/fonts/Rachel/Roman.woff2") format("woff2"),
+//         url("./assets/fonts/Rachel/Roman.woff") format("woff"),
+//         url("./assets/fonts/Rachel/Roman.ttf") format("truetype");
+// }
+
+:root {
+    // ? font sizes
+    --fs-s: var(--fs-100);
+    --fs-m: var(--fs-300);
+    --fs-l: var(--fs-500);
+    --fs-xl: var(--fs-700);
+    --fs-xxl: var(--fs-900);
+
+    // ? Weights
+    --fw-l: 400;
+    --fw-m: 500;
+    --fw-b: 700;
+}
+
+body {
+    font-family: var(--ff-geist);
+    font-optical-sizing: auto;
+    font-style: normal;
+    line-height: 1.7;
+}
+
+:where(h1, h2, h3, h4, p, a:not(.Button), .Button, span) {
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: #{toRem(2px)};
+    color: black;
+}
+:where(h1, h2, h3, h4, p, span):not(:last-child) {
+    margin: 0 0 1rem 0;
+}
+:where(h1, h2, h3, h4) {
+    text-wrap: balance;
+}
+h1,
+.h1 {
+    font-size: var(--fs-l);
+    font-weight: var(--fw-b);
+}
+h2,
+.h2 {
+    font-size: var(--fs-l);
+    font-weight: var(--fw-b);
+}
+h3,
+.h3 {
+    font-size: var(--fs-m);
+    font-weight: var(--fw-m);
+}
+h4,
+.h4 {
+    font-size: var(--fs-s);
+    font-weight: var(--fw-m);
+}
+p,
+.p {
+    font-size: var(--fs-s);
+    font-weight: var(--fw-l);
+}
+a:not(.Button) {
+    font-size: var(--fs-s);
+    font-weight: var(--fw-m);
+    text-decoration: none;
+}
+.fs-s {
+    font-size: var(--fs-100);
+}
+.fs-m {
+    font-size: var(--fs-200);
+}
+.fs-l {
+    font-size: var(--fs-500);
+}
+.fs-xl {
+    font-size: var(--fs-700);
+}
+.fs-xxl {
+    font-size: var(--fs-900);
+}
+.fw-l {
+    font-weight: var(--fw-l);
+}
+.fw-m {
+    font-weight: var(--fw-m);
+}
+.fw-b {
+    font-weight: var(--fw-b);
+}
+.link {
+    text-decoration: underline !important;
+    color: var(--accent-clr) !important;
+}
+// .link:hover,
+// .link:focus {
+// }
+// .text-gradient {
+// 	background: var(--blue);
+// 	background: linear-gradient(90deg, var(--blue) 0%, var(--pink) 100%);
+// 	background-size: 100%;
+// 	-webkit-background-clip: text;
+// 	-moz-background-clip: text;
+// 	-webkit-text-fill-color: transparent;
+// 	-moz-text-fill-color: transparent;
+// }
+@media print {
+    :root {
+        --fs-s: 12px; /* 1rem */
+        --fs-m: 16px; /* 1.3rem */
+        --fs-l: 22px; /* 1.7rem */
+        --fs-xl: 30px; /* 2.3rem */
+        --fs-xxl: 40px; /* 3.1rem */
+        --fs-3xl: calc(24px + 4vw); /* Adjust as needed */
+    }
+}

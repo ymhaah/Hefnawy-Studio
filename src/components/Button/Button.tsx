@@ -1,6 +1,6 @@
 // import React from "react";
 
-import buttonStyle from "./button.module.scss";
+// import buttonStyle from "./button.module.scss";
 
 type BasePropsT<E extends React.ElementType> = {
     children: React.ReactNode;

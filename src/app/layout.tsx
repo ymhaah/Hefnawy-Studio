@@ -4,42 +4,42 @@ import { Toaster } from "sonner";
 
 import { Inter, Playfair_Display } from "next/font/google";
 import localFont from "next/font/local";
-// import "./globals.css";
+import "./index.scss";
 
-// sans
+// ? Sans
 const inter = Inter({
     subsets: ["latin"],
     variable: "--ff-inter",
-    display: "swap",
 });
 
 const Geist = localFont({
     src: [
         {
-            path: "/Fonts/Geist/",
+            path: "../../public/Fonts/Geist/statics-otf/Geist-Regular.otf",
             weight: "400",
             style: "normal",
         },
         {
-            path: "/Fonts/Geist/",
-            weight: "500",
+            path: "../../public/Fonts/Geist/statics-woff/Geist-Regular.woff2",
+            weight: "400",
             style: "normal",
         },
     ],
+    fallback: ["Inter"],
     variable: "--ff-geist",
-    display: "swap",
 });
+
 const ModernSociety = localFont({
-    src: "/Fonts/modern_society/ModernSociety-Regular.otf",
+    src: "../../public/Fonts/modern_society/ModernSociety-Regular.otf",
+    fallback: ["Inter"],
+    weight: "400",
     variable: "--ff-modern_society",
-    display: "swap",
 });
 
 // serif
 const playfair_display = Playfair_Display({
     subsets: ["latin"],
     variable: "--ff-playfair",
-    display: "swap",
 });
 
 export const metadata: Metadata = {
@@ -55,7 +55,7 @@ export default function RootLayout({
     return (
         <html lang="en">
             <body
-                className={`${inter.className} ${playfair_display.className} ${ModernSociety.className} ${Geist.className}`}
+                className={`${inter.variable} ${playfair_display.variable} ${Geist.variable} ${ModernSociety.variable}`}
             >
                 {children}
                 <Toaster />

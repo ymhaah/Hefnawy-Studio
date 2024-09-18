@@ -30,7 +30,8 @@
             "@comp/*": ["./src/components/*"],
             "@ui/*": ["src/components/ui/*"],
             "@img/*": ["./src/assets/images/*"],
-            "@icon/*": ["./src/assets/icons/*"]
+            "@icon/*": ["./src/assets/icons/*"],
+            "@pub/*": ["./public/*"]
         }
     },
     "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
