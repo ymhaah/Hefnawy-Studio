@@ -12,23 +12,6 @@ const inter = Inter({
     variable: "--ff-inter",
 });
 
-const Geist = localFont({
-    src: [
-        {
-            path: "../../public/Fonts/Geist/statics-otf/Geist-Regular.otf",
-            weight: "400",
-            style: "normal",
-        },
-        {
-            path: "../../public/Fonts/Geist/statics-woff/Geist-Regular.woff2",
-            weight: "400",
-            style: "normal",
-        },
-    ],
-    fallback: ["Inter"],
-    variable: "--ff-geist",
-});
-
 const ModernSociety = localFont({
     src: "../../public/Fonts/modern_society/ModernSociety-Regular.otf",
     fallback: ["Inter"],
@@ -55,7 +38,7 @@ export default function RootLayout({
     return (
         <html lang="en">
             <body
-                className={`${inter.variable} ${playfair_display.variable} ${Geist.variable} ${ModernSociety.variable}`}
+                className={`${inter.variable} ${playfair_display.variable} ${ModernSociety.variable}`}
             >
                 {children}
                 <Toaster />

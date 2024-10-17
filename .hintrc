@@ -23,7 +23,9 @@
           "overscroll-behavior",
           "scroll-behavior",
           "backface-visibility",
-          "aspect-ratio"
+          "aspect-ratio",
+          "width: fit-content",
+          "height: fit-content"
         ]
       }
     ],

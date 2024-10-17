@@ -2,32 +2,11 @@
 @use "../util/index" as *;
 
 /* 
---ff-inter
---ff-geist
---ff-playfair
---ff-modern_society
+    ? font families
+--ff-inter -> sans-serif
+--ff-playfair -> san
+--ff-modern_society -> gamic 
 */
-
-// Basic system font stacks
-// Sans-serif
-// font-family: -apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui, helvetica neue, helvetica, Cantarell, Ubuntu, roboto, noto, arial, sans-serif;
-// Serif
-// font-family: Iowan Old Style, Apple Garamond, Baskerville, Times New Roman, Droid Serif, Times, Source Serif Pro, serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
-// Mono
-// font-family: Menlo, Consolas, Monaco, Liberation Mono, Lucida Console, monospace;
-
-// // ! font file path is made to match the path from the css file not from the sass file
-// // ! Rachel => serif
-// @font-face {
-//     font-family: "Rachel";
-//     font-weight: 400;
-//     font-style: normal;
-//     font-display: swap;
-//     src: url("./assets/fonts/Rachel/Roman.woff2") format("woff2"),
-//         url("./assets/fonts/Rachel/Roman.woff") format("woff"),
-//         url("./assets/fonts/Rachel/Roman.ttf") format("truetype");
-// }
-
 :root {
     // ? font sizes
     --fs-s: var(--fs-100);
@@ -39,58 +18,63 @@
     // ? Weights
     --fw-l: 400;
     --fw-m: 500;
-    --fw-b: 700;
+    --fw-b: 800;
 }
 
 body {
-    font-family: var(--ff-geist);
+    font-family: var(--ff-inter);
     font-optical-sizing: auto;
     font-style: normal;
-    line-height: 1.7;
+    // line-height: 1.7;
+    font-synthesis: none;
+    font-optical-sizing: auto;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
-:where(h1, h2, h3, h4, p, a:not(.Button), .Button, span) {
-    margin: 0;
-    text-transform: uppercase;
-    letter-spacing: #{toRem(2px)};
-    color: black;
-}
-:where(h1, h2, h3, h4, p, span):not(:last-child) {
-    margin: 0 0 1rem 0;
-}
-:where(h1, h2, h3, h4) {
-    text-wrap: balance;
-}
-h1,
-.h1 {
-    font-size: var(--fs-l);
-    font-weight: var(--fw-b);
-}
-h2,
-.h2 {
-    font-size: var(--fs-l);
-    font-weight: var(--fw-b);
-}
-h3,
-.h3 {
-    font-size: var(--fs-m);
-    font-weight: var(--fw-m);
-}
-h4,
-.h4 {
-    font-size: var(--fs-s);
-    font-weight: var(--fw-m);
-}
-p,
-.p {
-    font-size: var(--fs-s);
-    font-weight: var(--fw-l);
-}
-a:not(.Button) {
-    font-size: var(--fs-s);
-    font-weight: var(--fw-m);
-    text-decoration: none;
-}
+// :where(h1, h2, h3, h4, p, a:not(.Button), .Button, span) {
+//     margin: 0;
+//     letter-spacing: #{toRem(2px)};
+//     color: black;
+// }
+// :where(h1, h2, h3, h4, p, span):not(:last-child) {
+//     margin: 0 0 1rem 0;
+// }
+// :where(h1, h2, h3, h4) {
+//     font-family: var(--ff-inter);
+//     text-wrap: balance;
+// }
+// h1,
+// .h1 {
+//     font-size: var(--fs-l);
+//     font-weight: var(--fw-b);
+// }
+// h2,
+// .h2 {
+//     font-size: var(--fs-l);
+//     font-weight: var(--fw-b);
+// }
+// h3,
+// .h3 {
+//     font-size: var(--fs-m);
+//     font-weight: var(--fw-m);
+// }
+// h4,
+// .h4 {
+//     font-size: var(--fs-s);
+//     font-weight: var(--fw-m);
+// }
+// p,
+// .p {
+//     font-size: var(--fs-s);
+//     font-weight: var(--fw-l);
+// }
+// a:not(.Button) {
+//     font-size: var(--fs-s);
+//     font-weight: var(--fw-m);
+//     text-decoration: none;
+// }
 .fs-s {
     font-size: var(--fs-100);
 }
