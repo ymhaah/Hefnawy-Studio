@@ -1,3 +1,5 @@
+import { error } from "console";
+import { s } from "framer-motion/client";
 import type { Config } from "tailwindcss";
 
 const config: Config = {
@@ -11,38 +13,41 @@ const config: Config = {
     theme: {
         extend: {
             colors: {
-                border: "hsl(var(--border))",
-                input: "hsl(var(--input))",
-                ring: "hsl(var(--ring))",
-                background: "hsl(var(--background))",
-                foreground: "hsl(var(--foreground))",
+                error: "var(--error-clr-light)",
+                success: "var(--success-clr-light)",
+                border: "var(--border-clr-light)",
+                background: {
+                    light: "var(--bg-clr-light)",
+                    dark: "var(--bg-clr-dark)",
+                },
+                foreground: "var(--bg-clr-dark)",
                 primary: {
-                    DEFAULT: "hsl(var(--primary))",
-                    foreground: "hsl(var(--primary-foreground))",
+                    DEFAULT: "var(--accent-clr-light)",
+                    foreground: "var(--accent-clr-dark)",
                 },
                 secondary: {
-                    DEFAULT: "hsl(var(--secondary))",
-                    foreground: "hsl(var(--secondary-foreground))",
+                    DEFAULT: "var(--accent-clr-light)",
+                    foreground: "var(--accent-clr-dark)",
                 },
                 destructive: {
-                    DEFAULT: "hsl(var(--destructive))",
-                    foreground: "hsl(var(--destructive-foreground))",
+                    DEFAULT: "var(--error-clr-light)",
+                    foreground: "var(--accent-clr-dark)",
                 },
                 muted: {
-                    DEFAULT: "hsl(var(--muted))",
-                    foreground: "hsl(var(--muted-foreground))",
+                    DEFAULT: "var(--mono-clr-dark)",
+                    foreground: "var(--mono-clr-light)",
                 },
                 accent: {
-                    DEFAULT: "hsl(var(--accent))",
-                    foreground: "hsl(var(--accent-foreground))",
+                    DEFAULT: "var(--accent-clr-light)",
+                    foreground: "var(--accent-clr-dark)",
                 },
                 popover: {
-                    DEFAULT: "hsl(var(--popover))",
-                    foreground: "hsl(var(--popover-foreground))",
+                    DEFAULT: "var(--bg-clr-light)",
+                    foreground: "var(--bg-clr-dark)",
                 },
                 card: {
-                    DEFAULT: "hsl(var(--card))",
-                    foreground: "hsl(var(--card-foreground))",
+                    DEFAULT: "var(--bg-clr-light)",
+                    foreground: "var(--bg-clr-dark)",
                 },
             },
             borderRadius: {

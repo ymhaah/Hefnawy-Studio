@@ -34,15 +34,11 @@
 // }
 // }
 
-.loader {
-    width: 100%;
-    height: 100vh;
-    position: fixed;
-    top: 0;
-    left: 0;
-    @include flex(r, c, c);
+.Loader {
     background-color: var(--main-light-clr);
-    z-index: 1000;
+    pointer-events: none;
+    .Container {
+    }
     .loading-spinner {
         --size: 15vw;
         width: var(--size);
