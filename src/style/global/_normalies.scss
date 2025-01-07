@@ -59,8 +59,8 @@
 *::after {
     box-sizing: border-box;
 }
-:before,
-:after {
+::before,
+::after {
     text-decoration: inherit;
     vertical-align: inherit;
 }
@@ -126,7 +126,7 @@ ul {
     outline: none;
 }
 .focus {
-    --focus-ring-clr: var(--accent-clr, hsla(0, 0%, 50%, 0.5));
+    --focus-ring-clr: var(--accent-clr, hsla(192, 3%, 61%, 0.5));
     box-shadow: var(--focus-shadow, 0 0 0 transparent),
         0 0 0 -0.6em var(--bg-clr), 0 0 0 -0.8em var(--focus-ring-clr);
     transition: box-shadow var(--time-fast) var(--animation);
@@ -138,7 +138,7 @@ ul {
 }
 :disabled,
 .disabled {
-    --focus-ring-clr: hsla(0, 0%, 50%, 0.5);
+    --focus-ring-clr: hsla(192, 3%, 61%, 0.5);
     filter: grayscale(80%);
     opacity: 0.8;
     cursor: not-allowed !important;

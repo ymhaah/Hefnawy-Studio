@@ -33,11 +33,19 @@
     --error-clr-light: hsla(var(--clr-red), 1);
     --success-clr-light: hsla(var(--clr-green), 1);
 
-    --accent-clr-light: hsla(var(--clr-blue), 1);
-    --accent-clr-dark: hsla(var(--clr-dark-blue), 1);
+    --primary-clr-light: hsla(var(--clr-blue), 1);
+    --primary-clr-dark: hsla(var(--clr-dark-blue), 1);
 
     --mono-clr-dark: hsla(var(--clr-gray), 1);
     --mono-clr-light: hsla(var(--clr-light-gray-500), 1);
+
+    --bg-clr: var(--bg-clr-light);
+    --txt-clr: var(--txt-clr-dark);
+    --primary-clr: var(--primary-clr-light);
+    --mono-clr: var(--mono-clr-dark);
+    --border-clr: var(--border-clr-light);
+    --error-clr: var(--error-clr-light);
+    --success-clr: var(--success-clr-light);
 
     color-scheme: light;
 }
