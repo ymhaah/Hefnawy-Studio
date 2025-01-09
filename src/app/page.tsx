@@ -1,5 +1,5 @@
 // import Image from "next/image";
-import Loader from "../components/Loader/Loader";
+import Loader from "../components/Loader";
 
 export default function Home() {
     return (

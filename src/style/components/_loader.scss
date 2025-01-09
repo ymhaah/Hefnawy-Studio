@@ -35,9 +35,21 @@
 // }
 
 .Loader {
-    background-color: var(--main-light-clr);
+    background-color: var(--bg-clr-dark);
     pointer-events: none;
     .Container {
+        color: var(--txt-clr-light);
+        .h {
+            font-size: 1.5rem;
+            font-weight: 800;
+            padding: 0.5rem;
+            text-transform: uppercase;
+        }
+        .s {
+            font-size: 1.5rem;
+            font-weight: 600;
+            padding: 0.5rem;
+        }
     }
     .loading-spinner {
         --size: 15vw;

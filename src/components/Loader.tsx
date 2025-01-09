@@ -7,7 +7,8 @@ function Loader() {
             aria-live="assertive"
         >
             <div className="Container flex items-center justify-center">
-                effe
+                <span className="h">Hefnawy</span> |{" "}
+                <span className="s">Studio</span>
             </div>
         </div>
     );
