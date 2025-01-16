@@ -36,126 +36,62 @@
 
 .Loader {
     background-color: var(--bg-clr-dark);
-    pointer-events: none;
+    // pointer-events: none;
     .Container {
-        color: var(--txt-clr-light);
-        .h {
-            font-size: 1.5rem;
-            font-weight: 800;
-            padding: 0.5rem;
-            text-transform: uppercase;
-        }
-        .s {
-            font-size: 1.5rem;
-            font-weight: 600;
-            padding: 0.5rem;
-        }
-    }
-    .loading-spinner {
-        --size: 15vw;
-        width: var(--size);
-        height: var(--size);
-        position: relative;
-        filter: blur(3px) contrast(10);
-        .absolute {
-            width: 100%;
-            height: 100%;
-            position: absolute;
-            top: 0;
-            left: 0;
-        }
-        .small-dots.circle {
-            --circle-size: var(--size);
-            --sons-size: 12%;
-            $son-num: 9;
-            --circle-radius: calc(
-                calc(var(--circle-size) - var(--sons-size)) / 2
-            );
-            --son-deg: calc(360deg / #{$son-num});
-            width: var(--circle-size);
-            height: var(--circle-size);
-            position: relative;
-            @for $inti from 1 to $son-num + 1 {
-                & :nth-child(#{$inti}) {
-                    --deg: calc(var(--son-deg) * #{$inti});
-                }
-            }
-            span {
-                --X: calc(
-                    var(--circle-radius) +
-                        (var(--circle-radius) * cos(var(--deg)))
-                );
-                --Y: calc(
-                    var(--circle-radius) +
-                        (var(--circle-radius) * sin(var(--deg)))
-                );
-                width: var(--sons-size);
-                height: var(--sons-size);
-                position: absolute;
-                top: var(--Y);
-                left: var(--X);
-                margin: 0;
-            }
-        }
-        .big-dots.circle {
-            --circle-size: var(--size);
-            --sons-size: 18%;
-            $son-num: 3;
-            --circle-radius: calc(
-                calc(var(--circle-size) - var(--sons-size)) / 2
-            );
-            --son-deg: calc(360deg / #{$son-num});
-            width: var(--circle-size);
-            height: var(--circle-size);
-            position: relative;
-            @for $inti from 1 to $son-num + 1 {
-                & :nth-child(#{$inti}) {
-                    --deg: calc(var(--son-deg) * #{$inti});
-                }
-            }
-            span {
-                --X: calc(
-                    var(--circle-radius) +
-                        (var(--circle-radius) * cos(var(--deg)))
-                );
-                --Y: calc(
-                    var(--circle-radius) +
-                        (var(--circle-radius) * sin(var(--deg)))
-                );
-                width: var(--sons-size);
-                height: var(--sons-size);
-                position: absolute;
-                top: var(--Y);
-                left: var(--X);
-                margin: 0;
-            }
-        }
-        .spinner {
-            animation-name: spin;
-            animation-timing-function: linear;
-            animation-iteration-count: infinite;
-            transform-origin: 50% 50%;
-            mix-blend-mode: multiply;
-            span {
-                background-color: var(--main-dark-clr);
-                border-radius: 50%;
-            }
-        }
-        .small-dots {
-            animation-duration: 7s;
-            background-color: var(--main-light-clr);
-        }
-        .big-dots {
-            animation-duration: 4s;
-        }
-    }
-}
+        --container-width: 99%;
 
-@keyframes spin {
-    0% {
-        transform: rotate(0deg);
-    }
-    100% {
-        transform: rotate(360deg);
+        h1 {
+            font-size: 5vw;
+            font-weight: 400;
+            filter: blur(0.5px);
+            color: var(--txt-clr-light);
+            // font-family: var(--ff-modern_society);
+            font-family: var(--ff-rakkas);
+            // color: white;
+            // line-height: 1;
+            position: relative;
+            // animation: grow-shrink-rotate-disappear 4s ease-in-out forwards
+            //     infinite;
+        }
+        h1::after {
+            content: "™";
+            font-size: 25%;
+            font-family: var(--ff-inter);
+            position: absolute;
+            top: -5%;
+            right: 0%;
+        }
+        .h {
+            font-family: var(--ff-rakkas);
+            font-family: var(--ff-Diwani);
+            font-size: 90%;
+            // position: absolute;
+        }
     }
 }
+// @keyframes grow-shrink-rotate-disappear {
+//     /* Grow and shrink a couple of times */
+//     0% {
+//         transform: scale(1);
+//         opacity: 1;
+//     }
+//     25% {
+//         transform: scale(1.2);
+//     }
+//     50% {
+//         transform: scale(1);
+//     }
+//     75% {
+//         transform: scale(1.2);
+//     }
+
+//     /* Rotate and fade out */
+//     90% {
+//         transform: scale(1) rotate(360deg);
+//         opacity: 1;
+//     }
+//     100% {
+//         transform: scale(0) rotate(360deg);
+//         opacity: 0;
+//     }
+// }
