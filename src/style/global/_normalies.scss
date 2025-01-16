@@ -63,6 +63,7 @@
 ::after {
     text-decoration: inherit;
     vertical-align: inherit;
+    font: inherit;
 }
 html,
 body {
@@ -70,6 +71,8 @@ body {
     max-width: 100%;
     overflow-x: clip;
     background-color: var(--bg-clr);
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
 }
 @supports not (overflow: clip) {
     html,

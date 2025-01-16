@@ -34,64 +34,82 @@
 // }
 // }
 
+$glitch-steps: 20; // ? max is 100 before it gets too much
 .Loader {
+    --glitch-intensity: -2.5px; // ? max is 5 before it gets too much
+    --glitch-speed: 4s;
     background-color: var(--bg-clr-dark);
-    // pointer-events: none;
     .Container {
         --container-width: 99%;
-
-        h1 {
-            font-size: 5vw;
-            font-weight: 400;
-            filter: blur(0.5px);
-            color: var(--txt-clr-light);
-            // font-family: var(--ff-modern_society);
-            font-family: var(--ff-rakkas);
-            // color: white;
-            // line-height: 1;
+        .loader_logo--1 {
             position: relative;
-            // animation: grow-shrink-rotate-disappear 4s ease-in-out forwards
-            //     infinite;
+            h1 {
+                width: fit-content;
+                font-size: 100px;
+                font-weight: 400;
+                color: var(--txt-clr-light);
+                font-family: var(--ff-rakkas);
+                line-height: 1;
+                position: relative;
+                user-select: none;
+            }
+            .glitch::after,
+            .glitch::before {
+                content: attr(data-text);
+                font-size: 100%;
+                width: fit-content;
+                position: absolute;
+
+                top: 0;
+                color: var(--txt-clr-light);
+                background: var(--bg-clr-dark);
+                overflow: hidden;
+                clip: rect(0, 900px, 0, 0);
+                user-select: none;
+            }
+            .glitch::after {
+                left: var(--glitch-intensity);
+                text-shadow: 1px 0 var(--error-clr);
+                animation: noise-anim var(--glitch-speed) infinite linear
+                    alternate-reverse;
+            }
+            .glitch::before {
+                left: calc(var(--glitch-intensity) + 1px);
+                text-shadow: 1px 0 var(--primary-clr);
+                animation: noise-anim-2 calc(var(--glitch-speed) + 1s) infinite
+                    linear alternate-reverse;
+            }
         }
-        h1::after {
+        .loader_logo--1::after {
             content: "™";
-            font-size: 25%;
+            font-size: 25px;
             font-family: var(--ff-inter);
             position: absolute;
-            top: -5%;
-            right: 0%;
+            top: 0%;
+            right: -10%;
+            user-select: none;
         }
-        .h {
-            font-family: var(--ff-rakkas);
-            font-family: var(--ff-Diwani);
-            font-size: 90%;
-            // position: absolute;
+        // .h {
+        //     font-family: var(--ff-rakkas);
+        //     // font-family: var(--ff-Diwani);
+        //     font-size: 90%;
+        //     position: absolute;
+        //     top: 20%;
+        // }
+    }
+}
+
+@keyframes noise-anim {
+    @for $i from 0 through $glitch-steps {
+        #{percentage($i*(1/$glitch-steps))} {
+            clip: rect(random(100) + px, 9999px, random(100) + px, 0);
         }
     }
 }
-// @keyframes grow-shrink-rotate-disappear {
-//     /* Grow and shrink a couple of times */
-//     0% {
-//         transform: scale(1);
-//         opacity: 1;
-//     }
-//     25% {
-//         transform: scale(1.2);
-//     }
-//     50% {
-//         transform: scale(1);
-//     }
-//     75% {
-//         transform: scale(1.2);
-//     }
-
-//     /* Rotate and fade out */
-//     90% {
-//         transform: scale(1) rotate(360deg);
-//         opacity: 1;
-//     }
-//     100% {
-//         transform: scale(0) rotate(360deg);
-//         opacity: 0;
-//     }
-// }
+@keyframes noise-anim-2 {
+    @for $i from 0 through $glitch-steps {
+        #{percentage($i*(1/$glitch-steps))} {
+            clip: rect(random(100) + px, 9999px, random(100) + px, 0);
+        }
+    }
+}
