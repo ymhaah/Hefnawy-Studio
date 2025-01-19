@@ -1,54 +1,28 @@
-@use "../global/index" as *;
-@use "../util/index" as *;
+// @use "../global/index" as *;
+// @use "../util/index" as *;
 
-// @include flex(r, c, c);
-// @include flexForPhon(cr,2);
-// @include grid(2, 2, fr, 1rem)
+// // @include flex(r, c, c);
+// // @include flexForPhon(cr,2);
+// // @include grid(2, 2, fr, 1rem)
 
-// .circle {
-// --circle-size: ;
-// --sons-size: ;
-// --circle-radius: calc(calc(var(--circle-size) - var(--sons-size)) / 2);
-// --son-deg: calc(360deg / #{$son-num});
-// width: var(--circle-size);
-// height: var(--circle-size);
-// position: relative;
-// @for $inti from 1 to $son-num + 1 {
-//     & :nth-child(#{$inti}) {
-//         --deg: calc(var(--son-deg) * #{$inti});
-//     }
-// }
-// span {
-//     --X: calc(
-//         var(--circle-radius) + (var(--circle-radius) * cos(var(--deg)))
-//     );
-//     --Y: calc(
-//         var(--circle-radius) + (var(--circle-radius) * sin(var(--deg)))
-//     );
-//     width: var(--sons-size);
-//     height: var(--sons-size);
-//     position: absolute;
-//     top: var(--Y);
-//     left: var(--X);
-//     margin: 0;
-// }
-// }
+// font-family: var(--ff-Diwani);
 
-$glitch-steps: 20; // ? max is 100 before it gets too much
+$glitch-steps: 25; // ? max is 100 before it gets too much
 .Loader {
-    --glitch-intensity: -2.5px; // ? max is 5 before it gets too much
-    --glitch-speed: 4s;
+    --glitch-intensity: -1.5px; // ? max is 5 before it gets too much
+    --glitch-speed: 2s;
     background-color: var(--bg-clr-dark);
     .Container {
         --container-width: 99%;
-        .loader_logo--1 {
+        position: relative;
+
+        .Logo {
             position: relative;
             h1 {
                 width: fit-content;
-                font-size: 100px;
+                font-size: 200px;
                 font-weight: 400;
-                color: var(--txt-clr-light);
-                font-family: var(--ff-rakkas);
+                color: var(--bg-clr);
                 line-height: 1;
                 position: relative;
                 user-select: none;
@@ -59,57 +33,61 @@ $glitch-steps: 20; // ? max is 100 before it gets too much
                 font-size: 100%;
                 width: fit-content;
                 position: absolute;
-
                 top: 0;
-                color: var(--txt-clr-light);
+                color: var(--bg-clr);
                 background: var(--bg-clr-dark);
                 overflow: hidden;
-                clip: rect(0, 900px, 0, 0);
+                clip: rect(0, 0px, 0, 0);
                 user-select: none;
             }
             .glitch::after {
                 left: var(--glitch-intensity);
                 text-shadow: 1px 0 var(--error-clr);
-                animation: noise-anim var(--glitch-speed) infinite linear
+                animation: noise-anim var(--glitch-speed) ease-in
                     alternate-reverse;
             }
             .glitch::before {
                 left: calc(var(--glitch-intensity) + 1px);
                 text-shadow: 1px 0 var(--primary-clr);
-                animation: noise-anim-2 calc(var(--glitch-speed) + 1s) infinite
-                    linear alternate-reverse;
+                animation: noise-anim-2 calc(var(--glitch-speed) + 1s) ease-in
+                    alternate-reverse;
             }
         }
-        .loader_logo--1::after {
+        .logo_stage-1 {
+            font-family: var(--ff-rakkas);
+        }
+        .logo_stage-2 {
+            font-family: var(--ff-modern_society);
+        }
+        .logo_stage-1::after,
+        .logo_stage-2::after {
             content: "™";
             font-size: 25px;
+            color: var(--bg-clr);
             font-family: var(--ff-inter);
             position: absolute;
             top: 0%;
             right: -10%;
             user-select: none;
         }
-        // .h {
-        //     font-family: var(--ff-rakkas);
-        //     // font-family: var(--ff-Diwani);
-        //     font-size: 90%;
-        //     position: absolute;
-        //     top: 20%;
-        // }
+        .logo_stage-1::after {
+        }
+        .logo_stage-2::after {
+        }
     }
 }
 
 @keyframes noise-anim {
     @for $i from 0 through $glitch-steps {
         #{percentage($i*(1/$glitch-steps))} {
-            clip: rect(random(100) + px, 9999px, random(100) + px, 0);
+            clip: rect(random(100) + px, 9999px, random(200) + px, 0);
         }
     }
 }
 @keyframes noise-anim-2 {
     @for $i from 0 through $glitch-steps {
         #{percentage($i*(1/$glitch-steps))} {
-            clip: rect(random(100) + px, 9999px, random(100) + px, 0);
+            clip: rect(random(100) + px, 9999px, random(200) + px, 0);
         }
     }
 }
