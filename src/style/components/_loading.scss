@@ -1,0 +1,80 @@
+@use "../global/index" as *;
+@use "../util/index" as *;
+
+// // @include flex(r, c, c);
+// // @include flexForPhon(cr,2);
+// // @include grid(2, 2, fr, 1rem)
+
+// font-family: var(--ff-Diwani);
+
+$glitch-steps: 25; // ? max is 100 before it gets too much
+.Loading {
+    --glitch-intensity: -3px; // ? max is 5 before it gets too much
+    --glitch-speed: 3s;
+    background-color: var(--bg-clr);
+    .Container {
+        .Logo {
+            h1 {
+                font-weight: var(--fw-m);
+                color: var(--txt-clr);
+                filter: blur(0.1px);
+                user-select: none;
+            }
+        }
+        .logo_main {
+            h1 {
+                font-size: 2rem;
+                font-family: var(--ff-rakkas);
+            }
+        }
+        .logo_studio {
+            h1 {
+                font-size: 10rem;
+                font-family: var(--ff-modern_society);
+            }
+        }
+    }
+}
+.glitch {
+    overflow: hidden;
+}
+.glitch::after,
+.glitch::before {
+    content: attr(data-text);
+    font-size: 100%;
+    width: fit-content;
+    position: absolute;
+    top: 0;
+    color: var(--txt-clr);
+    background: var(--bg-clr);
+    overflow: hidden;
+    clip: rect(0, 0px, 0, 0);
+    user-select: none;
+    z-index: -1;
+    text-shadow: 2px 0 var(--error-clr);
+}
+.glitch::after {
+    left: var(--glitch-intensity);
+    animation: noise-anim var(--glitch-speed) linear infinite alternate-reverse;
+}
+.glitch::before {
+    left: calc(var(--glitch-intensity) * -1.5);
+    animation: noise-anim-2 calc(var(--glitch-speed) + 1s) linear infinite
+        alternate-reverse;
+}
+@media (prefers-reduced-motion: no-preference) {
+    @keyframes noise-anim {
+        @for $i from 0 through $glitch-steps {
+            #{percentage($i*(1/$glitch-steps))} {
+                clip: rect(random(100) + px, 9999px, random(250) + px, 0);
+            }
+        }
+    }
+    @keyframes noise-anim-2 {
+        @for $i from 0 through $glitch-steps {
+            #{percentage($i*(1/$glitch-steps))} {
+                clip: rect(random(100) + px, 9999px, random(250) + px, 0);
+            }
+        }
+    }
+}
