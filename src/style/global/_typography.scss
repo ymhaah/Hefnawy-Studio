@@ -9,102 +9,154 @@
 */
 :root {
     // ? font sizes
-    --fs-s: var(--fs-100);
-    --fs-m: var(--fs-300);
-    --fs-l: var(--fs-500);
-    --fs-xl: var(--fs-700);
-    --fs-xxl: var(--fs-900);
-
-    // clamp(16px, 1.2vw, 19px)
+    --fs-sm: clamp(0.58rem, 0.13vi + 0.55rem, 0.66rem); // 0.66rem -> 9.28px
+    --fs-base: clamp(0.88rem, 0.4vi + 0.78rem, 1.13rem); // 1.13rem -> 14.08px
+    --fs-md: clamp(1.31rem, 0.96vi + 1.07rem, 1.91rem); // 1.91rem -> 20.96px
+    --fs-lg: clamp(1.97rem, 2.05vi + 1.46rem, 3.25rem); // 3.25rem -> 31.52px
+    --fs-xl: clamp(2.95rem, 4.12vi + 1.92rem, 5.53rem); // 5.53rem -> 47.2px
+    --fs-xxl: clamp(4.43rem, 7.95vi + 2.44rem, 9.4rem); // 9.4rem -> 70.88px
+    --fs-xxxl: clamp(
+        6.64rem,
+        14.93vi + 2.91rem,
+        15.97rem
+    ); // 15.97rem -> 106.24px
 
     // ? Weights
     --fw-l: 300;
     --fw-m: 400;
-    --fw-b: 700;
+    --fw-b: 600;
+}
+
+// ? Fallback for browsers that don’t support `vi`
+@supports not (width: 1vi) {
+    :root {
+        --fs-sm: clamp(0.58rem, 0.13vw + 0.55rem, 0.66rem);
+        --fs-base: clamp(0.88rem, 0.4vw + 0.78rem, 1.13rem);
+        --fs-md: clamp(1.31rem, 0.96vw + 1.07rem, 1.91rem);
+        --fs-lg: clamp(1.97rem, 2.05vw + 1.46rem, 3.25rem);
+        --fs-xl: clamp(2.95rem, 4.12vw + 1.92rem, 5.53rem);
+        --fs-xxl: clamp(4.43rem, 7.95vw + 2.44rem, 9.4rem);
+        --fs-xxxl: clamp(6.64rem, 14.93vw + 2.91rem, 15.97rem);
+    }
+}
+// ?  For browsers that don't support clamp
+@supports not (font-size: clamp(1rem, 1vw, 1rem)) {
+    :root {
+        --fs-sm: 0.58rem;
+        --fs-base: 0.88rem;
+        --fs-md: 1.31rem;
+        --fs-lg: 1.97rem;
+        --fs-xl: 2.95rem;
+        --fs-xxl: 4.43rem;
+        --fs-xxxl: 6.64rem;
+    }
+    @media screen and (min-width: 1400px) {
+        :root {
+            --fs-sm: 0.66rem;
+            --fs-base: 1.13rem;
+            --fs-md: 1.91rem;
+            --fs-lg: 3.25rem;
+            --fs-xl: 5.53rem;
+            --fs-xxl: 9.4rem;
+            --fs-xxxl: 15.97rem;
+        }
+    }
+}
+@media print {
+    :root {
+        --fs-sm: 0.66rem;
+        --fs-base: 1.13rem;
+        --fs-md: 1.91rem;
+        --fs-lg: 3.25rem;
+        --fs-xl: 5.53rem;
+        --fs-xxl: 9.4rem;
+        --fs-xxxl: 15.97rem;
+    }
 }
 
 body {
     font-family: var(--ff-inter);
+    color: var(--txt-clr);
     font-optical-sizing: auto;
     font-style: normal;
-    // line-height: 1.7;
+    line-height: 1.6;
+    letter-spacing: 0.02em;
     font-synthesis: none;
     font-optical-sizing: auto;
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
-
-// :where(h1, h2, h3, h4, p, a:not(.Button), .Button, span) {
-//     margin: 0;
-//     letter-spacing: #{toRem(2px)};
-//     color: black;
-// }
-// :where(h1, h2, h3, h4, p, span):not(:last-child) {
-//     margin: 0 0 1rem 0;
-// }
-// :where(h1, h2, h3, h4) {
-//     font-family: var(--ff-inter);
-//     text-wrap: balance;
-// }
-// h1,
-// .h1 {
-//     font-size: var(--fs-l);
-//     font-weight: var(--fw-b);
-// }
-// h2,
-// .h2 {
-//     font-size: var(--fs-l);
-//     font-weight: var(--fw-b);
-// }
-// h3,
-// .h3 {
-//     font-size: var(--fs-m);
-//     font-weight: var(--fw-m);
-// }
-// h4,
-// .h4 {
-//     font-size: var(--fs-s);
-//     font-weight: var(--fw-m);
-// }
-// p,
-// .p {
-//     font-size: var(--fs-s);
-//     font-weight: var(--fw-l);
-// }
-// a:not(.Button) {
-//     font-size: var(--fs-s);
-//     font-weight: var(--fw-m);
-//     text-decoration: none;
-// }
-.fs-s {
-    font-size: var(--fs-100);
+:where(h1, h2, h3, h4, p, a:not(.Button), .Button, span) {
+    // margin: 0;
+    // letter-spacing: #{toRem(2px)};
+    // color: black;
 }
-.fs-m {
-    font-size: var(--fs-200);
+:where(h1, h2, h3, h4, p, span):not(:last-child) {
+    margin: 0 0 0.5rem 0;
 }
-.fs-l {
-    font-size: var(--fs-500);
+:where(h1, h2, h3, h4) {
+    text-wrap: balance;
+    hyphens: auto;
+    font-weight: var(--fw-b); /* Bolder for headings */
+    letter-spacing: -0.02em; /* Tighten letter-spacing for headings */
+    line-height: 1.3;
+    text-transform: capitalize;
 }
-.fs-xl {
-    font-size: var(--fs-700);
-}
-.fs-xxl {
-    font-size: var(--fs-900);
-}
-.fw-l {
-    font-weight: var(--fw-l);
-}
-.fw-m {
-    font-weight: var(--fw-m);
-}
-.fw-b {
+h1,
+h2,
+.h1 {
+    font-size: var(--fs-md);
     font-weight: var(--fw-b);
 }
-.link {
-    text-decoration: underline !important;
-    color: var(--accent-clr) !important;
+
+h3,
+.h3 {
+    font-size: var(--fs-md);
+    font-weight: var(--fw-b);
 }
+h4,
+.h4 {
+    font-size: var(--fs-base);
+    font-weight: var(--fw-b);
+}
+p,
+.p,
+a:not(.Button) {
+    font-size: var(--fs-base);
+    font-weight: var(--fw-m);
+}
+a:not(.Button) {
+    text-decoration: none;
+}
+// .fs-s {
+//     font-size: var(--fs-100);
+// }
+// .fs-m {
+//     font-size: var(--fs-200);
+// }
+// .fs-l {
+//     font-size: var(--fs-500);
+// }
+// .fs-xl {
+//     font-size: var(--fs-700);
+// }
+// .fs-xxl {
+//     font-size: var(--fs-900);
+// }
+// .fw-l {
+//     font-weight: var(--fw-l);
+// }
+// .fw-m {
+//     font-weight: var(--fw-m);
+// }
+// .fw-b {
+//     font-weight: var(--fw-b);
+// }
+// .link {
+//     text-decoration: underline !important;
+//     color: var(--accent-clr) !important;
+// }
 // .link:hover,
 // .link:focus {
 // }
@@ -117,13 +169,3 @@ body {
 // 	-webkit-text-fill-color: transparent;
 // 	-moz-text-fill-color: transparent;
 // }
-@media print {
-    :root {
-        --fs-s: 12px; /* 1rem */
-        --fs-m: 16px; /* 1.3rem */
-        --fs-l: 22px; /* 1.7rem */
-        --fs-xl: 30px; /* 2.3rem */
-        --fs-xxl: 40px; /* 3.1rem */
-        --fs-3xl: calc(24px + 4vw); /* Adjust as needed */
-    }
-}

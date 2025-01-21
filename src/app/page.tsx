@@ -12,6 +12,13 @@ export default async function Home() {
         <main className="h-[500vh] w-full">
             <div className="Container">
                 <Button>test</Button>
+                <h2>this is a heading</h2>
+                <p>
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                    Voluptatum nam atque sed illo itaque voluptate quisquam
+                    harum amet. Illo, praesentium dolorem. Voluptate corporis
+                    omnis architecto cumque quis deserunt labore illum.
+                </p>
             </div>
         </main>
     );
