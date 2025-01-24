@@ -12,13 +12,56 @@ export default async function Home() {
         <main className="h-[500vh] w-full">
             <div className="Container">
                 <Button>test</Button>
-                <h2>this is a heading</h2>
-                <p>
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                    Voluptatum nam atque sed illo itaque voluptate quisquam
-                    harum amet. Illo, praesentium dolorem. Voluptate corporis
-                    omnis architecto cumque quis deserunt labore illum.
+                <h1 className="h1 fs-xxxl">
+                    H1 Heading - The Biggest Title H1 Heading - The Biggest
+                    Title
+                </h1>
+                <h2 className="h1">H2 Heading - Secondary Title</h2>
+                <h3 className="h3">H3 Heading - Section Title</h3>
+                <h4 className="h4">H4 Heading - Subsection Title</h4>
+                <p className="p fs-base">
+                    This is a paragraph of text using the <code>p</code> class.
+                    It should display the base font size and line height for
+                    body text. This is a paragraph of text using the{" "}
+                    <code>p</code> class. It should display the base font size
+                    and line height for body text. This is a paragraph of text
+                    using the <code>p</code> class. It should display the base
+                    font size and line height for body text. This is a paragraph
+                    of text using the <code>p</code> class. It should display
+                    the base font size and line height for body text.
                 </p>
+                <p className="p">
+                    You can also test inline elements like{" "}
+                    <strong>bold text</strong>, <em>italic text</em>,{" "}
+                    <a href="#test">links</a>, and <code>code snippets</code>.
+                </p>
+                <small className="small">
+                    Small Text: This is for smaller, less emphasized text.
+                </small>
+                <div style={{ marginTop: "2rem" }}>
+                    <h3 className="h3">Font Size Utilities</h3>
+                    <p className="fs-sm">
+                        This text uses <code>.fs-sm</code>.
+                    </p>
+                    <p className="fs-base">
+                        This text uses <code>.fs-base</code>.
+                    </p>
+                    <p className="fs-md">
+                        This text uses <code>.fs-md</code>.
+                    </p>
+                    <p className="fs-lg">
+                        This text uses <code>.fs-lg</code>.
+                    </p>
+                    <p className="fs-xl">
+                        This text uses <code>.fs-xl</code>.
+                    </p>
+                    <p className="fs-xxl">
+                        This text uses <code>.fs-xxl</code>.
+                    </p>
+                    <p className="fs-xxxl">
+                        This text uses <code>.fs-xxxl</code>.
+                    </p>
+                </div>
             </div>
         </main>
     );

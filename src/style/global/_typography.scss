@@ -7,58 +7,49 @@
 --ff-playfair -> san
 --ff-modern_society -> gamic 
 */
+
 :root {
     // ? font sizes
-    --fs-sm: clamp(0.58rem, 0.13vi + 0.55rem, 0.66rem); // 0.66rem -> 9.28px
-    --fs-base: clamp(0.88rem, 0.4vi + 0.78rem, 1.13rem); // 1.13rem -> 14.08px
-    --fs-md: clamp(1.31rem, 0.96vi + 1.07rem, 1.91rem); // 1.91rem -> 20.96px
-    --fs-lg: clamp(1.97rem, 2.05vi + 1.46rem, 3.25rem); // 3.25rem -> 31.52px
-    --fs-xl: clamp(2.95rem, 4.12vi + 1.92rem, 5.53rem); // 5.53rem -> 47.2px
-    --fs-xxl: clamp(4.43rem, 7.95vi + 2.44rem, 9.4rem); // 9.4rem -> 70.88px
-    --fs-xxxl: clamp(
-        6.64rem,
-        14.93vi + 2.91rem,
-        15.97rem
-    ); // 15.97rem -> 106.24px
-
-    // ? Weights
-    --fw-l: 300;
-    --fw-m: 400;
-    --fw-b: 600;
+    --fs-sm: clamp(0.68rem, 0.11vi + 0.65rem, 0.74rem);
+    --fs-base: clamp(0.75rem, 0.8vi + 0.55rem, 1.1rem);
+    --fs-md: clamp(0.83rem, 1.95vi + 0.34rem, 1.9rem);
+    --fs-lg: clamp(0.91rem, 3.88vi + -0.06rem, 3.04rem);
+    --fs-xl: clamp(1rem, 7.03vi + -0.76rem, 4.86rem);
+    --fs-xxl: clamp(1.1rem, 12.15vi + -1.94rem, 7.78rem);
+    --fs-xxxl: clamp(1.21rem, 20.44vi + -3.9rem, 12.45rem);
 }
-
 // ? Fallback for browsers that don’t support `vi`
 @supports not (width: 1vi) {
     :root {
-        --fs-sm: clamp(0.58rem, 0.13vw + 0.55rem, 0.66rem);
-        --fs-base: clamp(0.88rem, 0.4vw + 0.78rem, 1.13rem);
-        --fs-md: clamp(1.31rem, 0.96vw + 1.07rem, 1.91rem);
-        --fs-lg: clamp(1.97rem, 2.05vw + 1.46rem, 3.25rem);
-        --fs-xl: clamp(2.95rem, 4.12vw + 1.92rem, 5.53rem);
-        --fs-xxl: clamp(4.43rem, 7.95vw + 2.44rem, 9.4rem);
-        --fs-xxxl: clamp(6.64rem, 14.93vw + 2.91rem, 15.97rem);
+        --fs-sm: clamp(0.68rem, 0.11vw + 0.65rem, 0.74rem);
+        --fs-base: clamp(0.75rem, 0.8vw + 0.55rem, 1.1rem);
+        --fs-md: clamp(0.83rem, 1.95vw + 0.34rem, 1.9rem);
+        --fs-lg: clamp(0.91rem, 3.88vw + -0.06rem, 3.04rem);
+        --fs-xl: clamp(1rem, 7.03vw + -0.76rem, 4.86rem);
+        --fs-xxl: clamp(1.1rem, 12.15vw + -1.94rem, 7.78rem);
+        --fs-xxxl: clamp(1.21rem, 20.44vw + -3.9rem, 12.45rem);
     }
 }
 // ?  For browsers that don't support clamp
-@supports not (font-size: clamp(1rem, 1vw, 1rem)) {
+@supports not (font-size: clamp(1rem, 1vi, 1rem)) {
     :root {
-        --fs-sm: 0.58rem;
-        --fs-base: 0.88rem;
-        --fs-md: 1.31rem;
-        --fs-lg: 1.97rem;
-        --fs-xl: 2.95rem;
-        --fs-xxl: 4.43rem;
-        --fs-xxxl: 6.64rem;
+        --fs-sm: 0.68rem;
+        --fs-base: 0.75rem;
+        --fs-md: 0.83rem;
+        --fs-lg: 0.91rem;
+        --fs-xl: 1rem;
+        --fs-xxl: 1.1rem;
+        --fs-xxxl: 1.21rem;
     }
-    @media screen and (min-width: 1400px) {
+    @media screen and (min-width: 1280px) {
         :root {
-            --fs-sm: 0.66rem;
-            --fs-base: 1.13rem;
-            --fs-md: 1.91rem;
-            --fs-lg: 3.25rem;
-            --fs-xl: 5.53rem;
-            --fs-xxl: 9.4rem;
-            --fs-xxxl: 15.97rem;
+            --fs-sm: 0.74rem;
+            --fs-base: 1.19rem;
+            --fs-md: 1.9rem;
+            --fs-lg: 3.04rem;
+            --fs-xl: 4.86rem;
+            --fs-xxl: 7.78rem;
+            --fs-xxxl: 12.45rem;
         }
     }
 }
@@ -76,83 +67,92 @@
 
 body {
     font-family: var(--ff-inter);
+    font-size: var(--fs-base);
+    font-style: normal;
+    line-height: 1.5;
+    letter-spacing: 0em;
+    font-weight: 400;
     color: var(--txt-clr);
     font-optical-sizing: auto;
-    font-style: normal;
-    line-height: 1.6;
-    letter-spacing: 0.02em;
+    font-feature-settings: "liga" 1, "calt" 1;
     font-synthesis: none;
     font-optical-sizing: auto;
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
-:where(h1, h2, h3, h4, p, a:not(.Button), .Button, span) {
-    // margin: 0;
-    // letter-spacing: #{toRem(2px)};
-    // color: black;
-}
-:where(h1, h2, h3, h4, p, span):not(:last-child) {
-    margin: 0 0 0.5rem 0;
-}
-:where(h1, h2, h3, h4) {
-    text-wrap: balance;
-    hyphens: auto;
-    font-weight: var(--fw-b); /* Bolder for headings */
-    letter-spacing: -0.02em; /* Tighten letter-spacing for headings */
-    line-height: 1.3;
-    text-transform: capitalize;
-}
+// :where(h1, h2, h3, h4, p, a:not(.Button), .Button, span) {
+//     // margin: 0;
+//     // letter-spacing: #{toRem(2px)};
+//     // color: black;
+// }
+// :where(h1, h2, h3, h4) {
+//     text-wrap: balance;
+//     hyphens: auto;
+//     text-transform: capitalize;
+// }
+// :where(h1, h2, h3, h4, p, span):not(:last-child) {
+//     margin: 0 0 0.5rem 0;
+// }
 h1,
 h2,
 .h1 {
-    font-size: var(--fs-md);
-    font-weight: var(--fw-b);
+    font-weight: 700;
+    line-height: calc(1em * 1.1);
+    letter-spacing: -0.02em;
+    margin: 0.5em 0;
 }
-
 h3,
 .h3 {
-    font-size: var(--fs-md);
-    font-weight: var(--fw-b);
+    font-weight: 700;
+    line-height: calc(1em * 1.2);
+    letter-spacing: -0.015em;
+    margin: 0.6em 0;
 }
 h4,
 .h4 {
-    font-size: var(--fs-base);
-    font-weight: var(--fw-b);
+    font-weight: 600;
+    line-height: calc(1em * 1.3);
+    letter-spacing: -0.01em;
+    margin: 0.75em 0;
 }
 p,
 .p,
 a:not(.Button) {
-    font-size: var(--fs-base);
-    font-weight: var(--fw-m);
-}
-a:not(.Button) {
+    font-weight: 400;
+    margin: 1em 0;
     text-decoration: none;
 }
-// .fs-s {
-//     font-size: var(--fs-100);
-// }
-// .fs-m {
-//     font-size: var(--fs-200);
-// }
-// .fs-l {
-//     font-size: var(--fs-500);
-// }
-// .fs-xl {
-//     font-size: var(--fs-700);
-// }
-// .fs-xxl {
-//     font-size: var(--fs-900);
-// }
-// .fw-l {
-//     font-weight: var(--fw-l);
-// }
-// .fw-m {
-//     font-weight: var(--fw-m);
-// }
-// .fw-b {
-//     font-weight: var(--fw-b);
-// }
+small,
+.small {
+    font-size: var(--fs-sm);
+    letter-spacing: 0.02em;
+    font-weight: 300;
+    text-transform: uppercase;
+}
+
+.fs-sm {
+    font-size: var(--fs-sm);
+}
+.fs-base {
+    font-size: var(--fs-base);
+}
+.fs-md {
+    font-size: var(--fs-md);
+}
+.fs-lg {
+    font-size: var(--fs-lg);
+}
+.fs-xl {
+    font-size: var(--fs-xl);
+}
+.fs-xxl {
+    font-size: var(--fs-xxl);
+}
+.fs-xxxl {
+    font-size: var(--fs-xxxl);
+}
+
 // .link {
 //     text-decoration: underline !important;
 //     color: var(--accent-clr) !important;
