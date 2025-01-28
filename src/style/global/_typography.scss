@@ -3,65 +3,32 @@
 
 /* 
     ? font families
---ff-inter -> sans-serif
+--ff-inter -> sans-serif, main font
 --ff-playfair -> san
---ff-modern_society -> gamic 
+--ff-modern_society -> display font, for Studio logo 
+--ff-rakkas -> display font, for hefnawy logo
+--ff-Diwani -> display font, for cool staff
 */
 
 :root {
     // ? font sizes
-    --fs-sm: clamp(0.68rem, 0.11vi + 0.65rem, 0.74rem);
-    --fs-base: clamp(0.75rem, 0.8vi + 0.55rem, 1.1rem);
-    --fs-md: clamp(0.83rem, 1.95vi + 0.34rem, 1.9rem);
-    --fs-lg: clamp(0.91rem, 3.88vi + -0.06rem, 3.04rem);
-    --fs-xl: clamp(1rem, 7.03vi + -0.76rem, 4.86rem);
-    --fs-xxl: clamp(1.1rem, 12.15vi + -1.94rem, 7.78rem);
-    --fs-xxxl: clamp(1.21rem, 20.44vi + -3.9rem, 12.45rem);
-}
-// ? Fallback for browsers that don’t support `vi`
-@supports not (width: 1vi) {
-    :root {
-        --fs-sm: clamp(0.68rem, 0.11vw + 0.65rem, 0.74rem);
-        --fs-base: clamp(0.75rem, 0.8vw + 0.55rem, 1.1rem);
-        --fs-md: clamp(0.83rem, 1.95vw + 0.34rem, 1.9rem);
-        --fs-lg: clamp(0.91rem, 3.88vw + -0.06rem, 3.04rem);
-        --fs-xl: clamp(1rem, 7.03vw + -0.76rem, 4.86rem);
-        --fs-xxl: clamp(1.1rem, 12.15vw + -1.94rem, 7.78rem);
-        --fs-xxxl: clamp(1.21rem, 20.44vw + -3.9rem, 12.45rem);
-    }
-}
-// ?  For browsers that don't support clamp
-@supports not (font-size: clamp(1rem, 1vi, 1rem)) {
-    :root {
-        --fs-sm: 0.68rem;
-        --fs-base: 0.75rem;
-        --fs-md: 0.83rem;
-        --fs-lg: 0.91rem;
-        --fs-xl: 1rem;
-        --fs-xxl: 1.1rem;
-        --fs-xxxl: 1.21rem;
-    }
-    @media screen and (min-width: 1280px) {
-        :root {
-            --fs-sm: 0.74rem;
-            --fs-base: 1.19rem;
-            --fs-md: 1.9rem;
-            --fs-lg: 3.04rem;
-            --fs-xl: 4.86rem;
-            --fs-xxl: 7.78rem;
-            --fs-xxxl: 12.45rem;
-        }
-    }
+    --fs-sm: #{toRem(12px)};
+    --fs-base: #{toRem(17px)};
+    --fs-md: #{toRem(20px)};
+    --fs-lg: #{toRem(35px)};
+    --fs-xl: #{toRem(150px)};
+    --fs-xxl: #{toRem(250px)};
+    --fs-xxxl: #{toRem(300px)};
 }
 @media print {
     :root {
-        --fs-sm: 0.66rem;
-        --fs-base: 1.13rem;
-        --fs-md: 1.91rem;
-        --fs-lg: 3.25rem;
-        --fs-xl: 5.53rem;
-        --fs-xxl: 9.4rem;
-        --fs-xxxl: 15.97rem;
+        --fs-sm: #{toRem(10px)};
+        --fs-base: #{toRem(14px)};
+        --fs-md: #{toRem(18px)};
+        --fs-lg: #{toRem(28px)};
+        --fs-xl: #{toRem(50px)};
+        --fs-xxl: #{toRem(80px)};
+        --fs-xxxl: #{toRem(100px)};
     }
 }
 
@@ -86,11 +53,11 @@ body {
 //     // letter-spacing: #{toRem(2px)};
 //     // color: black;
 // }
-// :where(h1, h2, h3, h4) {
-//     text-wrap: balance;
-//     hyphens: auto;
-//     text-transform: capitalize;
-// }
+:where(h1, h2, h3, h4) {
+    text-wrap: balance;
+    hyphens: auto;
+    text-transform: capitalize;
+}
 // :where(h1, h2, h3, h4, p, span):not(:last-child) {
 //     margin: 0 0 0.5rem 0;
 // }
