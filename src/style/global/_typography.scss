@@ -55,7 +55,6 @@ body {
 // }
 :where(h1, h2, h3, h4) {
     text-wrap: balance;
-    hyphens: auto;
     text-transform: capitalize;
 }
 // :where(h1, h2, h3, h4, p, span):not(:last-child) {

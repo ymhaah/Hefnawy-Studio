@@ -126,7 +126,7 @@ body {
     outline: none;
 }
 .focus {
-    --focus-ring-clr: var(--accent-clr, hsla(192, 3%, 61%, 0.5));
+    --focus-ring-clr: var(--accent-clr, hsla(232, 79%, 59%));
     box-shadow: var(--focus-shadow, 0 0 0 transparent),
         0 0 0 -0.6em var(--bg-clr), 0 0 0 -0.8em var(--focus-ring-clr);
     transition: box-shadow var(--time-fast) var(--animation);
@@ -138,7 +138,7 @@ body {
 }
 :disabled,
 .disabled {
-    --focus-ring-clr: hsla(192, 3%, 61%, 0.5);
+    --focus-ring-clr: hsla(192, 3%, 61%);
     filter: grayscale(80%);
     opacity: 0.8;
     cursor: not-allowed !important;
@@ -258,7 +258,7 @@ svg {
 //         color: var(--success-clr);
 //     }
 // }
-.button {
+.Button {
     width: fit-content;
     height: fit-content;
     max-width: 100%;
@@ -276,8 +276,8 @@ svg {
     cursor: pointer;
     text-decoration: none;
     text-transform: capitalize;
-    font-weight: var(--fw-l);
-    font-size: var(--fs-sm);
+    font-weight: 900;
+    font-size: var(--fs-base);
     line-height: 1;
     border-radius: var(--radius);
     background-color: var(--accent-clr, hsla(0, 0%, 100%, 0));
