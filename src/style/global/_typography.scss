@@ -119,10 +119,16 @@ small,
     font-size: var(--fs-xxxl);
 }
 
-// .link {
-//     text-decoration: underline !important;
-//     color: var(--accent-clr) !important;
-// }
+a:not(.Button).Link {
+    text-decoration: underline;
+    color: var(--accent-clr, hsl(232, 79%, 59%));
+    .Icon {
+        width: 1em;
+        height: 1em;
+        // margin: 0 0.25em;
+    }
+}
+
 // .link:hover,
 // .link:focus {
 // }

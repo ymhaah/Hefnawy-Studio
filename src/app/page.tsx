@@ -1,6 +1,8 @@
 // import Image from "next/image";
 import Button from "@ui/Button";
 
+import icon from "@icon/arrow-small-right.svg";
+
 async function mockLoadingDelay(ms: number) {
     return new Promise((resolve) => setTimeout(resolve, ms));
 }
@@ -11,7 +13,15 @@ export default async function Home() {
     return (
         <main className="h-[500vh] w-full">
             <div className="Container">
-                <Button>test</Button>
+                {/* <Button>test</Button> */}
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur{" "}
+                    <a href="#" className="Link p">
+                        this is a link{" "}
+                        <img src={icon.src} alt="" className="Icon" />
+                    </a>
+                    adipisicing elit.
+                </p>
             </div>
         </main>
     );
