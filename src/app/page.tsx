@@ -16,12 +16,21 @@ export default async function Home() {
                 {/* <Button>test</Button> */}
                 <p>
                     Lorem ipsum dolor sit amet, consectetur{" "}
-                    <a href="#" className="Link p">
+                    <a href="#" className="Link">
                         this is a link{" "}
-                        <img src={icon.src} alt="" className="Icon" />
+                        <img src={icon.src} alt="" className="arrow Icon" />
                     </a>
                     adipisicing elit.
                 </p>
+                <h1 className="fs-md">
+                    Lorem ipsum dolor sit amet, Lorem ipsum dolor sit amet,
+                    consectetur{" "}
+                    <a href="#" className="Link">
+                        this is a link{" "}
+                        <img src={icon.src} alt="" className="Icon arrow" />
+                    </a>
+                    adipisicing elit.
+                </h1>
             </div>
         </main>
     );

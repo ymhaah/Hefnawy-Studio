@@ -54,7 +54,6 @@ body {
 //     // color: black;
 // }
 :where(h1, h2, h3, h4) {
-    text-wrap: balance;
     text-transform: capitalize;
 }
 // :where(h1, h2, h3, h4, p, span):not(:last-child) {
@@ -83,8 +82,7 @@ h4,
     margin: 0.75em 0;
 }
 p,
-.p,
-a:not(.Button) {
+.p {
     font-weight: 400;
     margin: 1em 0;
     text-decoration: none;
@@ -120,12 +118,22 @@ small,
 }
 
 a:not(.Button).Link {
-    text-decoration: underline;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.25em;
     color: var(--accent-clr, hsl(232, 79%, 59%));
+    text-decoration: underline;
+    font-weight: inherit;
+    line-height: inherit;
+    letter-spacing: inherit;
+    margin-right: 0.4em;
     .Icon {
-        width: 1em;
-        height: 1em;
-        // margin: 0 0.25em;
+        width: 0.7em;
+        height: 0.7em;
+    }
+    .Icon.arrow {
+        transform: rotate(-45deg);
+        margin-left: -0.4em;
     }
 }
 
