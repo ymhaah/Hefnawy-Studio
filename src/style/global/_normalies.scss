@@ -362,6 +362,25 @@ svg {
     margin-top: 0;
 }
 
+.Logo {
+    h1 {
+        font-weight: var(--fw-m);
+        filter: blur(0.05px);
+        user-select: none;
+    }
+}
+.logo_main {
+    h1 {
+        font-family: var(--ff-rakkas);
+        font-size: var(--fs-xxl);
+    }
+}
+.logo_studio {
+    h1 {
+        font-family: var(--ff-modern_society);
+    }
+}
+
 .txt-animation {
     opacity: 0.4;
     transform: translateX(-25%);
