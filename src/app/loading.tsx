@@ -1,9 +1,20 @@
-function LoadingScreen() {
+import { ReactNode } from "react";
+
+/**
+ * LoadingScreen Component
+ *
+ * A full-screen loading indicator for Hefnawy Studio.
+ * It includes an animated glitch effect on the word "studio".
+ *
+ * @returns {ReactNode} The main loading screen component.
+ */
+function LoadingScreen(): ReactNode {
     return (
-        <div
+        <section
             className="Loading fixed w-full h-svh inset-0 z-[1000]"
             role="status"
             aria-live="polite"
+            aria-label="Hefnawy Studio Loading Screen"
         >
             <div className="Container relative">
                 <div className="Logo logo_main w-full py-3 flex justify-start items-center">
@@ -21,7 +32,7 @@ function LoadingScreen() {
                 </div>
             </div>
             <p className="sr-only">Loading, please wait</p>
-        </div>
+        </section>
     );
 }
 

@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 
 import { Toaster } from "sonner";
 
+import Footer from "@/components/Footer";
+
 import { Inter, Playfair_Display } from "next/font/google";
 import localFont from "next/font/local";
 import "./index.scss";
@@ -60,6 +62,7 @@ export default function RootLayout({
                 className={`${inter.variable} ${playfair_display.variable} ${ModernSociety.variable} ${Rakkas.variable} ${Diwani.variable}`}
             >
                 {children}
+                <Footer />
                 <Toaster />
             </body>
         </html>

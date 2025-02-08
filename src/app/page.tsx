@@ -14,7 +14,7 @@ export default async function Home() {
         <main className="h-[500vh] w-full">
             <div className="Container">
                 {/* <Button>test</Button> */}
-                <p>
+                {/* <p>
                     Lorem ipsum dolor sit amet, consectetur{" "}
                     <a href="#" className="Link">
                         this is a link{" "}
@@ -30,7 +30,7 @@ export default async function Home() {
                         <img src={icon.src} alt="" className="Icon arrow" />
                     </a>
                     adipisicing elit.
-                </h1>
+                </h1> */}
             </div>
         </main>
     );
