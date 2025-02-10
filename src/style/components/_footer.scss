@@ -7,7 +7,7 @@
 
 footer.main-footer {
     background-color: var(--bg-clr-dark);
-    color: var(--bg-clr-light);
+    color: var(--txt-clr-light);
     .Container {
         // @include flex(c, c, c);
         // padding: var(--gap) 0;
@@ -33,7 +33,21 @@ footer.main-footer {
         //         }
         //     }
         // }
-        section[aria-label="Site Info & Links"] {
+        section.footer_bottom {
+            padding: var(--section-gap) 0 var(--gap) 0;
+            gap: var(--gap);
+            .footer_info {
+                gap: var(--gap);
+                p {
+                    letter-spacing: -0.04em;
+                }
+                h2 {
+                    // color: var(--bg-clr);
+                }
+                .social-links a {
+                    color: var(--txt-clr-light) !important;
+                }
+            }
         }
         .local-time {
         }

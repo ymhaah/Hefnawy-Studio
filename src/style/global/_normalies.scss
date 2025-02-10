@@ -45,7 +45,10 @@
 
     --shadow: 0 6px 30px rgba(0, 0, 0, 10%);
     --margin: min(12em, 12vh);
-    --gap: 1rem;
+
+    --gap: clamp(1.5em, 4vw, 2.5em);
+    --section-gap: clamp(5em, 21vh, 12em);
+
     --icon-size: 1rem;
     --icon-clr: var(--bg-clr);
 

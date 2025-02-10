@@ -1,51 +1,39 @@
 import { ReactNode } from "react";
 
-// import facebook from "@icon/facebook.svg";
-// import linkedin from "@icon/linkedin.svg";
-// import twitter from "@icon/twitter.svg";
-
 /**
  * SocialLinks component renders a list of social media links.
  * @returns {ReactNode} Rendered social media links.
  */
 function SocialLinks(): ReactNode {
-    // const socialLinks = [
-    //     {
-    //         icon: facebook,
-    //         href: "#",
-    //         alt: "Facebook",
-    //     },
-    //     {
-    //         icon: linkedin,
-    //         href: "#",
-    //         alt: "Linkedin",
-    //     },
-    //     {
-    //         icon: twitter,
-    //         href: "#",
-    //         alt: "Twitter/X",
-    //     },
-    // ];
+    const socialLinks = [
+        {
+            href: "#",
+            siteName: "Instagram",
+        },
+        {
+            href: "#",
+            siteName: "Twitter",
+        },
+        {
+            href: "#",
+            siteName: "Linkedin",
+        },
+    ];
 
     return (
-        <ul className="social-links">
-            {/* {socialLinks.map((link, index) => (
-                <li key={index}>
+        <ul className="social-links flex justify-start items-center flex-row flex-grow">
+            {socialLinks.map((link, index) => (
+                <li key={index} className="pr-4">
                     <a
                         href={link.href}
-                        className="focus"
+                        className="focus p"
                         target="_blank"
                         rel="noopener noreferrer"
                     >
-                        <span className="visually-hidden">{link.alt}</span>
-                        <img
-                            src={link.icon}
-                            alt={link.alt}
-                            role="presentation"
-                        />
+                        {link.siteName}
                     </a>
                 </li>
-            ))} */}
+            ))}
         </ul>
     );
 }

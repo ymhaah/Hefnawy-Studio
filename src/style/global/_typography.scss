@@ -12,8 +12,8 @@
 
 :root {
     // ? font sizes
-    --fs-sm: #{toRem(12px)};
-    --fs-base: #{toRem(17px)};
+    --fs-sm: #{toRem(11.4px)};
+    --fs-base: #{toRem(16.5px)};
     --fs-md: #{toRem(20px)};
     --fs-lg: #{toRem(35px)};
     --fs-xl: #{toRem(150px)};
@@ -84,14 +84,14 @@ h4,
 p,
 .p {
     font-weight: 400;
-    margin: 1em 0;
+    margin: 0.6em 0;
     text-decoration: none;
 }
 small,
 .small {
     font-size: var(--fs-sm);
     letter-spacing: 0.02em;
-    font-weight: 300;
+    font-weight: 200;
     text-transform: uppercase;
 }
 
@@ -117,25 +117,26 @@ small,
     font-size: var(--fs-xxxl);
 }
 
-a:not(.Button).Link {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.25em;
-    color: var(--accent-clr, hsl(232, 79%, 59%));
-    text-decoration: underline;
-    font-weight: inherit;
-    line-height: inherit;
-    letter-spacing: inherit;
-    margin-right: 0.4em;
-    .Icon {
-        width: 0.7em;
-        height: 0.7em;
-    }
-    .Icon.arrow {
-        transform: rotate(-45deg);
-        margin-left: -0.4em;
-    }
-}
+// a:not(.Button),
+// .Link {
+//     display: inline-flex;
+//     align-items: center;
+//     gap: 0.25em;
+//     color: var(--accent-clr, hsl(232, 79%, 59%));
+//     text-decoration: underline;
+//     font-weight: inherit;
+//     line-height: inherit;
+//     letter-spacing: inherit;
+//     .Icon {
+//         padding-right: 0.4em;
+//         width: 0.7em;
+//         height: 0.7em;
+//     }
+//     .Icon.arrow {
+//         transform: rotate(-45deg);
+//         margin-left: -0.4em;
+//     }
+// }
 
 // .link:hover,
 // .link:focus {
