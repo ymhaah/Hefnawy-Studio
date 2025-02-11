@@ -366,20 +366,23 @@ svg {
 }
 
 .Logo {
-    h1 {
+    h1,
+    h2 {
         font-weight: var(--fw-m);
         filter: blur(0.05px);
         user-select: none;
     }
 }
 .logo_main {
-    h1 {
+    h1,
+    h2 {
         font-family: var(--ff-rakkas);
         font-size: var(--fs-xxl);
     }
 }
 .logo_studio {
-    h1 {
+    h1,
+    h2 {
         font-family: var(--ff-modern_society);
     }
 }

@@ -7,15 +7,19 @@
 
 // font-family: var(--ff-Diwani);
 
-$glitch-steps: 25; // ? max is 100 before it gets too much
+$glitch-steps: 30; // ? max is 100 before it gets too much
+:root {
+    --glitch-intensity: -4px; // ? max is 5 before it gets too much
+    --glitch-speed: 2.5s;
+    --glitch-bg-clr: var(--bg-clr);
+    --glitch-txt-clr: var(--txt-clr);
+}
 .Loading {
-    --glitch-intensity: -3px; // ? max is 5 before it gets too much
-    --glitch-speed: 3s;
-    background-color: var(--bg-clr);
+    background-color: var(--glitch-bg-clr);
     .Container {
         .Logo {
             h1 {
-                color: var(--txt-clr);
+                color: var(--glitch-txt-clr);
             }
         }
         .logo_main {
@@ -40,8 +44,8 @@ $glitch-steps: 25; // ? max is 100 before it gets too much
     width: fit-content;
     position: absolute;
     top: 0;
-    color: var(--txt-clr);
-    background: var(--bg-clr);
+    color: var(--glitch-txt-clr);
+    background: var(--glitch-bg-clr);
     overflow: hidden;
     clip: rect(0, 0px, 0, 0);
     user-select: none;

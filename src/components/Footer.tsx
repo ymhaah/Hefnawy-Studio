@@ -1,5 +1,7 @@
 import { ReactNode } from "react";
 
+import Link from "next/link";
+
 import SocialLinks from "@ui/SocialLinks";
 import LocalTime from "@ui/LocalTime";
 
@@ -22,21 +24,45 @@ function Footer(): ReactNode {
     ];
 
     return (
-        <footer className="main-footer w-full " aria-label="main site footer">
-            <div className="Container">
-                {/* <div className="footer__main">
-                    <h2 className="footer__title">
-                        <a href="/index.html" className="main-logo focus">
-                        Shubham
-                    </a>
-                    </h2>
-                    <p className="small">
+        <footer
+            className="main-footer w-full overflow-hidden"
+            aria-label="main site footer"
+        >
+            <div className="Container flex flex-col relative">
+                <section
+                    className="footer__main w-full flex flex-row"
+                    aria-label="main site footer"
+                >
+                    <div className="Logo logo_main">
+                        <h2 className="">
+                            <Link href="/" className="focus">
+                                <span aria-hidden="true">حَفْناوِيّ</span>
+                                <span className="sr-only">hefnawy studio</span>
+                            </Link>
+                        </h2>
+                        <p className="small">
+                            Lorem ipsum dolor sit amet consectetur adipisicing
+                            elit. Voluptate, provident officiis deleniti impedit
+                            debitis voluptatibus?
+                        </p>
+                    </div>
+                    <div className="">
                         Lorem ipsum dolor sit amet consectetur adipisicing elit.
                         Voluptate, provident officiis deleniti impedit debitis
                         voluptatibus?
-                    </p>
-                </div>
-                {footerLinks.map((item, index) => (
+                    </div>
+                    <div className="">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Voluptate, provident officiis deleniti impedit debitis
+                        voluptatibus?
+                    </div>
+                    <div className="">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Voluptate, provident officiis deleniti impedit debitis
+                        voluptatibus?
+                    </div>
+                </section>
+                {/* {footerLinks.map((item, index) => (
                     <nav key={index} aria-label="secondary Navigation">
                         <h2 className="footer__title">{item.title}</h2>
                         <ul>
@@ -97,42 +123,30 @@ function Footer(): ReactNode {
                             ))}
                         </ul>
                     </div>
-                ))}
-                <nav aria-label="social media links">
-                    <h2 className="footer__title">Follow My On</h2>
-                    <SocialLinks />
-                </nav> */}
+                ))} */}
+
                 <section
                     className="footer_bottom w-full flex justify-between gap-4 items-center flex-row "
                     aria-label="Site Info & Links"
                 >
                     <div className="footer_info flex justify-start items-center flex-row ">
-                        <div className="">
+                        <div className="flex flex-col">
                             <h2 className="small">Version</h2>
                             <p>2025 © Edition</p>
                         </div>
-                        <div>
+                        <div className="flex flex-col">
                             <h2 className="small">Local time</h2>
                             <LocalTime />
                         </div>
                     </div>
                     <nav
-                        className="flex justify-center items-start flex-col "
+                        className="flex items-start flex-col "
                         aria-label="social media links"
                     >
                         <h2 className="small">Socials</h2>
                         <SocialLinks />
                     </nav>
                 </section>
-                {/* <div className="Logo logo_studio absolute  w-full h-full flex justify-center items-center">
-                    <h1
-                        className="glitch"
-                        data-text="studio"
-                        aria-hidden="true"
-                    >
-                        studio
-                    </h1>
-                </div> */}
             </div>
         </footer>
     );

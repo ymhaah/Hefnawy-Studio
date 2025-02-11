@@ -6,9 +6,13 @@
 // @include grid(2, 2, fr, 1rem)
 
 footer.main-footer {
+    --glitch-bg-clr: var(--bg-clr-dark);
+    --glitch-txt-clr: var(--txt-clr-light);
     background-color: var(--bg-clr-dark);
     color: var(--txt-clr-light);
     .Container {
+        .footer__main {
+        }
         // @include flex(c, c, c);
         // padding: var(--gap) 0;
         // gap: calc(var(--gap) / 2);
