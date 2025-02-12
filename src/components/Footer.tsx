@@ -29,7 +29,7 @@ function Footer(): ReactNode {
             aria-label="main site footer"
         >
             <div className="Container flex flex-col relative">
-                <section
+                {/* <section
                     className="footer__main w-full flex flex-row"
                     aria-label="main site footer"
                 >
@@ -61,7 +61,7 @@ function Footer(): ReactNode {
                         Voluptate, provident officiis deleniti impedit debitis
                         voluptatibus?
                     </div>
-                </section>
+                </section> */}
                 {/* {footerLinks.map((item, index) => (
                     <nav key={index} aria-label="secondary Navigation">
                         <h2 className="footer__title">{item.title}</h2>
@@ -124,12 +124,20 @@ function Footer(): ReactNode {
                         </ul>
                     </div>
                 ))} */}
-
+                <div className="Logo logo_studio w-full flex justify-center items-center">
+                    <h1
+                        className="glitch"
+                        data-text="studio"
+                        aria-hidden="true"
+                    >
+                        studio
+                    </h1>
+                </div>
                 <section
-                    className="footer_bottom w-full flex justify-between gap-4 items-center flex-row "
+                    className="footer_bottom w-full flex justify-between gap-4 items-center flex-row max-sm:flex-col-reverse"
                     aria-label="Site Info & Links"
                 >
-                    <div className="footer_info flex justify-start items-center flex-row ">
+                    <div className="footer_info flex justify-start max-sm:w-full max-sm:flex-wrap items-center flex-grow max-sm:justify-between max-sm:items-start">
                         <div className="flex flex-col">
                             <h2 className="small">Version</h2>
                             <p>2025 © Edition</p>
@@ -139,8 +147,9 @@ function Footer(): ReactNode {
                             <LocalTime />
                         </div>
                     </div>
+                    <span className="Line h-[0.5px] w-full sm:hidden opacity-25"></span>
                     <nav
-                        className="flex items-start flex-col "
+                        className="flex items-start flex-col max-sm:w-full"
                         aria-label="social media links"
                     >
                         <h2 className="small">Socials</h2>
@@ -153,3 +162,5 @@ function Footer(): ReactNode {
 }
 
 export default Footer;
+
+// TODO: make a cool effect for the footer bottom links

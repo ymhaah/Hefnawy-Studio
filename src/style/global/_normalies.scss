@@ -125,19 +125,9 @@ body {
 ::-moz-focus-inner {
     border: none;
 }
-:focus {
-    outline: none;
-}
-.focus {
-    --focus-ring-clr: var(--accent-clr, hsla(232, 79%, 59%));
-    box-shadow: var(--focus-shadow, 0 0 0 transparent),
-        0 0 0 -0.6em var(--bg-clr), 0 0 0 -0.8em var(--focus-ring-clr);
-    transition: box-shadow var(--time-fast) var(--animation);
-}
-.focus:focus-visible {
-    outline: 2px solid transparent;
-    box-shadow: var(--focus-shadow, 0 0 0 transparent),
-        0 0 0 0.25em var(--bg-clr), 0 0 0 0.45em var(--focus-ring-clr);
+
+:focus-visible {
+    outline: 2px solid var(--accent-clr, hsla(232, 79%, 59%));
 }
 :disabled,
 .disabled {
@@ -197,6 +187,9 @@ svg {
     // aspect-ratio: 1;
     // fill: var(--icon-clr);
     // color: var(--icon-clr);
+}
+.Line {
+    background-color: var(--accent-clr, hsla(225, 7%, 12%));
 }
 // .input-wrapper {
 //     width: 100%;
@@ -371,6 +364,7 @@ svg {
         font-weight: var(--fw-m);
         filter: blur(0.05px);
         user-select: none;
+        white-space: nowrap;
     }
 }
 .logo_main {

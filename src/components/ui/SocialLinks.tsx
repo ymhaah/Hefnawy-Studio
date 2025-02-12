@@ -7,26 +7,30 @@ import { ReactNode } from "react";
 function SocialLinks(): ReactNode {
     const socialLinks = [
         {
-            href: "#",
+            href: "https://www.instagram.com/hefnawystudio/",
             siteName: "Instagram",
         },
         {
-            href: "#",
+            href: "https://x.com/hafanwy",
             siteName: "Twitter",
         },
         {
-            href: "#",
+            href: "https://www.linkedin.com/in/youssef-hefnawy/",
             siteName: "Linkedin",
+        },
+        {
+            href: "https://medium.com/@Youssef_Hefnawy",
+            siteName: "Medium",
         },
     ];
 
     return (
-        <ul className="social-links flex justify-start items-center flex-row flex-grow">
+        <ul className="social-links flex justify-start max-sm:flex-wrap items-center flex-row flex-grow">
             {socialLinks.map((link, index) => (
-                <li key={index} className="pr-4">
+                <li key={index}>
                     <a
                         href={link.href}
-                        className="focus p"
+                        className="focus"
                         target="_blank"
                         rel="noopener noreferrer"
                     >

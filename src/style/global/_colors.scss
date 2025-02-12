@@ -20,7 +20,7 @@
 
     /* Colors */
     --bg-clr-light: hsla(var(--clr-light-gray-400), 1);
-    --bg-clr-dark: hsla(var(--clr-dark-charcoal-700), 1);
+    --bg-clr-dark: hsla(var(--clr-dark-charcoal-500), 1);
 
     --txt-clr-dark: hsla(var(--clr-dark-charcoal-500), 1);
     --txt-clr-light: hsla(var(--clr-white), 1);
@@ -70,7 +70,7 @@
     // --color-border-solid: hsl(0, 0%, 82%);
     // --color-border-light: hsla(0, 0%, 100%, 0.2);
     // --color-border-solid-light: hsl(220, 2%, 34%);
-    // --color-dark: #1C1D20;
+    --color-dark: hsl(225, 7%, 12%);
     // --color-dark-dark: hsl(220, 7%, 8%);
     // --color-border: hsla(225, 7%, 12%, 0.176);
     // --color-text: #1C1D20;
