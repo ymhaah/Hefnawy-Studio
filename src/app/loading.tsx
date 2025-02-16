@@ -16,14 +16,16 @@ function LoadingScreen(): ReactNode {
             aria-live="polite"
             aria-label="Hefnawy Studio Loading Screen"
         >
-            <div className="Container relative">
-                <div className="Logo logo_main w-full py-3 flex justify-start items-center">
-                    <h1 aria-hidden="true">حَفْناوِيٍّ</h1>
+            <div className="Container py-5 relative">
+                <div className="w-full flex justify-start items-center">
+                    <h1 aria-hidden="true" className="Logo logo_main">
+                        حَفْناوِيٍّ
+                    </h1>
                     <span className="sr-only">hefnawy studio</span>
                 </div>
-                <div className="Logo logo_studio absolute inset-0 w-full h-full flex justify-center items-center">
+                <div className="absolute inset-0 w-full h-full flex justify-center items-center">
                     <h1
-                        className="glitch"
+                        className="glitch Logo logo_studio"
                         data-text="studio"
                         aria-hidden="true"
                     >

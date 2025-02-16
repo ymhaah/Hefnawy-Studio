@@ -40,3 +40,77 @@
 -   `XXXL` (--fs-xxxl): 300px
 
 ---
+
+## 📐 Layout
+
+-   highest z-index: 1000
+-   gap, margin, padding: 1.25rem -> gap-5
+-   section gap, margin, padding: 5rem -> pt-20 pb-20
+
+<!-- ### Container
+
+-   `Container Width`: 95%
+
+---
+
+## 📏 Grid
+
+### Grid
+
+-   `Grid Template`: 2x2 (repeat(2, 2fr))
+-   `Grid Gap`: 1rem
+
+---
+
+## 📏 Flex
+
+### Flex
+
+-   `Flex Direction`: row
+-   `Flex Wrap`: nowrap
+-   `Flex Align Items`: center
+-   `Flex Align Content`: center
+
+### Flex For Phone
+
+-   `Flex Direction`: column
+-   `Flex Wrap`: wrap
+-   `Flex Align Items`: start
+-   `Flex Align Content`: start
+
+---
+
+## 📏 Button
+
+Buttons are used to trigger actions or navigate to different pages. They are typically used in forms, navigation menus, or other interactive elements.
+
+### Button Sizes
+
+-   `Small`: max-content
+-   `Base`: max-content
+
+### Button Colors
+
+-   `Primary`: hsla(232, 79%, 59%, 1) (--clr-blue)
+-   `Contrast`: hsla(0, 0%, 100%, 1) (--txt-clr-light)
+-   `Mono`: hsla(220, 7%, 8%, 1) (--bg-clr-dark)
+
+### Button Styles
+
+-   `Button`: width: fit-content; height: fit-content; max-width: 100%; display: inline-flex; flex: 0 1 auto; justify-content: center; align-items: center; vertical-align: middle; text-align: center; white-space: nowrap; overflow: hidden; appearance: button; padding: max(0.85em, 0.85rem) max(2em, 2rem); user-select: none; cursor: pointer; text-decoration: none; text-transform: capitalize; font-weight: 900; font-size: var(--fs-base); line-height: 1; border-radius: var(--radius); background-color: var(--accent-clr, hsla(0, 0%, 100%, 0)); color: var(--btn-txt-clr, hsl(220, 13%, 5%)); box-shadow: var(--shadow); -webkit-mask-image: -webkit-radial-gradient(white, black); transition: transform var(--time-fast) var(--animation); --focus-shadow: inset 0px -0.4rem 0 var(--accent-shadow-clr);
+-   `Button:hover`: opacity: 0.8;
+-   `Button:active`: transform: scale(0.95); box-shadow: 0 1px 4px -1px var(--shadow);
+-   `Button:not(:last-child)`: margin-right: 1rem; margin-top: 0;
+-   `Button:has(img, svg)`:
+-   `Button:where(:hover, :active):not(:has(img, svg))`:
+-   `Button:has(img, svg):where(:hover, :active)`:
+-   `Button:where(:hover, :active):not(:has(img, svg))`:
+-   `Button:has(img, svg):where(:hover, :active)`:
+
+---
+
+## 📏 Avatar
+
+Avatars are used to represent a user or entity in a visually appealing and recognizable way. They are typically used in user profiles, chat interfaces, or other contexts where a visual representation of a user is important.
+
+### 📏 Avatar -->

@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import { Toaster } from "sonner";
 
 import Footer from "@/components/Footer";
+import Header from "@/components/Header";
 
 import { Inter, Playfair_Display } from "next/font/google";
 import localFont from "next/font/local";
@@ -61,6 +62,7 @@ export default function RootLayout({
             <body
                 className={`${inter.variable} ${playfair_display.variable} ${ModernSociety.variable} ${Rakkas.variable} ${Diwani.variable}`}
             >
+                <Header />
                 {children}
                 <Footer />
                 <Toaster />

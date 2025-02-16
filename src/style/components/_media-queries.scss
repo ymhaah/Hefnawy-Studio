@@ -43,12 +43,7 @@
 // For laptop, S-Monitor
 @media screen and (max-width: #{toEm(768px)}) {
     .Container {
-        // --container-width: calc(100% - 2rem);
-    }
-    .main-header {
-        .Container {
-            --container-width: 90%;
-        }
+        --container-width: calc(100% - 2.5rem);
     }
     header.main-header {
         .header__Container {

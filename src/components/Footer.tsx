@@ -30,16 +30,30 @@ function Footer(): ReactNode {
         >
             <div className="Container flex flex-col relative">
                 {/* <section
-                    className="footer__main w-full flex flex-row"
-                    aria-label="main site footer"
+                    aria-label="about us"
+                    className="footer_about max-sm:flex-col-reverse w-full justify-between flex flex-row"
                 >
-                    <div className="Logo logo_main">
-                        <h2 className="">
-                            <Link href="/" className="focus">
+                    <div>
+                        <h2 className="Logo logo_main h1">
+                            <Link href="/" className="focus no-underline">
                                 <span aria-hidden="true">حَفْناوِيّ</span>
                                 <span className="sr-only">hefnawy studio</span>
                             </Link>
                         </h2>
+                        <p className="p fs-lg">
+                            Lorem ipsum dolor sit amet. Lorem ipsum dolor sit
+                            amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor
+                            sit amet.{" "}
+                        </p>
+                    </div>
+                    <div></div>
+                </section> */}
+                {/* <section
+                    className="footer__main w-full flex flex-row"
+                    aria-label="main site footer"
+                >
+                    <div className="">
+                        
                         <p className="small">
                             Lorem ipsum dolor sit amet consectetur adipisicing
                             elit. Voluptate, provident officiis deleniti impedit
@@ -124,35 +138,26 @@ function Footer(): ReactNode {
                         </ul>
                     </div>
                 ))} */}
-                <div className="Logo logo_studio w-full flex justify-center items-center">
-                    <h1
-                        className="glitch"
-                        data-text="studio"
-                        aria-hidden="true"
-                    >
-                        studio
-                    </h1>
-                </div>
                 <section
-                    className="footer_bottom w-full flex justify-between gap-4 items-center flex-row max-sm:flex-col-reverse"
+                    className="footer_bottom ls-xs pb-5 pt-20 w-full gap-5 flex justify-between flex-row max-sm:flex-col-reverse"
                     aria-label="Site Info & Links"
                 >
-                    <div className="footer_info flex justify-start max-sm:w-full max-sm:flex-wrap items-center flex-grow max-sm:justify-between max-sm:items-start">
+                    <div className="footer_info gap-5 flex justify-start max-sm:w-full max-sm:flex-wrap flex-grow max-sm:justify-between max-sm:items-start">
                         <div className="flex flex-col">
-                            <h2 className="small">Version</h2>
+                            <h2 className="small mb-5">Version</h2>
                             <p>2025 © Edition</p>
                         </div>
                         <div className="flex flex-col">
-                            <h2 className="small">Local time</h2>
+                            <h2 className="small mb-5">Local time</h2>
                             <LocalTime />
                         </div>
                     </div>
-                    <span className="Line h-[0.5px] w-full sm:hidden opacity-25"></span>
+                    <span className="Line h-[0.5px] w-full mt-5 sm:hidden opacity-25"></span>
                     <nav
                         className="flex items-start flex-col max-sm:w-full"
                         aria-label="social media links"
                     >
-                        <h2 className="small">Socials</h2>
+                        <h2 className="small mb-5">Socials</h2>
                         <SocialLinks />
                     </nav>
                 </section>

@@ -37,17 +37,13 @@
 // }
 
 :root {
-    --container-width: 95%;
-    --Header-hight: #{toRem(80px)};
+    --container-width: calc(100% - 5rem);
 
     // --radius: #{toRem(10px)};
     --radius: #{toEm(8px)};
 
     --shadow: 0 6px 30px rgba(0, 0, 0, 10%);
     --margin: min(12em, 12vh);
-
-    --gap: clamp(1.5em, 4vw, 2.5em);
-    --section-gap: clamp(5em, 21vh, 12em);
 
     --icon-size: 1rem;
     --icon-clr: var(--bg-clr);
@@ -145,16 +141,6 @@ ul {
     a {
         text-decoration: none;
     }
-}
-
-input,
-button,
-textarea,
-a,
-select {
-    font: inherit;
-    letter-spacing: inherit;
-    word-spacing: inherit;
 }
 
 img {
@@ -359,26 +345,17 @@ svg {
 }
 
 .Logo {
-    h1,
-    h2 {
-        font-weight: var(--fw-m);
-        filter: blur(0.05px);
-        user-select: none;
-        white-space: nowrap;
-    }
+    font-weight: var(--fw-m);
+    filter: blur(0.05px);
+    user-select: none;
+    white-space: nowrap;
 }
 .logo_main {
-    h1,
-    h2 {
-        font-family: var(--ff-rakkas);
-        font-size: var(--fs-xxl);
-    }
+    font-family: var(--ff-rakkas);
+    font-size: var(--fs-lg);
 }
 .logo_studio {
-    h1,
-    h2 {
-        font-family: var(--ff-modern_society);
-    }
+    font-family: var(--ff-modern_society);
 }
 
 .txt-animation {

@@ -25,12 +25,12 @@ function SocialLinks(): ReactNode {
     ];
 
     return (
-        <ul className="social-links flex justify-start max-sm:flex-wrap items-center flex-row flex-grow">
+        <ul className="social-links flex gap-5 justify-start max-sm:flex-wrap items-center flex-row flex-grow">
             {socialLinks.map((link, index) => (
                 <li key={index}>
                     <a
                         href={link.href}
-                        className="focus"
+                        className="focus no-underline"
                         target="_blank"
                         rel="noopener noreferrer"
                     >

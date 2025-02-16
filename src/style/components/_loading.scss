@@ -18,19 +18,13 @@ $glitch-steps: 30; // ? max is 100 before it gets too much
     background-color: var(--glitch-bg-clr);
     .Container {
         .Logo {
-            h1 {
-                color: var(--glitch-txt-clr);
-            }
+            color: var(--glitch-txt-clr);
         }
         .logo_main {
-            h1 {
-                font-size: var(--fs-lg);
-            }
+            font-size: var(--fs-lg);
         }
         .logo_studio {
-            h1 {
-                font-size: var(--fs-xl);
-            }
+            font-size: var(--fs-xl);
         }
     }
 }
