@@ -7,7 +7,7 @@ import Link from "next/link";
 import { gsap } from "gsap";
 import { useGSAP } from "@gsap/react";
 
-// import Button from "@/Button";
+import Button from "@ui/Button";
 
 gsap.registerPlugin(useGSAP);
 
@@ -117,20 +117,20 @@ function Header(): ReactNode {
                         <span className="sr-only">hefnawy studio</span>
                     </Link>
                 </div>
-                <div className="header__nav-wrapper">
-                    {/* <Button
-                        iconOnlyAlt="Menu Toggle"
+                <div>
+                    <Button
+                        iconOnlyAlt="Main Header Menu Toggle"
                         type="button"
                         aria-controls="main-navigation-list"
                         aria-expanded={navOpenState === "opened"}
                         handleClick={toggleNav}
-                        className="header__toggle-button"
+                        className="hidden max-sm:inline-flex"
                     >
                         {navOpenState === "opened" ? (
                             <svg
-                                width="14"
-                                height="14"
-                                viewBox="0 0 14 14"
+                                width="18"
+                                height="18"
+                                viewBox="0 0 18 18"
                                 fill="none"
                                 aria-labelledby="close-icon"
                                 role="img"
@@ -142,11 +142,11 @@ function Header(): ReactNode {
                                     fill="black"
                                 />
                             </svg>
-                        ) : ( 
+                        ) : (
                             <svg
                                 width="18"
-                                height="12"
-                                viewBox="0 0 18 12"
+                                height="18"
+                                viewBox="0 0 18 18"
                                 fill="none"
                                 aria-labelledby="menu-icon"
                                 role="img"
@@ -159,21 +159,22 @@ function Header(): ReactNode {
                                 />
                             </svg>
                         )}
-                    </Button>  max-sm:*/}
+                    </Button>
                     <nav
-                        className={`header_nav ${
-                            navOpenState === "opened"
-                                ? "header__nav--opened"
-                                : navOpenState === "closing"
-                                ? "header__nav--closing"
-                                : "header__nav--closed"
-                        }`}
+                        className=""
                         ref={nav}
+                        data-state={
+                            navOpenState === "opened"
+                                ? "opened"
+                                : navOpenState === "closing"
+                                ? "closing"
+                                : "closed"
+                        }
                         aria-label="Main Navigation"
                     >
                         <ul
                             id="main-navigation-list"
-                            className="header__nav-list flex gap-5 justify-end items-center"
+                            className="header__nav-list flex gap-5 justify-end items-center max-sm:flex-col max-sm:justify-between max-sm:items-center"
                         >
                             {navLinks.map((link, index) => (
                                 <li key={index} className="header__nav-item">
@@ -203,3 +204,7 @@ function Header(): ReactNode {
 }
 
 export default Header;
+
+// TODO: what link should i add
+// TODO: make a cool effect for the nav opening and closing with gsap
+// TODO: add links and site info for the nav in phone size

@@ -2,9 +2,18 @@
 @use "./typography.scss" as *;
 @use "../util/index" as *;
 
+// TODO: cool link effect for the main nav link and one for other links
+
 // @tailwind base;
 // @tailwind components;
 @tailwind utilities;
+
+.test {
+    width: 25%;
+    height: 25vh;
+    background-color: rgba(255, 0, 0, 0.496);
+    margin: 1rem;
+}
 
 // @include flex(r, c, c);
 // @include flexForPhon(Hero, cr);
@@ -95,6 +104,27 @@ body {
     margin: 0;
     padding: 0;
     overscroll-behavior: contain;
+}
+html.lenis,
+html.lenis body {
+    height: auto;
+}
+
+html.lenis,
+html.lenis body {
+    height: auto;
+}
+.lenis.lenis-smooth {
+    scroll-behavior: auto !important;
+}
+.lenis.lenis-smooth [data-lenis-prevent] {
+    overscroll-behavior: contain;
+}
+.lenis.lenis-stopped {
+    overflow: hidden;
+}
+.lenis.lenis-smooth iframe {
+    pointer-events: none;
 }
 .Container {
     height: 100%;
@@ -240,7 +270,7 @@ svg {
 //         color: var(--success-clr);
 //     }
 // }
-.Button {
+:where(.Button) {
     width: fit-content;
     height: fit-content;
     max-width: 100%;
@@ -280,6 +310,12 @@ svg {
         padding: 0.65em 1.5em;
     }
 }
+:where(.Button.icon-only) {
+    padding: max(1em, 1rem);
+    box-shadow: none;
+    background-color: transparent;
+    border: none;
+}
 .btn-primary {
     --accent-clr: var(--primary-clr);
     --btn-txt-clr: var(--bg-clr);
@@ -300,9 +336,9 @@ svg {
 .button:active {
     transform: scale(0.95);
 }
-.button:not(:last-child) {
-    margin-right: 1rem;
-}
+// .button:not(:last-child) {
+//     margin-right: 1rem;
+// }
 .button :where(svg, img, span) {
     pointer-events: none;
 }
@@ -322,9 +358,9 @@ svg {
 :where(.button:not(:last-of-type)) {
     /* // @apply mr-5; */
 }
-.Button:not(:last-child) {
-    margin: 0 0 1rem 0;
-}
+// .Button:not(:last-child) {
+//     margin: 0 0 1rem 0;
+// }
 .button.icon-only {
     padding: max(1em, 1rem);
     box-shadow: none;

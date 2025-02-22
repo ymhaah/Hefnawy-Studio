@@ -168,4 +168,5 @@ function Footer(): ReactNode {
 
 export default Footer;
 
-// TODO: make a cool effect for the footer bottom links
+// TODO: make a cool effect\design for the footer
+// TODO: make some game or a cool meme thing for the footer
