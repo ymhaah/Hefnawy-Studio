@@ -11,19 +11,19 @@ import { ReactNode } from "react";
 function LoadingScreen(): ReactNode {
     return (
         <section
-            className="Loading fixed w-full h-svh inset-0 z-[1000]"
+            className="Loading fixed inset-0 z-[1000] h-svh w-full"
             role="status"
             aria-live="polite"
             aria-label="Hefnawy Studio Loading Screen"
         >
-            <div className="Container py-5 relative">
-                <div className="w-full flex justify-start items-center">
+            <div className="Container relative py-5">
+                <div className="flex w-full items-center justify-start">
                     <h1 aria-hidden="true" className="Logo logo_main">
                         حَفْناوِيٍّ
                     </h1>
                     <span className="sr-only">hefnawy studio</span>
                 </div>
-                <div className="absolute inset-0 w-full h-full flex justify-center items-center">
+                <div className="absolute inset-0 flex h-full w-full items-center justify-center">
                     <h1
                         className="glitch Logo logo_studio"
                         data-text="studio"

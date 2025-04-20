@@ -42,9 +42,7 @@ function Button<E extends React.ElementType = "button">({
             disabled={Component === "button" ? isDisabled : undefined}
             onClick={handleClick}
             {...nativeAttributes}
-            className={`Button focus ${isDisabled && "disabled"} ${
-                iconOnlyAlt && "icon-only"
-            } ${nativeAttributes.className || ""}`}
+            className={`Button focus ${isDisabled ? "disabled" : ""} ${iconOnlyAlt ? "icon-only" : ""} ${nativeAttributes.className || ""}`}
         >
             {children}
         </Component>

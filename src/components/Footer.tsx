@@ -2,6 +2,8 @@ import { ReactNode } from "react";
 
 import Link from "next/link";
 
+import Button from "@ui/Button";
+import Input from "@ui/Input";
 import SocialLinks from "@ui/SocialLinks";
 import LocalTime from "@ui/LocalTime";
 
@@ -28,54 +30,42 @@ function Footer(): ReactNode {
             className="main-footer w-full overflow-hidden"
             aria-label="main site footer"
         >
-            <div className="Container flex flex-col relative">
-                {/* <section
-                    aria-label="about us"
-                    className="footer_about max-sm:flex-col-reverse w-full justify-between flex flex-row"
-                >
-                    <div>
-                        <h2 className="Logo logo_main h1">
-                            <Link href="/" className="focus no-underline">
-                                <span aria-hidden="true">حَفْناوِيّ</span>
-                                <span className="sr-only">hefnawy studio</span>
-                            </Link>
-                        </h2>
-                        <p className="p fs-lg">
-                            Lorem ipsum dolor sit amet. Lorem ipsum dolor sit
-                            amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor
-                            sit amet.{" "}
-                        </p>
-                    </div>
-                    <div></div>
+            <div className="Container relative flex flex-col">
+                {/* <section className="footer_header flex w-full flex-row justify-center gap-8 pb-5 pt-20 max-sm:flex-col max-sm:gap-5">
+                    <form
+                        action=""
+                        className="flex w-full flex-row items-end gap-4"
+                    >
+                        <Input
+                            label="Email"
+                            placeholder="Enter your email"
+                            type="email"
+                            required
+                        />
+                        <Button type="submit" className="btn-mono-light">
+                            Click Me
+                        </Button>
+                    </form>
+                    <h2 className="fs-xl h1 m-0">
+                        Let’s work <br />
+                        together
+                    </h2>
                 </section> */}
-                {/* <section
-                    className="footer__main w-full flex flex-row"
-                    aria-label="main site footer"
-                >
-                    <div className="">
-                        
-                        <p className="small">
-                            Lorem ipsum dolor sit amet consectetur adipisicing
-                            elit. Voluptate, provident officiis deleniti impedit
-                            debitis voluptatibus?
-                        </p>
+                <section className="footer_header flex w-full flex-row justify-between gap-10 pb-5 pt-20 max-md:flex-col-reverse">
+                    <div className="header_info flex flex-col">
+                        <Link href="/" className="focus no-underline">
+                            <h1 aria-hidden="true" className="Logo logo_main">
+                                حَفْناوِيٍّ
+                            </h1>
+                            <span className="sr-only">hefnawy studio</span>
+                        </Link>
+                        <small className="md:max-w-[50ch]">
+                            Hefnawy Studio is a design studio that focuses on
+                            creating innovative and visually stunning websites
+                            and applications.
+                        </small>
                     </div>
-                    <div className="">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Voluptate, provident officiis deleniti impedit debitis
-                        voluptatibus?
-                    </div>
-                    <div className="">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Voluptate, provident officiis deleniti impedit debitis
-                        voluptatibus?
-                    </div>
-                    <div className="">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Voluptate, provident officiis deleniti impedit debitis
-                        voluptatibus?
-                    </div>
-                </section> */}
+                </section>
                 {/* {footerLinks.map((item, index) => (
                     <nav key={index} aria-label="secondary Navigation">
                         <h2 className="footer__title">{item.title}</h2>
@@ -138,11 +128,8 @@ function Footer(): ReactNode {
                         </ul>
                     </div>
                 ))} */}
-                <section
-                    className="footer_bottom ls-xs pb-5 pt-20 w-full gap-5 flex justify-between flex-row max-sm:flex-col-reverse"
-                    aria-label="Site Info & Links"
-                >
-                    <div className="footer_info gap-5 flex justify-start max-sm:w-full max-sm:flex-wrap flex-grow max-sm:justify-between max-sm:items-start">
+                <section className="footer_bottom flex w-full flex-row justify-between gap-5 pb-5 pt-16 max-sm:flex-col-reverse">
+                    <div className="footer_info flex flex-grow justify-start gap-5 max-sm:w-full max-sm:flex-wrap max-sm:items-start max-sm:justify-between">
                         <div className="flex flex-col">
                             <h2 className="small mb-5">Version</h2>
                             <p>2025 © Edition</p>
@@ -152,9 +139,9 @@ function Footer(): ReactNode {
                             <LocalTime />
                         </div>
                     </div>
-                    <span className="Line h-[0.5px] w-full mt-5 sm:hidden opacity-25"></span>
+                    <span className="Line mt-5 h-[0.5px] w-full opacity-25 sm:hidden"></span>
                     <nav
-                        className="flex items-start flex-col max-sm:w-full"
+                        className="flex flex-col items-start max-sm:w-full"
                         aria-label="social media links"
                     >
                         <h2 className="small mb-5">Socials</h2>

@@ -8,13 +8,6 @@
 // @tailwind components;
 @tailwind utilities;
 
-.test {
-    width: 25%;
-    height: 25vh;
-    background-color: rgba(255, 0, 0, 0.496);
-    margin: 1rem;
-}
-
 // @include flex(r, c, c);
 // @include flexForPhon(Hero, cr);
 // @include grid(2, 2, fr, 1rem)
@@ -36,20 +29,10 @@
 //     }
 // }
 
-// @layer base {
-//     * {
-//         @apply border-border;
-//     }
-//     body {
-//         @apply bg-background text-foreground;
-//     }
-// }
-
 :root {
     --container-width: calc(100% - 5rem);
 
-    // --radius: #{toRem(10px)};
-    --radius: #{toEm(8px)};
+    --radius: 0.35rem;
 
     --shadow: 0 6px 30px rgba(0, 0, 0, 10%);
     --margin: min(12em, 12vh);
@@ -109,11 +92,6 @@ html.lenis,
 html.lenis body {
     height: auto;
 }
-
-html.lenis,
-html.lenis body {
-    height: auto;
-}
 .lenis.lenis-smooth {
     scroll-behavior: auto !important;
 }
@@ -131,7 +109,6 @@ html.lenis body {
     width: var(--container-width, 90%);
     margin-inline: auto;
 }
-
 // section,
 // footer,
 // article:not([class]) {
@@ -147,19 +124,17 @@ html.lenis body {
     background-color: var(--primary-clr);
     color: var(--bg-clr);
 }
-
 ::-moz-focus-inner {
     border: none;
 }
-
 :focus-visible {
-    outline: 2px solid var(--accent-clr, hsla(232, 79%, 59%));
+    outline: 3px solid var(--border-clr);
 }
 :disabled,
 .disabled {
-    --focus-ring-clr: hsla(192, 3%, 61%);
-    filter: grayscale(80%);
-    opacity: 0.8;
+    --focus-ring-clr: var(--mono-clr);
+    filter: grayscale(90%);
+    opacity: 0.9;
     cursor: not-allowed !important;
 }
 
@@ -207,69 +182,42 @@ svg {
 .Line {
     background-color: var(--accent-clr, hsla(225, 7%, 12%));
 }
-// .input-wrapper {
-//     width: 100%;
-//     position: relative;
-//     @include flex(c, sb, fs);
-//     gap: 0.2em;
-//     margin-block-start: 0.6em;
-//     #input-date {
-//         cursor: pointer;
-//     }
-// }
-// .form-input {
-//     border: 0.1em solid var(--mono-clr);
-//     border-radius: var(--radius);
-//     padding: 0.35em 0.55em;
-//     width: 100%;
-//     background-color: var(--bg-clr);
-//     caret-color: var(--primary-clr);
-//     box-shadow: 0 0 0 -0.1em var(--bg-clr), 0 0 0 -0.2em var(--primary-clr);
-//     transition: box-shadow var(--time-fast) var(--animation);
-// }
-// .form-label {
-//     position: relative;
-//     text-transform: uppercase;
-//     font-size: 0.7em;
-//     letter-spacing: 0.05em;
-//     margin-inline: 0.45em;
-//     padding: 0.1em 0.35em;
-// }
-// .form-label.required::after {
-//     content: "*";
-//     position: absolute;
-//     top: -10%;
-//     right: -3px;
-//     font-size: 1em;
-//     color: var(--error-clr);
-//     user-select: none;
-// }
-// .form-input:focus {
-//     outline: none;
-//     box-shadow: 0 0 0 0.2em var(--bg-clr), 0 0 0 0.3em var(--primary-clr);
-// }
-// .form-input::placeholder {
-//     user-select: none;
-// }
-// .form-input::selection {
-//     background: var(--primary-clr);
-//     color: var(--bg-clr);
-// }
-// form {
-//     @include flex(c, c, fs);
-//     font-size: var(--fs-s);
-//     gap: 0.8em;
-//     text-align: left;
-//     p[date-form-error="waiting"] {
-//         color: var(--txt-clr);
-//     }
-//     p[date-form-error="error"] {
-//         color: var(--error-clr);
-//     }
-//     p[date-form-error="success"] {
-//         color: var(--success-clr);
-//     }
-// }
+#input-date {
+    cursor: pointer;
+}
+.form-input {
+    font-size: var(--fs-base);
+    border: 0.1em solid var(--mono-clr);
+    border-radius: var(--radius);
+    padding: max(0.5em, 0.5rem) max(1em, 1rem);
+    background-color: var(--bg-clr);
+    color: var(--txt-clr);
+    box-shadow: var(--shadow);
+}
+.form-label.required::after {
+    content: "*";
+    position: absolute;
+    top: -20%;
+    right: -20%;
+    font-size: 1.2em;
+    color: var(--error-clr);
+    user-select: none;
+}
+form {
+    @include flex(c, c, fs);
+    font-size: var(--fs-s);
+    gap: 0.8em;
+    text-align: left;
+    p[date-form-error="waiting"] {
+        color: var(--txt-clr);
+    }
+    p[date-form-error="error"] {
+        color: var(--error-clr);
+    }
+    p[date-form-error="success"] {
+        color: var(--success-clr);
+    }
+}
 :where(.Button) {
     width: fit-content;
     height: fit-content;
@@ -283,21 +231,20 @@ svg {
     white-space: nowrap;
     overflow: hidden;
     appearance: button;
-    padding: max(0.85em, 0.85rem) max(2em, 2rem);
+    padding: max(0.5em, 0.5rem) max(1em, 1rem);
     user-select: none;
     cursor: pointer;
     text-decoration: none;
     text-transform: capitalize;
-    font-weight: 900;
+    font-weight: 450;
     font-size: var(--fs-base);
     line-height: 1;
     border-radius: var(--radius);
-    background-color: var(--accent-clr, hsla(0, 0%, 100%, 0));
-    color: var(--btn-txt-clr, hsl(220, 13%, 5%));
+    background-color: var(--accent-clr, hsl(225, 7%, 12%));
+    color: var(--btn-txt-clr, hsl(210, 5%, 92%));
+    border: none;
     box-shadow: var(--shadow);
-    -webkit-mask-image: -webkit-radial-gradient(white, black);
-    transition: transform var(--time-fast) var(--animation);
-    --focus-shadow: inset 0px -0.4rem 0 var(--accent-shadow-clr);
+    // transition: all var(--time-fast) var(--animation);
 }
 @supports not (width: fit-content) {
     .button {
@@ -305,10 +252,22 @@ svg {
         height: max-content;
     }
 }
-@supports not (padding: max(0.85em, 0.85rem) max(2em, 2rem)) {
+@supports not (padding: max(0.5em, 0.5rem) max(1em, 1rem)) {
     .button {
-        padding: 0.65em 1.5em;
+        padding: 0.5em 1em;
     }
+}
+:where(.Button:not(:last-of-type)) {
+    margin-right: 1.2rem;
+    margin-top: 0;
+}
+@media (hover: hover) and (pointer: fine) {
+    :where(.Button):not(.disabled, :disabled):hover {
+        opacity: 0.9;
+    }
+}
+:where(.Button):active {
+    transform: scale(0.95);
 }
 :where(.Button.icon-only) {
     padding: max(1em, 1rem);
@@ -320,25 +279,14 @@ svg {
     --accent-clr: var(--primary-clr);
     --btn-txt-clr: var(--bg-clr);
 }
-.btn-primary {
-    background: var(--radial-gradient-primary);
-    --accent-clr: var(--primary-clr-600);
-    --btn-txt-clr: var(--bg-clr);
+.btn-mono-dark {
+    --accent-clr: var(--bg-clr-dark);
+    --btn-txt-clr: var(--txt-clr-light);
 }
-.btn-contrast {
-    --accent-clr: var(--contrast-clr);
-    --btn-txt-clr: var(--bg-clr);
+.btn-mono-light {
+    --accent-clr: var(--txt-clr-light);
+    --btn-txt-clr: var(--bg-clr-dark);
 }
-.btn-mono {
-    --accent-clr: var(--txt-clr);
-    --btn-txt-clr: var(--bg-clr);
-}
-.button:active {
-    transform: scale(0.95);
-}
-// .button:not(:last-child) {
-//     margin-right: 1rem;
-// }
 .button :where(svg, img, span) {
     pointer-events: none;
 }
@@ -348,36 +296,10 @@ svg {
 }
 .Button:has(img, svg):where(:hover, :active) {
 }
-:where(button, .button):hover {
-    opacity: 0.8;
-}
-:where(button, .button):active {
-    transform: scale(0.95);
-    box-shadow: 0 1px 4px -1px var(--shadow);
-}
-:where(.button:not(:last-of-type)) {
-    /* // @apply mr-5; */
-}
-// .Button:not(:last-child) {
-//     margin: 0 0 1rem 0;
-// }
+
 .button.icon-only {
     padding: max(1em, 1rem);
     box-shadow: none;
-}
-
-// .Button:has(img, svg) {
-// }
-// .Button:where(:hover, :active):not(:has(img, svg)) {
-// }
-// .Button:has(img, svg):where(:hover, :active) {
-// }
-.button:active {
-    transform: scale(0.95);
-}
-:where(.button:not(:last-of-type)) {
-    margin-right: var(--gap);
-    margin-top: 0;
 }
 
 .Logo {

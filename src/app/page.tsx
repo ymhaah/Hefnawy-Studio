@@ -14,13 +14,12 @@ export default async function Home() {
 
     return (
         <SmoothScroll>
-            <div className="test"></div>
-            <div className="test ts" data-scroll data-scroll-speed="0.3"></div>
-            <div className="test" data-scroll data-scroll-speed="0.5"></div>
-            <div className="test"></div>
             <main className="h-[500vh] w-full">
                 <div className="Container">
-                    {/* <Button>test</Button> */}
+                    <Button className="btn-mono-light rou">Click Me</Button>
+                    <Button className="btn-mono-dark">Click Me</Button>
+                    <Button className="btn-primary">Click Me</Button>
+                    <Button className="">Click Me</Button>
                     {/* <p>
                     Lorem ipsum dolor sit amet, consectetur{" "}
                     <a href="#" className="Link">

@@ -26,7 +26,7 @@
     --txt-clr-light: hsla(var(--clr-white), 1);
 
     --border-clr-dark: hsla(var(--clr-dark-charcoal-500), 0.176);
-    --border-clr-light: hsla(var(--clr-white), 0.2);
+    --border-clr-light: hsla(var(--clr-white), 0.5);
     --border-clr-solid-dark: hsla(var(--clr-light-gray-800), 1);
     --border-clr-solid-light: hsla(var(--clr-light-gray-700), 1);
 
@@ -43,7 +43,7 @@
     --txt-clr: var(--txt-clr-dark);
     --primary-clr: var(--primary-clr-dark);
     --mono-clr: var(--mono-clr-dark);
-    --border-clr: var(--border-clr-light);
+    --border-clr: var(--border-clr-solid-dark);
     --error-clr: var(--error-clr-light);
     --success-clr: var(--success-clr-light);
 

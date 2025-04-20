@@ -46,68 +46,118 @@
         --container-width: calc(100% - 2.5rem);
     }
 
-    nav[data-state="opened"] {
-        animation: navSlideIn var(--time-slow) var(--animation) forwards;
-        display: block;
-    }
-    nav[data-state="closing"] {
-        animation: navSlideOut var(--time-slow) var(--animation) forwards;
-    }
-    nav[data-state="closed"] {
-        display: none;
-    }
+    // nav[data-state="opened"] {
+    //     display: block;
+    // }
 
-    @keyframes slideIn {
-        from {
-            transform: translateY(-5%);
-        }
-        to {
-            transform: translateY(0);
-        }
-    }
+    // nav[data-state="closing"] {
+    //     animation: navSlideOut 0.3s var(--animation) forwards;
+    // }
 
-    @keyframes slideOut {
-        from {
-            transform: translateY(0);
-        }
-        to {
-            transform: translateY(-5%);
-        }
-    }
-    .Header nav {
-        height: 100svh;
-        width: 100%;
-        display: block;
-        position: absolute;
-        isolation: isolate;
-        background-color: var(--bg-clr-dark);
-        left: 0;
-        top: 100%;
-        z-index: 101;
-        padding: 2rem 1rem;
-        box-shadow: var(--shadow);
-        transform: translateY(-125%);
-        li a {
-            color: var(--txt-clr-light);
-        }
-    }
+    // nav[data-state="closed"] {
+    //     display: none;
+    // }
 
-    // .Container {
+    // .Header nav {
+    //     background-color: var(--bg-clr-dark);
+    //     box-shadow: -10px 0 30px rgba(0, 0, 0, 0.1);
+    //     animation: navSlideIn 0.4s var(--animation) forwards;
+
+    //     li a {
+    //         color: var(--txt-clr-light);
+    //         font-size: 1.25rem;
+    //         opacity: 0;
+    //     }
+
+    //     .header__nav-list {
+    //         padding: 5rem 2rem;
+    //         height: 100%;
+    //     }
     // }
-    // .Button,
-    // .inputFiled {
-    //     width: 100% !important;
+
+    // @keyframes navSlideIn {
+    //     from {
+    //         transform: translateX(100%);
+    //     }
+    //     to {
+    //         transform: translateX(0);
+    //     }
     // }
-    // .Button:not(:last-child),
-    // .inputFiled:not(:last-child) {
-    //     margin: 0 0 1rem 0;
+
+    // @keyframes navSlideOut {
+    //     from {
+    //         transform: translateX(0);
+    //     }
+    //     to {
+    //         transform: translateX(100%);
+    //     }
     // }
-    // .button {
-    //     width: 100%;
+
+    // @keyframes fadeInRight {
+    //     from {
+    //         opacity: 0;
+    //         transform: translateX(20px);
+    //     }
+    //     to {
+    //         opacity: 1;
+    //         transform: translateX(0);
+    //     }
     // }
-    // .button:not(:last-child) {
-    //     margin-right: 0;
-    //     margin-bottom: var(--gap);
+
+    // @keyframes fadeOutRight {
+    //     from {
+    //         opacity: 1;
+    //         transform: translateX(0);
+    //     }
+    //     to {
+    //         opacity: 0;
+    //         transform: translateX(20px);
+    //     }
+    // }
+
+    // .Header_nav {
+    //     .Nav_toggle-button {
+    //         width: 60px;
+    //         height: 60px;
+    //         border-radius: 50%;
+    //         background-color: var(--primary-clr);
+    //         transition: transform 0.3s var(--animation);
+
+    //         &:hover {
+    //             transform: scale(1.1);
+    //         }
+
+    //         .Nav_burger {
+    //             width: 100%;
+    //             &::after,
+    //             &::before {
+    //                 content: "";
+    //                 display: block;
+    //                 height: 2px;
+    //                 width: 30%;
+    //                 margin: auto;
+    //                 background-color: white;
+    //                 position: relative;
+    //                 transition: transform 0.3s var(--animation);
+    //             }
+    //             &::after {
+    //                 top: -4px;
+    //             }
+    //             &::before {
+    //                 top: 4px;
+    //             }
+    //         }
+    //         .burgerActive {
+    //             &::after {
+    //                 transform: rotate(45deg);
+    //                 top: -1px;
+    //             }
+    //             &::before {
+    //                 transform: rotate(-45deg);
+    //                 top: 1px;
+    //             }
+    //         }
+    //     }
     // }
 }
 @media screen and (min-width: #{toEm(769px)}) {

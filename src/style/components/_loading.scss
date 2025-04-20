@@ -7,10 +7,10 @@
 
 // font-family: var(--ff-Diwani);
 
-$glitch-steps: 30; // ? max is 100 before it gets too much
+$glitch-steps: 25; // ? max is 100 before it gets too much
 :root {
-    --glitch-intensity: -4px; // ? max is 5 before it gets too much
-    --glitch-speed: 2.5s;
+    --glitch-intensity: -3px; // ? max is 5 before it gets too much
+    --glitch-speed: 2s;
     --glitch-bg-clr: var(--bg-clr);
     --glitch-txt-clr: var(--txt-clr);
 }

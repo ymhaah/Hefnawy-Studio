@@ -15,8 +15,8 @@
     --fs-sm: #{toRem(11.4px)};
     --fs-base: #{toRem(16.5px)};
     --fs-md: #{toRem(20px)};
-    --fs-lg: #{toRem(35px)};
-    --fs-xl: #{toRem(150px)};
+    --fs-lg: #{toRem(40px)};
+    --fs-xl: #{toRem(100px)};
     --fs-xxl: #{toRem(250px)};
     --fs-xxxl: clamp(4.75rem, calc(35vw - 6rem), 25rem);
 
@@ -43,12 +43,14 @@ body {
     font-family: var(--ff-inter);
     font-size: var(--fs-base);
     font-style: normal;
-    line-height: 1.5;
+    line-height: 1.6;
     letter-spacing: var(--ls-base);
     font-weight: 450;
     color: var(--txt-clr);
     font-optical-sizing: auto;
-    font-feature-settings: "liga" 1, "calt" 1;
+    font-feature-settings:
+        "liga" 1,
+        "calt" 1;
     font-synthesis: none;
     font-optical-sizing: auto;
     text-rendering: optimizeLegibility;
@@ -155,7 +157,7 @@ small,
 }
 @media (hover: hover) and (pointer: fine) {
     :where(a:not(.Button), .Link):hover {
-        opacity: 0.8;
+        opacity: 0.9;
     }
 }
 input,
