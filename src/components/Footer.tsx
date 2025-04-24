@@ -2,6 +2,8 @@ import { ReactNode } from "react";
 
 import Link from "next/link";
 
+import TextPressure from "./ui/TextPressure";
+
 import Button from "@ui/Button";
 import Input from "@ui/Input";
 import SocialLinks from "@ui/SocialLinks";
@@ -31,26 +33,27 @@ function Footer(): ReactNode {
             aria-label="main site footer"
         >
             <div className="Container relative flex flex-col">
-                {/* <section className="footer_header flex w-full flex-row justify-center gap-8 pb-5 pt-20 max-sm:flex-col max-sm:gap-5">
-                    <form
-                        action=""
-                        className="flex w-full flex-row items-end gap-4"
-                    >
-                        <Input
-                            label="Email"
-                            placeholder="Enter your email"
-                            type="email"
-                            required
-                        />
-                        <Button type="submit" className="btn-mono-light">
-                            Click Me
-                        </Button>
-                    </form>
-                    <h2 className="fs-xl h1 m-0">
-                        Let’s work <br />
-                        together
-                    </h2>
-                </section> */}
+                <section className="footer_header flex w-full flex-row justify-center gap-8 pb-5 pt-20 max-sm:flex-col max-sm:gap-5">
+                    <div className="mx-auto max-w-5xl px-6">
+                        <div className="text-center">
+                            <h2 className="text-balance text-4xl font-semibold lg:text-5xl">
+                                Start Building
+                            </h2>
+                            <p className="mt-4">
+                                Libero sapiente aliquam quibusdam aspernatur.
+                            </p>
+
+                            <div className="mt-12 flex flex-wrap justify-center gap-4">
+                                <Button className="btn-mono-light">
+                                    Get Started
+                                </Button>
+                                <Button className="btn-mono-light">
+                                    Book Demo
+                                </Button>
+                            </div>
+                        </div>
+                    </div>
+                </section>
                 <section className="footer_header flex w-full flex-row justify-between gap-10 pb-5 pt-20 max-md:flex-col-reverse">
                     <div className="header_info flex flex-col">
                         <Link href="/" className="focus no-underline">
@@ -148,6 +151,7 @@ function Footer(): ReactNode {
                         <SocialLinks />
                     </nav>
                 </section>
+                <TextPressure text="Hefnawy Studio" />
             </div>
         </footer>
     );
