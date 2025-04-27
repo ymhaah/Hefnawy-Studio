@@ -49,6 +49,72 @@ const testimonials: Testimonial[] = [
             label: "Jodhpur, India",
         },
     },
+    {
+        name: "Jonathan Yombo",
+        role: "Software Engineer",
+        image: "https://randomuser.me/api/portraits/men/1.jpg",
+        quote: "Tailus is really extraordinary and very practical, no need to break your head. A real gold mine.",
+        location: {
+            lat: 38.9072,
+            lng: -77.0369,
+            label: "Washington, DC",
+        },
+    },
+    {
+        name: "Yves Kalume",
+        role: "GDE - Android",
+        image: "https://randomuser.me/api/portraits/men/6.jpg",
+        quote: "With no experience in webdesign I just redesigned my entire website in a few minutes with tailwindcss thanks to Tailus.",
+        location: {
+            lat: -1.9403,
+            lng: 29.8739,
+            label: "Rwanda",
+        },
+    },
+    {
+        name: "Yucel Faruksahan",
+        role: "Tailkits Creator",
+        image: "https://randomuser.me/api/portraits/men/7.jpg",
+        quote: "Great work on tailfolio template. This is one of the best personal website that I have seen so far :)",
+        location: {
+            lat: 26.2389,
+            lng: 73.0243,
+            label: "Jodhpur, India",
+        },
+    },
+    {
+        name: "Jonathan Yombo",
+        role: "Software Engineer",
+        image: "https://randomuser.me/api/portraits/men/1.jpg",
+        quote: "Tailus is really extraordinary and very practical, no need to break your head. A real gold mine.",
+        location: {
+            lat: 38.9072,
+            lng: -77.0369,
+            label: "Washington, DC",
+        },
+    },
+    {
+        name: "Yves Kalume",
+        role: "GDE - Android",
+        image: "https://randomuser.me/api/portraits/men/6.jpg",
+        quote: "With no experience in webdesign I just redesigned my entire website in a few minutes with tailwindcss thanks to Tailus.",
+        location: {
+            lat: -1.9403,
+            lng: 29.8739,
+            label: "Rwanda",
+        },
+    },
+    {
+        name: "Yucel Faruksahan",
+        role: "Tailkits Creator",
+        image: "https://randomuser.me/api/portraits/men/7.jpg",
+        quote: "Great work on tailfolio template. This is one of the best personal website that I have seen so far :)",
+        location: {
+            lat: 26.2389,
+            lng: 73.0243,
+            label: "Jodhpur, India",
+        },
+    },
 ];
 
 const chunkArray = (
@@ -116,16 +182,16 @@ export default function WallOfLoveSection() {
                                             </Avatar>
 
                                             <div>
-                                                <h3 className="font-medium">
+                                                <h3 className="h4 fs-base m-0">
                                                     {name}
                                                 </h3>
 
-                                                <span className="block text-sm tracking-wide text-muted-foreground">
+                                                <span className="p fs-base m-0 block">
                                                     {role}
                                                 </span>
 
-                                                <blockquote className="mt-3">
-                                                    <p className="text-gray-700 dark:text-gray-300">
+                                                <blockquote className="mt-3 max-md:mx-1">
+                                                    <p className="p fs-base">
                                                         {quote}
                                                     </p>
                                                 </blockquote>

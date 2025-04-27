@@ -1,9 +1,11 @@
 // import Image from "next/image";
 import Button from "@ui/Button";
 
+import { ConfettiButton } from "@ui/Confetti";
+
 import Testimonials from "@/components/Testimonials";
 
-import icon from "@icon/arrow-small-right.svg";
+// import icon from "@icon/arrow-small-right.svg";
 
 import SmoothScroll from "@/components/LenisScroll";
 
@@ -22,7 +24,7 @@ export default async function Home() {
                     <Button className="btn-mono-dark">Click Me</Button>
                     <Button className="btn-primary">Click Me</Button>
                     <Button className="">Click Me</Button>
-
+                    <ConfettiButton>click me</ConfettiButton>
                     <Testimonials />
                     {/* <p>
                     Lorem ipsum dolor sit amet, consectetur{" "}
