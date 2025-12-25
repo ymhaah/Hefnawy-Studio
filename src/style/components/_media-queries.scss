@@ -11,8 +11,9 @@
 }
 // For 4K
 @media screen and (min-width: #{toEm(1600px)}) {
-    .Container {
-        --container-width: calc(1600px - 6rem);
+    .Container,
+    .Container-full {
+        width: calc(1600px - 6rem);
     }
 }
 @media screen and (max-width: #{toEm(1600px)}) {
@@ -29,6 +30,9 @@
 // For Monitor
 
 @media screen and (max-width: #{toEm(1024px)}) {
+    :root {
+        --fs-xl: #{toRem(80px)};
+    }
     .Container {
         // --container-width: calc(100% - 4rem);
     }
@@ -42,8 +46,15 @@
 
 // For laptop, S-Monitor
 @media screen and (max-width: #{toEm(768px)}) {
+    :root {
+        --fs-lg: #{toRem(40px)};
+        --fs-xl: #{toRem(50px)};
+    }
+    :where(.Button) {
+        width: 100%;
+    }
     .Container {
-        --container-width: calc(100% - 2.5rem);
+        width: calc(100% - 2.5rem);
     }
 
     // nav[data-state="opened"] {

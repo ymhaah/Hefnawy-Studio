@@ -30,7 +30,7 @@
 // }
 
 :root {
-    --container-width: calc(100% - 5rem);
+    --container-width: 70%;
 
     --radius: 0.35rem;
 
@@ -107,6 +107,11 @@ html.lenis body {
 .Container {
     height: 100%;
     width: var(--container-width, 90%);
+    margin-inline: auto;
+}
+.Container-full {
+    height: 100%;
+    width: calc(100% - 5rem);
     margin-inline: auto;
 }
 // section,
@@ -231,7 +236,7 @@ form {
     white-space: nowrap;
     overflow: hidden;
     appearance: button;
-    padding: max(0.5em, 0.5rem) max(1em, 1rem);
+    padding: max(0.5em, 0.5rem) max(1.75em, 1.75rem);
     user-select: none;
     cursor: pointer;
     text-decoration: none;
@@ -239,7 +244,7 @@ form {
     font-weight: 450;
     font-size: var(--fs-base);
     line-height: 1;
-    border-radius: var(--radius);
+    border-radius: 40px;
     background-color: var(--accent-clr, hsl(225, 7%, 12%));
     color: var(--btn-txt-clr, hsl(210, 5%, 92%));
     border: none;
@@ -254,12 +259,8 @@ form {
 }
 @supports not (padding: max(0.5em, 0.5rem) max(1em, 1rem)) {
     .button {
-        padding: 0.5em 1em;
+        padding: 0.5em 1.75em;
     }
-}
-:where(.Button:not(:last-of-type)) {
-    margin-right: 1.2rem;
-    margin-top: 0;
 }
 @media (hover: hover) and (pointer: fine) {
     :where(.Button):not(.disabled, :disabled):hover {
@@ -285,6 +286,11 @@ form {
 }
 .btn-mono-light {
     --accent-clr: var(--txt-clr-light);
+    --btn-txt-clr: var(--bg-clr-dark);
+}
+.btn-skeleton {
+    --accent-clr: none;
+    box-shadow: none;
     --btn-txt-clr: var(--bg-clr-dark);
 }
 .button :where(svg, img, span) {
@@ -400,4 +406,25 @@ form {
 .accent-X-clr {
     --accent-clr: var(--accent-X-clr);
     --accent-shadow-clr: var(--clr-teal-blue-500);
+}
+
+.ts {
+    // الاب
+    grid-template-rows: repeat(2, minmax(0, 1fr));
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+
+    // ابن 1
+    grid-column: span 4 / span 4;
+
+    // ابن 2
+
+    grid-column: span 2 / span 2;
+
+    // ابن 3
+
+    grid-column: span 2 / span 2;
+
+    // ابن 4
+
+    grid-column: span 4 / span 4;
 }

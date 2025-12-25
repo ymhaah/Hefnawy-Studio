@@ -3,7 +3,12 @@ import Button from "@ui/Button";
 
 import { ConfettiButton } from "@ui/Confetti";
 
-import Testimonials from "@/components/Testimonials";
+import Hero from "@comp/Hero";
+import CoolThing1 from "@comp/CoolThing1";
+import Features from "@comp/Features";
+import Testimonials from "@comp/Testimonials";
+
+import GradualBlur from "@comp/GradualBlur";
 
 // import icon from "@icon/arrow-small-right.svg";
 
@@ -18,32 +23,21 @@ export default async function Home() {
 
     return (
         <SmoothScroll>
-            <main className="h-[500vh] w-full">
-                <div className="Container">
-                    <Button className="btn-mono-light rou">Click Me</Button>
-                    <Button className="btn-mono-dark">Click Me</Button>
-                    <Button className="btn-primary">Click Me</Button>
-                    <Button className="">Click Me</Button>
-                    <ConfettiButton>click me</ConfettiButton>
-                    <Testimonials />
-                    {/* <p>
-                    Lorem ipsum dolor sit amet, consectetur{" "}
-                    <a href="#" className="Link">
-                        this is a link{" "}
-                        <img src={icon.src} alt="" className="arrow Icon" />
-                    </a>
-                    adipisicing elit.
-                </p>
-                <h1 className="fs-md">
-                    Lorem ipsum dolor sit amet, Lorem ipsum dolor sit amet,
-                    consectetur{" "}
-                    <a href="#" className="Link">
-                        this is a link{" "}
-                        <img src={icon.src} alt="" className="Icon arrow" />
-                    </a>
-                    adipisicing elit.
-                </h1> */}
-                </div>
+            <main className="w-full">
+                <Hero />
+                <CoolThing1 />
+                <Features />
+                <Testimonials />
+                <GradualBlur
+                    target="page"
+                    position="bottom"
+                    height="3rem"
+                    strength={2}
+                    divCount={5}
+                    curve="bezier"
+                    exponential={true}
+                    opacity={1}
+                />
             </main>
         </SmoothScroll>
     );
@@ -52,4 +46,5 @@ export default async function Home() {
 // // TODO: loader
 // TODO: font sizes
 // TODO: button
-// TODO: footer
+// TODO: testimonials
+// // TODO: footer

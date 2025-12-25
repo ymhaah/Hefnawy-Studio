@@ -1,18 +1,10 @@
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import { Card, CardContent } from "@/components/ui/card";
-
-import WorldMap from "@ui/WorldMap";
 
 type Testimonial = {
     name: string;
     role: string;
     image: string;
     quote: string;
-    location: {
-        lat: number;
-        lng: number;
-        label: string;
-    };
 };
 
 const testimonials: Testimonial[] = [
@@ -21,186 +13,68 @@ const testimonials: Testimonial[] = [
         role: "Software Engineer",
         image: "https://randomuser.me/api/portraits/men/1.jpg",
         quote: "Tailus is really extraordinary and very practical, no need to break your head. A real gold mine.",
-        location: {
-            lat: 38.9072,
-            lng: -77.0369,
-            label: "Washington, DC",
-        },
     },
     {
         name: "Yves Kalume",
         role: "GDE - Android",
         image: "https://randomuser.me/api/portraits/men/6.jpg",
         quote: "With no experience in webdesign I just redesigned my entire website in a few minutes with tailwindcss thanks to Tailus.",
-        location: {
-            lat: -1.9403,
-            lng: 29.8739,
-            label: "Rwanda",
-        },
     },
     {
         name: "Yucel Faruksahan",
         role: "Tailkits Creator",
         image: "https://randomuser.me/api/portraits/men/7.jpg",
         quote: "Great work on tailfolio template. This is one of the best personal website that I have seen so far :)",
-        location: {
-            lat: 26.2389,
-            lng: 73.0243,
-            label: "Jodhpur, India",
-        },
     },
     {
-        name: "Jonathan Yombo",
-        role: "Software Engineer",
-        image: "https://randomuser.me/api/portraits/men/1.jpg",
-        quote: "Tailus is really extraordinary and very practical, no need to break your head. A real gold mine.",
-        location: {
-            lat: 38.9072,
-            lng: -77.0369,
-            label: "Washington, DC",
-        },
-    },
-    {
-        name: "Yves Kalume",
-        role: "GDE - Android",
-        image: "https://randomuser.me/api/portraits/men/6.jpg",
-        quote: "With no experience in webdesign I just redesigned my entire website in a few minutes with tailwindcss thanks to Tailus.",
-        location: {
-            lat: -1.9403,
-            lng: 29.8739,
-            label: "Rwanda",
-        },
-    },
-    {
-        name: "Yucel Faruksahan",
-        role: "Tailkits Creator",
-        image: "https://randomuser.me/api/portraits/men/7.jpg",
-        quote: "Great work on tailfolio template. This is one of the best personal website that I have seen so far :)",
-        location: {
-            lat: 26.2389,
-            lng: 73.0243,
-            label: "Jodhpur, India",
-        },
-    },
-    {
-        name: "Jonathan Yombo",
-        role: "Software Engineer",
-        image: "https://randomuser.me/api/portraits/men/1.jpg",
-        quote: "Tailus is really extraordinary and very practical, no need to break your head. A real gold mine.",
-        location: {
-            lat: 38.9072,
-            lng: -77.0369,
-            label: "Washington, DC",
-        },
-    },
-    {
-        name: "Yves Kalume",
-        role: "GDE - Android",
-        image: "https://randomuser.me/api/portraits/men/6.jpg",
-        quote: "With no experience in webdesign I just redesigned my entire website in a few minutes with tailwindcss thanks to Tailus.",
-        location: {
-            lat: -1.9403,
-            lng: 29.8739,
-            label: "Rwanda",
-        },
-    },
-    {
-        name: "Yucel Faruksahan",
-        role: "Tailkits Creator",
-        image: "https://randomuser.me/api/portraits/men/7.jpg",
-        quote: "Great work on tailfolio template. This is one of the best personal website that I have seen so far :)",
-        location: {
-            lat: 26.2389,
-            lng: 73.0243,
-            label: "Jodhpur, India",
-        },
+        name: "Anonymous author",
+        role: "Doing something",
+        image: "https://randomuser.me/api/portraits/men/8.jpg",
+        quote: "I am really new to Tailwind and I want to give a go to make some page on my own. I searched a lot of hero pages and blocks online. However, most of them are not giving me a clear view or needed some HTML/CSS coding background to make some changes from the original or too expensive to have. I downloaded the one of Tailus template which is very clear to understand at the start and you could modify the codes/blocks to fit perfectly on your purpose of the page.",
     },
 ];
 
-const chunkArray = (
-    array: Testimonial[],
-    chunkSize: number
-): Testimonial[][] => {
-    const result: Testimonial[][] = [];
-    for (let i = 0; i < array.length; i += chunkSize) {
-        result.push(array.slice(i, i + chunkSize));
-    }
-    return result;
-};
-
-const testimonialChunks = chunkArray(
-    testimonials,
-    Math.ceil(testimonials.length / 3)
-);
-
-export default function WallOfLoveSection() {
+function Testimonials() {
     return (
         <section className="Testimonials w-full" aria-label="Testimonials">
-            <div className="Container relative flex flex-col items-center justify-between py-5">
-                <div className="text-center">
+            <div className="Container relative flex flex-col items-center justify-between gap-5">
+                <div className="flex flex-col items-center text-center">
                     <h2 className="h2 fs-lg capitalize">
-                        Loved by the community
+                        What people probably said about me
                     </h2>
                     <p className="p fs-bass md:max-w-[50ch]">
-                        Harum quae dolore orrupti aut temporibus ariatur. Harum
-                        quae dolore orrupti aut temporibus ariatur.
+                        100% organic, hand-picked words from actual humans, Read
+                        at your own risk — extreme kindness ahead.
                     </p>
                 </div>
-                <WorldMap
-                    dots={testimonials.map((testimonial) => ({
-                        start: {
-                            lat: 13.7563,
-                            lng: 31.4913182,
-                            label: "Cairo, Egypt",
-                        },
-                        end: {
-                            lat: testimonial.location.lat,
-                            lng: testimonial.location.lng,
-                            label: testimonial.location.label,
-                        },
-                    }))}
-                    className="max-md:w-[200%]"
-                />
-                <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
-                    {testimonialChunks.map((chunk, chunkIndex) => (
-                        <div key={chunkIndex} className="space-y-3">
-                            {chunk.map(
-                                ({ name, role, quote, image }, index) => (
-                                    <Card key={index}>
-                                        <CardContent className="grid grid-cols-[auto_1fr] gap-3 pt-6">
-                                            <Avatar className="size-9">
-                                                <AvatarImage
-                                                    alt={name}
-                                                    src={image}
-                                                    loading="lazy"
-                                                    width="120"
-                                                    height="120"
-                                                />
-                                                <AvatarFallback>
-                                                    ST
-                                                </AvatarFallback>
-                                            </Avatar>
-
-                                            <div>
-                                                <h3 className="h4 fs-base m-0">
-                                                    {name}
-                                                </h3>
-
-                                                <span className="p fs-base m-0 block">
-                                                    {role}
-                                                </span>
-
-                                                <blockquote className="mt-3 max-md:mx-1">
-                                                    <p className="p fs-base">
-                                                        {quote}
-                                                    </p>
-                                                </blockquote>
-                                            </div>
-                                        </CardContent>
-                                    </Card>
-                                )
-                            )}
-                        </div>
+                <div className="grid w-full grid-cols-1 gap-2 md:grid-cols-2 lg:grid-cols-3">
+                    {testimonials.map((testimonial, index) => (
+                        <article
+                            key={index}
+                            className="rounded-lg border-8 border-border p-2"
+                        >
+                            <header className="mb-4 flex items-center justify-start gap-3">
+                                <Avatar className="size-12">
+                                    <AvatarImage
+                                        alt={testimonial.name}
+                                        src={testimonial.image}
+                                        loading="lazy"
+                                        width="150"
+                                        height="150"
+                                    />
+                                    <AvatarFallback>ST</AvatarFallback>
+                                </Avatar>
+                                <div className="flex flex-col">
+                                    <h3 className="font-medium">
+                                        {testimonial.name}
+                                    </h3>
+                                    <small>{testimonial.role}</small>
+                                </div>
+                            </header>
+                            <blockquote className="m-0">
+                                <p className="p">{testimonial.quote}</p>
+                            </blockquote>
+                        </article>
                     ))}
                 </div>
             </div>
@@ -208,6 +82,6 @@ export default function WallOfLoveSection() {
     );
 }
 
-// TODO: fix the card design
-// TODO: make the map look cool
-// TODO: add some fake data to the testimonials array
+export default Testimonials;
+
+// TODO: add the data to the testimonials array with some fake ones

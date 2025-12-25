@@ -1,5 +1,3 @@
-import { error } from "console";
-import { s } from "framer-motion/client";
 import type { Config } from "tailwindcss";
 
 const config: Config = {
@@ -11,80 +9,40 @@ const config: Config = {
     ],
     prefix: "",
     theme: {
-    	extend: {
-    		colors: {
-    			error: 'var(--error-clr-light)',
-    			success: 'var(--success-clr-light)',
-    			border: 'hsl(var(--border))',
-    			background: 'hsl(var(--background))',
-    			foreground: 'hsl(var(--foreground))',
-    			primary: {
-    				DEFAULT: 'hsl(var(--primary))',
-    				foreground: 'hsl(var(--primary-foreground))'
-    			},
-    			secondary: {
-    				DEFAULT: 'hsl(var(--secondary))',
-    				foreground: 'hsl(var(--secondary-foreground))'
-    			},
-    			destructive: {
-    				DEFAULT: 'hsl(var(--destructive))',
-    				foreground: 'hsl(var(--destructive-foreground))'
-    			},
-    			muted: {
-    				DEFAULT: 'hsl(var(--muted))',
-    				foreground: 'hsl(var(--muted-foreground))'
-    			},
-    			accent: {
-    				DEFAULT: 'hsl(var(--accent))',
-    				foreground: 'hsl(var(--accent-foreground))'
-    			},
-    			popover: {
-    				DEFAULT: 'hsl(var(--popover))',
-    				foreground: 'hsl(var(--popover-foreground))'
-    			},
-    			card: {
-    				DEFAULT: 'hsl(var(--card))',
-    				foreground: 'hsl(var(--card-foreground))'
-    			},
-    			input: 'hsl(var(--input))',
-    			ring: 'hsl(var(--ring))',
-    			chart: {
-    				'1': 'hsl(var(--chart-1))',
-    				'2': 'hsl(var(--chart-2))',
-    				'3': 'hsl(var(--chart-3))',
-    				'4': 'hsl(var(--chart-4))',
-    				'5': 'hsl(var(--chart-5))'
-    			}
-    		},
-    		borderRadius: {
-    			lg: 'var(--radius)',
-    			md: 'calc(var(--radius) - 2px)',
-    			sm: 'calc(var(--radius) - 4px)'
-    		},
-    		keyframes: {
-    			'accordion-down': {
-    				from: {
-    					height: '0'
-    				},
-    				to: {
-    					height: 'var(--radix-accordion-content-height)'
-    				}
-    			},
-    			'accordion-up': {
-    				from: {
-    					height: 'var(--radix-accordion-content-height)'
-    				},
-    				to: {
-    					height: '0'
-    				}
-    			}
-    		},
-    		animation: {
-    			'accordion-down': 'accordion-down 0.2s ease-out',
-    			'accordion-up': 'accordion-up 0.2s ease-out'
-    		}
-    	}
+        extend: {
+            colors: {
+                gray: {
+                    DEFAULT: "hsl(var(--clr-gray))",
+                    light400: "hsl(var(--clr-light-gray-400))",
+                    light500: "hsl(var(--clr-light-gray-500))",
+                    light700: "hsl(var(--clr-light-gray-700))",
+                    light800: "hsl(var(--clr-light-gray-800))",
+                },
+                charcoal: {
+                    500: "hsl(var(--clr-dark-charcoal-500))",
+                    700: "hsl(var(--clr-dark-charcoal-700))",
+                },
+                blue: {
+                    DEFAULT: "hsl(var(--clr-blue))",
+                    dark: "hsl(var(--clr-dark-blue))",
+                },
+                red: "hsl(var(--clr-red))",
+                green: "hsl(var(--clr-green) )",
+
+                bg: "var(--bg-clr-light)",
+                txt: "var(--txt-clr-dark)",
+                primary: "var(--primary-clr-dark)",
+                mono: "var(--mono-clr-dark)",
+                border: "var(--border-clr-solid-dark)",
+                error: "var(--error-clr-light)",
+                success: "var(--success-clr-light)",
+            },
+            borderRadius: {
+                lg: "var(--radius)",
+                md: "calc(var(--radius) - 2px)",
+                sm: "calc(var(--radius) - 4px)",
+            },
+        },
     },
-    plugins: [require("tailwindcss-animate")],
 };
 export default config;

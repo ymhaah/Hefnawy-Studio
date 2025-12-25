@@ -12,12 +12,12 @@
 
 :root {
     // ? font sizes
-    --fs-sm: #{toRem(11.4px)};
+    --fs-sm: #{toRem(11.5px)};
     --fs-base: #{toRem(16.5px)};
     --fs-md: #{toRem(20px)};
-    --fs-lg: #{toRem(40px)};
+    --fs-lg: #{toRem(50px)};
     --fs-xl: #{toRem(100px)};
-    --fs-xxl: #{toRem(250px)};
+    --fs-xxl: 11vw;
     --fs-xxxl: clamp(4.75rem, calc(35vw - 6rem), 25rem);
 
     --ls-xs: -0.04em;
@@ -94,8 +94,7 @@ small,
 .small {
     font-size: var(--fs-sm);
     letter-spacing: var(--ls-xl);
-    font-weight: 200;
-    text-transform: uppercase;
+    font-weight: 300;
 }
 
 .fs-sm {

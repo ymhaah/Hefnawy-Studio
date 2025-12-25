@@ -62,7 +62,7 @@ function WorldMap({
         <div
             aria-label="Dotted world map of customer locations"
             {...nativeProps}
-            className={`w-[120%] ${nativeProps.className}`}
+            className={`w-[100%] ${nativeProps.className}`}
         >
             <div className="relative aspect-[2/1] w-full">
                 {/* Render the background map image */}

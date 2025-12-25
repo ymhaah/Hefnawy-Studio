@@ -180,7 +180,7 @@ function Header(): ReactNode {
     return (
         // header with nav style -> fixed left-0 top-0 isolate z-[1000] w-full
         <header
-            className="Header w-full"
+            className="Header max-h-[100px] w-full"
             ref={header}
             aria-label="Main Site Header"
         >
