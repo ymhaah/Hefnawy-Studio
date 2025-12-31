@@ -5,7 +5,7 @@ import { Rocket } from "lucide-react";
 function Hero() {
     return (
         <section
-            className="Hero | h-fit w-full max-sm:min-h-[60svh]"
+            className="Hero | h-fit w-full pb-10 max-sm:min-h-[60svh]"
             style={{ minHeight: "calc(80svh - 100px)" }}
         >
             <div className="Container relative flex flex-col items-center justify-center">

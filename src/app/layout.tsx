@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 
-import { Toaster } from "sonner";
+import { Toaster } from "react-hot-toast";
 
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -8,7 +8,7 @@ import Footer from "@/components/Footer";
 import { Inter, Playfair_Display } from "next/font/google";
 import localFont from "next/font/local";
 import "./index.scss";
-import icon from "@icon/arrow-small-right.svg";
+// import icon from "@icon/arrow-small-right.svg";
 
 // ? Sans
 const inter = Inter({

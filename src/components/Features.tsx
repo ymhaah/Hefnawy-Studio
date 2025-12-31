@@ -38,7 +38,7 @@ const locations: locationsT[] = [
 export default function Features() {
     return (
         <section className="px-4 py-16 md:py-32">
-            <div className="mx-auto grid max-w-5xl border md:grid-cols-2">
+            <div className="Container grid border md:grid-cols-2">
                 <div className="col-span-full border-y p-12">
                     <h2 className="fs-lg h1 text-center">Why choose me?</h2>
                 </div>
@@ -98,13 +98,13 @@ export default function Features() {
                                     Sat 22 Feb
                                 </span>
                             </div>
-                            <div className="mt-1.5 w-3/5 rounded-lg border bg-bg p-3 text-xs">
-                                Hey, I'm having trouble with my website.
+                            <div className="mt-1.5 w-3/5 max-w-[250px] rounded-lg border bg-bg p-3 text-xs">
+                                Hey, I&apos;m having trouble with my website.
                             </div>
                         </div>
 
                         <div>
-                            <div className="mb-1 ml-auto w-3/5 rounded-lg bg-blue-600 p-3 text-xs text-white">
+                            <div className="mb-1 ml-auto w-3/5 max-w-[250px] rounded-lg bg-blue-600 p-3 text-xs text-white">
                                 Never gonna give you up, Never gonna let you
                                 down, Never gonna run around and desert you
                             </div>

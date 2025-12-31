@@ -190,39 +190,44 @@ svg {
 #input-date {
     cursor: pointer;
 }
+
 .form-input {
-    font-size: var(--fs-base);
+    max-width: 100%;
+    min-width: 50%;
+    min-height: 2.5em;
     border: 0.1em solid var(--mono-clr);
     border-radius: var(--radius);
-    padding: max(0.5em, 0.5rem) max(1em, 1rem);
+    padding: 0.35em 0.55em;
+    width: 100%;
     background-color: var(--bg-clr);
+    caret-color: var(--primary-clr);
+}
+.form-label {
     color: var(--txt-clr);
-    box-shadow: var(--shadow);
+    position: relative;
+    text-transform: uppercase;
+    font-size: 0.7em;
+    letter-spacing: 0.05em;
+    margin-inline: 0.45em;
+    padding: 0.1em 0.35em;
 }
 .form-label.required::after {
     content: "*";
     position: absolute;
-    top: -20%;
-    right: -20%;
-    font-size: 1.2em;
+    top: -10%;
+    right: -3px;
+    font-size: 1em;
     color: var(--error-clr);
     user-select: none;
 }
-form {
-    @include flex(c, c, fs);
-    font-size: var(--fs-s);
-    gap: 0.8em;
-    text-align: left;
-    p[date-form-error="waiting"] {
-        color: var(--txt-clr);
-    }
-    p[date-form-error="error"] {
-        color: var(--error-clr);
-    }
-    p[date-form-error="success"] {
-        color: var(--success-clr);
-    }
+.form-input::placeholder {
+    user-select: none;
 }
+.form-input::selection {
+    background: var(--primary-clr);
+    color: var(--txt-clr);
+}
+
 :where(.Button) {
     width: fit-content;
     height: fit-content;

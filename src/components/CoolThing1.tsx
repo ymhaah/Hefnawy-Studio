@@ -9,9 +9,9 @@ function CoolThing1() {
             <div className="shadow-3xl h-[90%] w-[75%] overflow-hidden rounded-[2rem] bg-white max-sm:w-[90%]">
                 <Ballpit
                     count={200}
-                    gravity={0.2}
+                    gravity={1}
                     friction={0.8}
-                    wallBounce={1}
+                    wallBounce={1.2}
                     followCursor={false}
                     colors={[
                         "hsl(232, 79%, 59%)",

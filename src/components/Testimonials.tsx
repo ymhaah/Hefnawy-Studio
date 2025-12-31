@@ -9,28 +9,22 @@ type Testimonial = {
 
 const testimonials: Testimonial[] = [
     {
-        name: "Jonathan Yombo",
+        name: "Shubham Rakhecha",
+        role: "CEO @Skyrekon | Blockchain & AI Solutions",
+        image: "https://media.licdn.com/dms/image/v2/D5603AQHokULVyoz5zA/profile-displayphoto-scale_200_200/B56ZfneZ49GQAY-/0/1751935198529?e=1769040000&v=beta&t=SopnEm7lI7yFy0NiWV2OPoAo0V1L57s4hrQawMzf1iE",
+        quote: "I had the pleasure of working with Youssef Hefnawy, a highly talented and reliable developer. He excels at understanding complex challenges and delivering clean, scalable, and efficient solutions. His technical expertise, attention to detail, and collaborative mindset made him a valuable asset to our project. I highly recommend him for any development role.",
+    },
+    {
+        name: "Rukundo Aimé",
         role: "Software Engineer",
-        image: "https://randomuser.me/api/portraits/men/1.jpg",
-        quote: "Tailus is really extraordinary and very practical, no need to break your head. A real gold mine.",
+        image: "https://media.licdn.com/dms/image/v2/D4D03AQH5mVPAHX0mCg/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1699876610431?e=1769040000&v=beta&t=ZjncAPGezuYdIgJeyP5IhoP8U9hIZYMolPozjmoZh_k",
+        quote: "I had an excellent experience working with Youssef on my website. He was professional, communicative, and clearly understood my requirements. The project was delivered on time, within budget, and exceeded my expectations in both design and functionality. I highly recommend him.",
     },
     {
-        name: "Yves Kalume",
-        role: "GDE - Android",
-        image: "https://randomuser.me/api/portraits/men/6.jpg",
-        quote: "With no experience in webdesign I just redesigned my entire website in a few minutes with tailwindcss thanks to Tailus.",
-    },
-    {
-        name: "Yucel Faruksahan",
-        role: "Tailkits Creator",
-        image: "https://randomuser.me/api/portraits/men/7.jpg",
-        quote: "Great work on tailfolio template. This is one of the best personal website that I have seen so far :)",
-    },
-    {
-        name: "Anonymous author",
-        role: "Doing something",
-        image: "https://randomuser.me/api/portraits/men/8.jpg",
-        quote: "I am really new to Tailwind and I want to give a go to make some page on my own. I searched a lot of hero pages and blocks online. However, most of them are not giving me a clear view or needed some HTML/CSS coding background to make some changes from the original or too expensive to have. I downloaded the one of Tailus template which is very clear to understand at the start and you could modify the codes/blocks to fit perfectly on your purpose of the page.",
+        name: "Pamela Jackson",
+        role: "digital product designer",
+        image: "https://media.licdn.com/dms/image/v2/C5103AQFUKLf3IUBdWw/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1516279675930?e=1769040000&v=beta&t=NHTebJm7aUHarTXQNGR50FV9roG-6x-R7eYpV49wbi4",
+        quote: "I had the pleasure of working with Yusuf on a microsite project and was thoroughly impressed. He exceeded our performance standards, delivered a visually stunning and highly functional result, and met all deadlines. His professionalism, communication, and attention to detail made the entire process seamless.",
     },
 ];
 
