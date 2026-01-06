@@ -2,9 +2,9 @@ import type { ReactNode } from "react";
 
 import Link from "next/link";
 
-import TextPressure from "@ui/TextPressure";
-import SocialLinks from "@ui/SocialLinks";
-import LocalTime from "@ui/LocalTime";
+import TextPressure from "./ui/TextPressure";
+import SocialLinks from "./ui/SocialLinks";
+import LocalTime from "./ui/LocalTime";
 
 /**
  * Footer component renders the footer with various link sections.

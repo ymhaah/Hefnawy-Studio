@@ -1,14 +1,14 @@
 import Image from "next/image";
 
-import projectImage1 from "@img/projects/p-1.jpeg";
-import projectImage2 from "@img/projects/p-2.jpeg";
-import projectImage3 from "@img/projects/p-3.png";
-import projectImage4 from "@img/projects/p-4.jpeg";
+import projectImage1 from "../assets/images/projects/p-1.jpeg";
+import projectImage2 from "../assets/images/projects/p-2.jpeg";
+import projectImage3 from "../assets/images/projects/p-3.png";
+import projectImage4 from "../assets/images/projects/p-4.jpeg";
 
-import projectImage1Webp from "@img/projects/p-1.webp";
-import projectImage2Webp from "@img/projects/p-2.webp";
-import projectImage3Webp from "@img/projects/p-3.webp";
-import projectImage4Webp from "@img/projects/p-4.webp";
+import projectImage1Webp from "../assets/images/projects/p-1.webp";
+import projectImage2Webp from "../assets/images/projects/p-2.webp";
+import projectImage3Webp from "../assets/images/projects/p-3.webp";
+import projectImage4Webp from "../assets/images/projects/p-4.webp";
 
 const projectsInfo = [
     {

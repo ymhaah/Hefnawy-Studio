@@ -1,4 +1,4 @@
-import Ballpit from "@comp/Ballpit";
+import Ballpit from "./Ballpit";
 
 function CoolThing1() {
     return (

@@ -7,9 +7,9 @@ import {
     ChartContainer,
     ChartTooltip,
     ChartTooltipContent,
-} from "@/components/ui/chart";
+} from "./ui/chart";
 
-import WorldMap from "@ui/WorldMap";
+import WorldMap from "./ui/WorldMap";
 
 type locationsT = {
     lat: number;
