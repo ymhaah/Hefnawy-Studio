@@ -1,5 +1,9 @@
 import { ReactNode } from "react";
 
+async function mockLoadingDelay(ms: number) {
+    return new Promise((resolve) => setTimeout(resolve, ms));
+}
+
 /**
  * LoadingScreen Component
  *
@@ -8,7 +12,8 @@ import { ReactNode } from "react";
  *
  * @returns {ReactNode} The main loading screen component.
  */
-function LoadingScreen(): ReactNode {
+async function LoadingScreen(): Promise<ReactNode> {
+    await mockLoadingDelay(5000); // ? simulate loading time to show loading page design
     return (
         <section
             className="Loading fixed inset-0 z-[1000] h-svh w-full"
