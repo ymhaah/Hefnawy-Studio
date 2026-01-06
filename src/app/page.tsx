@@ -1,28 +1,17 @@
-// import Image from "next/image";
-// import Button from "@ui/Button";
+import Hero from "../components/Hero";
+import CoolThing1 from "../components/CoolThing1";
+import Features from "../components/Features";
+import Projects from "../components/Projects";
+import Testimonials from "../components/Testimonials";
+import Contact from "../components/Contact";
 
-// import { ConfettiButton } from "@ui/Confetti";
-
-import Hero from "@comp/Hero";
-import CoolThing1 from "@comp/CoolThing1";
-import Features from "@comp/Features";
-import Projects from "@comp/Projects";
-import Testimonials from "@comp/Testimonials";
-import Contact from "@comp/Contact";
-
-import GradualBlur from "@comp/GradualBlur";
+import GradualBlur from "../components/GradualBlur";
 
 // import icon from "@icon/arrow-small-right.svg";
 
-import SmoothScroll from "@/components/LenisScroll";
-
-async function mockLoadingDelay(ms: number) {
-    return new Promise((resolve) => setTimeout(resolve, ms));
-}
+import SmoothScroll from "../components/LenisScroll";
 
 export default async function Home() {
-    await mockLoadingDelay(4000); // ? simulate loading time to show loading page design
-
     return (
         <SmoothScroll>
             <main className="w-full">
