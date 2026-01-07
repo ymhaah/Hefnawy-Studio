@@ -1,6 +1,28 @@
+"use client";
+
+import { useEffect, useState } from "react";
 import Ballpit from "./Ballpit";
 
+function IsLowEndDevice() {
+    const isMobile = /Mobi|Android/i.test(navigator.userAgent);
+    const cores = navigator.hardwareConcurrency ?? 2;
+    const memory =
+        (navigator as Navigator & { deviceMemory?: number }).deviceMemory ?? 2;
+
+    return isMobile || cores < 4 || memory < 4;
+}
+
 function CoolThing1() {
+    const [enabled, setEnabled] = useState(false);
+
+    useEffect(() => {
+        if (IsLowEndDevice()) {
+            setEnabled(true);
+        }
+    }, []);
+
+    if (!enabled) return null;
+
     return (
         <section
             className="CoolThing1 | relative flex h-[60vh] w-full items-center justify-center"
