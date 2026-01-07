@@ -6,11 +6,14 @@ import TextPressure from "./ui/TextPressure";
 import SocialLinks from "./ui/SocialLinks";
 import LocalTime from "./ui/LocalTime";
 
+import useLowEndDevice from "../hooks/useIsLowEndDevice";
+
 /**
  * Footer component renders the footer with various link sections.
  * @returns {React.ReactNode} The rendered footer component.
  */
 function Footer(): ReactNode {
+    const enabled = useLowEndDevice();
     return (
         <footer
             className="main-footer w-full overflow-hidden"
@@ -52,7 +55,7 @@ function Footer(): ReactNode {
                         <SocialLinks />
                     </nav>
                 </section>
-                <TextPressure text="Hefnawy Studio" />
+                {enabled ? null : <TextPressure text="Hefnawy Studio" />}
             </div>
         </footer>
     );

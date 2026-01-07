@@ -3,25 +3,14 @@
 import { useEffect, useState } from "react";
 import Ballpit from "./Ballpit";
 
-function IsLowEndDevice() {
-    const isMobile = /Mobi|Android/i.test(navigator.userAgent);
-    const cores = navigator.hardwareConcurrency ?? 2;
-    const memory =
-        (navigator as Navigator & { deviceMemory?: number }).deviceMemory ?? 2;
-
-    return isMobile || cores < 4 || memory < 4;
-}
+import useLowEndDevice from "../hooks/useIsLowEndDevice";
 
 function CoolThing1() {
-    const [enabled, setEnabled] = useState(false);
+    const enabled = useLowEndDevice();
 
-    useEffect(() => {
-        if (IsLowEndDevice()) {
-            setEnabled(true);
-        }
-    }, []);
+    if (enabled === null) return null;
 
-    if (!enabled) return null;
+    if (enabled) return null;
 
     return (
         <section
