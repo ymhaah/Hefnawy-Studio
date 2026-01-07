@@ -23,7 +23,7 @@ function Hero() {
                         as="a"
                         target="_blank"
                         rel="noopener noreferrer"
-                        href="https://freelancerprofilenuxt.mesh.prod.platform.usw2.upwork/freelancers/~01acd8e5370e5646aa?mp_source=share"
+                        href="https://www.upwork.com/freelancers/~01acd8e5370e5646aa"
                     >
                         Start Bulding
                         <span className="ml-2 flex items-center">
