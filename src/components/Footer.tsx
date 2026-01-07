@@ -3,7 +3,6 @@ import type { ReactNode } from "react";
 
 import Link from "next/link";
 
-import TextPressure from "./ui/TextPressure";
 import SocialLinks from "./ui/SocialLinks";
 import LocalTime from "./ui/LocalTime";
 
@@ -56,7 +55,6 @@ function Footer(): ReactNode {
                         <SocialLinks />
                     </nav>
                 </section>
-                {enabled ? null : <TextPressure text="Hefnawy Studio" />}
             </div>
         </footer>
     );

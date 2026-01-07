@@ -5,7 +5,10 @@ import Ballpit from "./Ballpit";
 import useLowEndDevice from "../hooks/useIsLowEndDevice";
 
 function CoolThing1() {
-    const enabled = useLowEndDevice();
+    const enabled = useLowEndDevice({
+        reasons: ["mobile"],
+        minMemory: 4,
+    });
 
     if (enabled === null) return null;
 

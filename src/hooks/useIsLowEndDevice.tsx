@@ -2,7 +2,21 @@
 
 import { useEffect, useState } from "react";
 
-export default function useLowEndDevice() {
+type LowEndReason = "mobile" | "cpu" | "memory";
+
+interface UseLowEndOptions {
+    reasons?: LowEndReason[]; // أسباب التقييم
+    minCores?: number;
+    minMemory?: number;
+}
+
+export default function useLowEndDevice(options: UseLowEndOptions = {}) {
+    const {
+        reasons = ["mobile", "cpu", "memory"],
+        minCores = 4,
+        minMemory = 4,
+    } = options;
+
     const [isLowEnd, setIsLowEnd] = useState<boolean | null>(null);
 
     useEffect(() => {
@@ -12,8 +26,14 @@ export default function useLowEndDevice() {
             (navigator as Navigator & { deviceMemory?: number }).deviceMemory ??
             2;
 
-        setIsLowEnd(isMobile || cores < 4 || memory < 4);
-    }, []);
+        const checks: Record<LowEndReason, boolean> = {
+            mobile: isMobile,
+            cpu: cores < minCores,
+            memory: memory < minMemory,
+        };
+
+        setIsLowEnd(reasons.some((reason) => checks[reason]));
+    }, [reasons, minCores, minMemory]);
 
     return isLowEnd;
 }
